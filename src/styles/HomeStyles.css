@@ -1,0 +1,42 @@
+.top_bar {
+    background: linear-gradient(180deg, #2A91DD 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.top_bar_email_text {
+    color: rgba(255, 255, 255, 1);
+}
+
+.top_bar_divider {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
+
+}
+
+.top_bar_phn_no {
+    color: rgba(255, 255, 255, 1)
+}
+
+.top_bar_fb_icon {
+
+    width: 32px !important;
+    height: 32px !important;
+    opacity: 1 !important;
+    
+
+}
+
+.top_bar_linkedin_icon{
+    border:round
+}
+
+
+.top_bar_get_quota_btn{
+color: white;
+border-radius: 43px;
+background: linear-gradient(96.58deg, #2589D2 6.11%, #2DC2E3 92.54%);
+}
+
+.top_bar_icon{
+    width:17.99px !important;
+    height: 19.55px !important;
+  
+}
