@@ -8,7 +8,10 @@ import linkedin from "../assets/linkedin.png";
 import insta from "../assets/insta.png";
 import twitter from "../assets/twitter.png";
 import divider from "../assets/divider.png";
+import logo from "../assets/logo.png";
 import "../styles/HomeStyles.css";
+import mission from "../assets/mission.png";
+import shadow from "../assets/shadow.png";
 
 function OurMission() {
   return (
@@ -56,10 +59,61 @@ function OurMission() {
             </li>
           </ul>
 
-          <button className="btn top_bar_get_quota_btn pb-2">get quota</button>
+          <button className="top_bar_get_quota_btn">Get Quote</button>
         </div>
       </nav>
-      <img style={{ marginTop: "0.3%" }} src={divider} alt="divider" />
+      <img
+        style={{ marginTop: "0.3%", marginBottom: "0px" }}
+        src={divider}
+        alt="divider"
+      />
+
+      <div className="d-flex">
+        <img className="logo" src={logo} alt="logo" />
+        <div className="menu-list">
+          <p className="home ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+          <p className="other-menues ">Home</p>
+        </div>
+
+        <button className="signup-btn">signup</button>
+
+        <button className="login-btn">login</button>
+      </div>
+
+      <div className="our-mission-btn">
+        <p className="our-mission-text">Our Mission</p>
+      </div>
+
+      <div className="d-flex">
+        <div className="our-mission-div">
+          <div className="our-mission-heading mt-3">
+            Empower Your Learning Journey with INNOVATIVE Quality Tech Limited
+          </div>
+          <div className="our-mission-main">
+            Step into a world where exam preparation meets innovation. Our
+            cutting-edge platform redefines the learning experience, offering
+            comprehensive resources and a user-friendly interface to help you
+            achieve your goals effectively. Welcome to the future of education.
+          </div>
+          <div className="our-mission-learn-more-btn">
+            <p className="our-mission-learn-more-text">learn more</p>
+          </div>
+        </div>
+
+        <div className="our-mission-img">
+          <div className="our-mission-main-image-bg"> </div>
+          <div style={{ marginTop: "-415px" }}>
+            <img className="our-mission-main-image" src={mission} />
+            <img className="our-mission-shadow" src={shadow} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
