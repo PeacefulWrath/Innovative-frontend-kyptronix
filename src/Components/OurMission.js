@@ -109,8 +109,12 @@ function OurMission() {
         <div className="our-mission-img">
           <div className="our-mission-main-image-bg"> </div>
           <div style={{ marginTop: "-415px" }}>
-            <img className="our-mission-main-image" src={mission} />
-            <img className="our-mission-shadow" src={shadow} />
+            <img
+              className="our-mission-main-image"
+              src={mission}
+              alt="mission"
+            />
+            <img className="our-mission-shadow" src={shadow} alt="shadow" />
           </div>
         </div>
       </div>

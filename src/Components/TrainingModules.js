@@ -62,32 +62,32 @@ function TrainingModules() {
         <div className="mt-5">
           <div className="row ms-5">
             <div className="col-md-3">
-              <img width={250} src={iso} />
+              <img width={250} src={iso} alt="iso" />
             </div>
             <div className="col-md-3">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto" />
             </div>
             <div className="col-md-3 ">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto2" />
             </div>
             <div className="col-md-3">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto3" />
             </div>
           </div>
         </div>
         <div className="mt-5">
           <div className="row ms-5">
             <div className="col-md-3">
-              <img width={250} src={iso} />
+              <img width={250} src={iso} alt="iso" />
             </div>
             <div className="col-md-3">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto" />
             </div>
             <div className="col-md-3 ">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto2" />
             </div>
             <div className="col-md-3 ">
-              <img width={250} src={auto} />
+              <img width={250} src={auto} alt="auto3" />
             </div>
           </div>
         </div>

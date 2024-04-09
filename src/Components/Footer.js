@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="d-flex ">
       <div style={{ marginLeft: "9%" }} className="footer-logo-section">
-        <img className="logo-white" src={logoWhite} />
+        <img className="logo-white" src={logoWhite} alt="logo-white" />
         <div className="footer-main-para mt-3">
           <div className="footer-logo-white-para ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id

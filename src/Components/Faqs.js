@@ -45,7 +45,11 @@ function Faqs() {
       <div className="faqs-all-ques">
         <div className="faqs-question">
           <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
-          <img className="plus" src={plus} />
+          <img className="plus" src={plus} alt="plus" />
+        </div>
+        <div className="faqs-question">
+          <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
+          <img className="plus" src={plus} alt="plus2" />
         </div>
         <div className="faqs-question">
           <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
@@ -53,11 +57,7 @@ function Faqs() {
         </div>
         <div className="faqs-question">
           <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
-          <img className="plus" src={plus} />
-        </div>
-        <div className="faqs-question">
-          <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
-          <img className="plus" src={plus} />
+          <img className="plus" src={plus} alt="plus3" />
         </div>
       </div>
     </div>

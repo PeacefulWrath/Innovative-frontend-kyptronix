@@ -37,9 +37,9 @@ function Testimonials() {
         <div className="testi-para">What our learners have to say?</div>
       </div>
       <div className="d-flex">
-        <img height={testi1Height} src={testi1} />
-        <img height={testi2Height} src={testi2} />
-        <img height={testi3Height} src={testi3} />
+        <img height={testi1Height} src={testi1} alt="testi1" />
+        <img height={testi2Height} src={testi2} alt="testi2" />
+        <img height={testi3Height} src={testi3} alt="testi3" />
         <button className="ms-5 btn h-50 btn-primary">prev</button>
         <button
           className="ms-5 btn h-50 btn-primary"

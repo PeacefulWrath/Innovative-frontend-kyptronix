@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import testi1 from "../assets/testi1.png";
-import testi2 from "../assets/testi2.png";
-import testi3 from "../assets/testi3.png";
+// import testi1 from "../assets/testi1.png";
+// import testi2 from "../assets/testi2.png";
+// import testi3 from "../assets/testi3.png";
 import "../styles/HomeStyles.css";
 import journey from "../assets/journey.png";
 
@@ -36,7 +36,7 @@ function OurJourney() {
         </div>
       </div>
       <div className="d-flex justify-content-center align-items-center m-3 ">
-        <img style={{ width: "90%" }} src={journey} />
+        <img style={{ width: "90%" }} src={journey} alt="journey" />
       </div>
     </div>
   );

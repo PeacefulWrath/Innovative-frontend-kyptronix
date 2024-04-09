@@ -33,14 +33,14 @@ function OurVision() {
         <div className="our-vision-img">
           <div className="our-vision-main-image-bg"> </div>
           {/* <div style={{ marginTop: "-415px" }}> */}
-          <img className="our-vision-main-image" src={telescope} />
+          <img className="our-vision-main-image" src={telescope} alt="tele" />
 
           {/* </div> */}
         </div>
 
-        <img className="tele-shad-1" src={teleShad} />
-        <img className="tele-shad-2" src={teleShad} />
-        <img className="tele-shad-3" src={teleShad} />
+        <img className="tele-shad-1" src={teleShad} alt="shad1" />
+        <img className="tele-shad-2" src={teleShad} alt="shad2" />
+        <img className="tele-shad-3" src={teleShad} alt="shad3" />
       </div>
     </>
   );

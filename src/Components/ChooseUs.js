@@ -35,7 +35,7 @@ function ChooseUs() {
 
         <div className="cus-cards-btns mt-3">
           <div className="d-flex cus-para-div ">
-            <img src={cr} className="w-10 ms-2" />
+            <img src={cr} className="w-10 ms-2" alt="cr" />
             <p className="ms-2 me-2 mt-3 cus-para-2">
               Extensive Study Resources
             </p>{" "}
@@ -43,11 +43,12 @@ function ChooseUs() {
               src={arrow}
               className=" w-10 me-2"
               style={{ cursor: "pointer" }}
+              alt="arrow"
             />
           </div>
 
           <div className="d-flex cus-para-div ">
-            <img src={cr} className="w-10 ms-2" />
+            <img src={cr} className="w-10 ms-2" alt="cr2" />
             <p className="ms-2 me-2 mt-3 cus-para-2">
               Extensive Study Resources
             </p>{" "}
@@ -55,11 +56,12 @@ function ChooseUs() {
               src={arrow}
               className=" w-10 me-2"
               style={{ cursor: "pointer" }}
+              alt="arrow2"
             />
           </div>
 
           <div className="d-flex cus-para-div ">
-            <img src={cr} className="w-10 ms-2" />
+            <img src={cr} className="w-10 ms-2" alt="cr3" />
             <p className="ms-2 me-2 mt-3 cus-para-2">
               Extensive Study Resources
             </p>{" "}
@@ -67,6 +69,7 @@ function ChooseUs() {
               src={arrow}
               className=" w-10 me-2"
               style={{ cursor: "pointer" }}
+              alt="arrow3"
             />
           </div>
         </div>
@@ -85,7 +88,7 @@ function ChooseUs() {
         </div>
       </div>
       <div className="question-img">
-        <img src={question} />
+        <img alt="questiion" src={question} />
       </div>
     </div>
   );
