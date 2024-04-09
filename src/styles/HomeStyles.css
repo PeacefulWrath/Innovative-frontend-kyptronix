@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
+
+
+
+
 /* top bar */
 
 .top_bar {
@@ -47,7 +54,7 @@
 }
 
 
-/* our mission smenu */
+/* our mission menu */
 
 .menu {
     margin-top: 0;
@@ -56,6 +63,7 @@
 .logo {
     /* height: 250px;
     width:270px */
+    width: 20%
 }
 
 .menu-list {
@@ -72,8 +80,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-left: 60px;
-    margin-top: 95px;
+    margin-left: 6%;
+    margin-top: 9%;
 }
 
 .other-menues {
@@ -84,8 +92,8 @@
     font-weight: 400;
     line-height: normal;
     opacity: 0.5;
-    margin-left: 2px;
-    margin-top: 95px;
+    margin-left: 1%;
+    margin-top: 9%;
 }
 
 .signup-btn {
@@ -96,9 +104,9 @@
     gap: 10px;
     border-radius: 36px;
     border: 2px solid #FFF;
-    margin-left: 35px;
+    margin-left: 10%;
     height: 10px;
-    margin-top: 85px;
+    margin-top: 4%;
     width: 40px;
 }
 
@@ -110,9 +118,9 @@
     gap: 10px;
     border-radius: 36px;
     border: 2px solid #FFF;
-    margin-left: 10px;
+    margin-left: 2%;
     height: 10px;
-    margin-top: 85px;
+    margin-top: 4%;
     width: 40px;
 }
 
@@ -254,10 +262,9 @@
 
 /* our visison */
 
-.our-vision-btn{
+.our-vision-btn {
 
     display: inline-flex;
-
     padding-top: 12px;
     padding-bottom: 1px;
     padding-left: 16px;
@@ -269,11 +276,10 @@
     background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
     height: 40px;
     margin-top: 167.54px;
-    margin-left: 700px;
-    margin-right: 100px;
+    margin-left: 58%;
 }
 
-.our-vision-text{
+.our-vision-text {
     color: #202020;
     font-family: "Exo 2";
     font-size: 20px;
@@ -282,15 +288,14 @@
     line-height: normal;
 }
 
-.our-vision-div{
-    width: 100%;
-    height: 100%;
+.our-vision-div {
+    width: 50%;
+    height: 50%;
     position: relative;
-    margin-left: 700px;
-    margin-right: 100px;
+    margin-left: 58%;
 }
 
-.our-vision-heading{
+.our-vision-heading {
     width: 500px;
     left: 0px;
     top: 0px;
@@ -302,7 +307,7 @@
     word-wrap: break-word;
 }
 
-.our-vision-main{
+.our-vision-main {
     width: 508px;
     left: 0px;
     top: 140px;
@@ -382,30 +387,208 @@
 
 }
 
-.tele-shad-1{
+.tele-shad-1 {
     margin-top: -245px;
     margin-left: 125px;
 
 }
 
-.tele-shad-2{
+.tele-shad-2 {
     margin-top: -200px;
     margin-left: 55px;
 }
 
-.tele-shad-3{
+.tele-shad-3 {
     margin-top: -265px;
     margin-left: -25px;
 }
 
-
-
-
-.rectangle{
+.rectangle {
     width: 300px;
-height: 382px;
-flex-shrink: 0;
-border-radius: 16px;
-border: 1.5px solid #FFF;
-backdrop-filter: blur(5px);
+    height: 382px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1.5px solid #FFF;
+    backdrop-filter: blur(5px);
+}
+
+.tm-heading {
+
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.unlock {
+    color: #FFF;
+    text-align: center;
+    /* leading-trim: both;
+    text-edge: cap; */
+    font-family: Hind !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* our journey */
+.testi-para {
+    color: #FFF;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+/* cus */
+.cus-para {
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cus-cards-btns {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.cus-para-2 {
+    color: #FFF;
+    font-family: Hind;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: sticky
+}
+
+.cus-para-div {
+    border-radius: 8px;
+    border: 1px solid #B6E0FF;
+    box-shadow: 0px 0px 8.2px 0px #62D9FF;
+    align-items: center;
+}
+
+.question-img {
+    zoom: 69%
+}
+
+.lm-btn {
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+}
+
+.faqs-para {
+    color: #FFF;
+
+    font-family: "Exo 2";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.faqs-all-ques {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    flex-shrink: 0;
+    margin-left: 22%;
+}
+
+.faqs-question {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqs-text {
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.plus{
+    margin-left: 10px;
+    margin-bottom: 2%;
+
+}
+
+.foooter-logo-section{
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    /* margin-left: 10%; */
+    width:20%
+}
+
+.logo-white{
+    width:15%
+}
+
+.footer-logo-white-para{
+    color: #FFF;
+font-family: Hind;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.footer-main-para{
+    width:50%;
+   
+}
+
+.footer-menues{
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+}
+
+
+.footer-menu{
+    color: #FFF;
+font-family: "Exo 2";
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+opacity: 0.5;
+}
+
+.footer-quote{
+    color: #FFF;
+font-family: "Exo 2";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import telescope from "../assets/telescope.png";
 import teleShad from "../assets/tele-shad-1.png";
+import "../styles/HomeStyles.css";
 
 function OurVision() {
   return (
