@@ -7,21 +7,6 @@ import gear from "../assets/gear.png";
 import "../styles/HomeStyles.css";
 
 function TrainingModules() {
-  const buttonStyle = {
-    borderRadius: "33px",
-    background:
-      "var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%))",
-    color: "#202020",
-    fontFamily: "Exo 2",
-    fontSize: "15px",
-    fontStyle: "normal",
-    fontWeight: "700",
-    lineHeight: "normal",
-    paddingTop: "12px",
-    paddingBottom: "12px",
-    paddingLeft: "16px",
-    paddingRight: "16px",
-  };
   const divStyle = {
     backgroundImage: `url(${gear})`, // Use the imported image as the background
     backgroundSize: "cover",
@@ -32,32 +17,6 @@ function TrainingModules() {
   // const items = Array.from({ length: 8 }, (_, index) => index + 1); // Generating 16 items for the grid
   return (
     <>
-      <div className=" d-flex justify-content-center align-items-center ">
-        <button className="btn" style={buttonStyle}>
-          Centered Button
-        </button>
-      </div>
-      <div className=" d-flex justify-content-center align-items-center">
-        <div style={{ width: "50%", textAlign: "center" }} className="mt-5">
-          <div className="tm-heading">
-            Elevate Your Skills with INNOVATIVE Quality Tech Training Modules
-          </div>
-        </div>
-      </div>
-
-      <div
-        style={{
-          width: "56%",
-          textAlign: "center",
-          marginTop: "3%",
-          marginLeft: "23%",
-          marginBottom: "5%",
-        }}
-      >
-        <div className="unlock">
-          Unlock Your Potential with Expertly Crafted Training Modules.
-        </div>
-      </div>
       <div style={divStyle}>
         <div className="mt-5">
           <div className="row ms-5">
