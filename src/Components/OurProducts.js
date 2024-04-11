@@ -17,10 +17,14 @@ function OurProducts() {
           <div className="Prod_op-btn-text">Our Products</div>
         </div>
       </div>
-
       <div className="d-flex justify-content-center mt-5">
         <div
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          style={{
+            width: "320px",
+            height: "450px",
+            border: "2px solid grey",
+          }}
+          className="ps-2 pe-2 pt-2"
         >
           <img width={300} alt="p1" height={300} src={p1} />
           <div
@@ -40,8 +44,8 @@ function OurProducts() {
         </div>
 
         <div
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
-          className="ms-3"
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
+          className="ps-2 pe-2 pt-2 ms-3"
         >
           <img width={300} alt="p2" height={300} src={p2} />
           <div
@@ -60,8 +64,8 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3"
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          className="ms-3 ps-2 pe-2 pt-2"
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p2" height={300} src={p2} />
           <div
@@ -80,8 +84,8 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3"
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          className="ms-3 ps-2 pe-2 pt-2"
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p3" height={300} src={p3} />
           <div
@@ -106,7 +110,7 @@ function OurProducts() {
           style={{
             width: "320px",
             height: "450px",
-            border: "2px solid green",
+            border: "2px solid grey",
           }}
           className="ps-2 pe-2 pt-2"
         >
@@ -128,7 +132,7 @@ function OurProducts() {
         </div>
 
         <div
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
           className="ps-2 pe-2 pt-2 ms-3"
         >
           <img width={300} alt="p2" height={300} src={p2} />
@@ -149,7 +153,7 @@ function OurProducts() {
         </div>
         <div
           className="ms-3 ps-2 pe-2 pt-2"
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p2" height={300} src={p2} />
           <div
@@ -169,7 +173,7 @@ function OurProducts() {
         </div>
         <div
           className="ms-3 ps-2 pe-2 pt-2"
-          style={{ width: "305px", height: "450px", border: "2px solid green" }}
+          style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p3" height={300} src={p3} />
           <div

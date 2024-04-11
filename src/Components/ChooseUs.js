@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import cr from "../assets/cr.png";
 import arrow from "../assets/arrow.png";
 import question from "../assets/question.png";
+import gsap from "gsap";
 
 function ChooseUs() {
+  const buttonRef3 = useRef(null);
+  const timeline = useRef(gsap.timeline());
+  const timeline2 = useRef(gsap.timeline());
+
+  const handleThirdLMMouseEnter = () => {
+    timeline.current.to(buttonRef3.current, {
+      width: "25%",
+      ease: "linear",
+      duration: 1,
+    });
+
+    timeline.current.play();
+
+    timeline2.current.to(buttonRef3.current, {
+      background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
+      duration: 1,
+    });
+    timeline2.current.play();
+  };
+
+  const handleThirdLMMouseLeave = () => {
+    timeline.current.reverse();
+    timeline2.current.reverse();
+  };
   const buttonStyle = {
     borderRadius: "33px",
     background:
@@ -74,17 +99,26 @@ function ChooseUs() {
           </div>
         </div>
 
-        <div className="mt-3 lm-div">
-          <button
-            className="lm-btn"
-            style={{
-              borderRadius: "32px",
-              background: "unset",
-              borderColor: "white",
-            }}
-          >
-            lear more
-          </button>
+        <div
+          className="cu-lm-btn"
+          ref={buttonRef3}
+          onMouseEnter={handleThirdLMMouseEnter}
+          onMouseLeave={handleThirdLMMouseLeave}
+        >
+          <p className="cu-lm-text">
+            learn more{" "}
+            <span>
+              {/* <img
+                  alt="smarrow"
+                  src={smallArrow}
+                  style={{
+                    width: "1px",
+                    height: " 9px",
+                    fill: "red",
+                  }}
+                /> */}
+            </span>
+          </p>
         </div>
       </div>
       <div className="question-img">

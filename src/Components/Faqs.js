@@ -1,9 +1,15 @@
+import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/HomeStyles.css";
 import plus from "../assets/plus.png";
+import gsap from "gsap";
 
 function Faqs() {
+  const buttonRef4 = useRef(null);
+
+  const timeline = useRef(gsap.timeline());
+  const timeline2 = useRef(gsap.timeline());
   const buttonStyle = {
     borderRadius: "33px",
     background:
@@ -19,6 +25,28 @@ function Faqs() {
     paddingLeft: "16px",
     paddingRight: "16px",
   };
+
+  const handleFourthLMMouseEnter = () => {
+    timeline.current.to(buttonRef4.current, {
+      width: "25%",
+      ease: "linear",
+      duration: 1,
+    });
+
+    timeline.current.play();
+
+    timeline2.current.to(buttonRef4.current, {
+      background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
+      duration: 1,
+    });
+    timeline2.current.play();
+  };
+
+  const handleFourthLMMouseLeave = () => {
+    timeline.current.reverse();
+    timeline2.current.reverse();
+  };
+
   return (
     <div className="d-flex">
       <div style={{ marginLeft: "100px" }}>
@@ -28,7 +56,7 @@ function Faqs() {
         <div style={{ width: "80%" }} className="mt-3">
           <div className="faqs-para">What people have to ask?</div>
         </div>
-        <div className="mt-3 lm-div">
+        {/* <div className="mt-3 lm-div">
           <button
             className="lm-btn"
             style={{
@@ -39,6 +67,28 @@ function Faqs() {
           >
             lear more
           </button>
+        </div> */}
+
+        <div
+          className="faq-lm-btn"
+          ref={buttonRef4}
+          onMouseEnter={handleFourthLMMouseEnter}
+          onMouseLeave={handleFourthLMMouseLeave}
+        >
+          <p className="faq-lm-text">
+            learn more{" "}
+            <span>
+              {/* <img
+                  alt="smarrow"
+                  src={smallArrow}
+                  style={{
+                    width: "1px",
+                    height: " 9px",
+                    fill: "red",
+                  }}
+                /> */}
+            </span>
+          </p>
         </div>
       </div>
 

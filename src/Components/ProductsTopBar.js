@@ -83,7 +83,7 @@ function ProductsTopBar() {
         <img className="Prod_logo" src={logo} alt="logo" />
         <div className="Prod_menu-list">
           <p className="Prod_home ">Home</p>
-          <p className="Prod_other-menues ">Prodvices</p>
+          <p className="Prod_other-menues ">Services</p>
           <p className="Prod_other-menues ">Products</p>
           <p className="Prod_other-menues ">Training</p>
           <p className="Prod_other-menues ">OurPartner</p>

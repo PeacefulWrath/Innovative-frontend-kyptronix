@@ -11,8 +11,8 @@ import twitter from "../assets/twitter.png";
 
 function Footer() {
   return (
-    <div className="d-flex ">
-      <div style={{ marginLeft: "9%" }} className="footer-logo-section">
+    <div className="d-flex justify-content-center ">
+      <div className="footer-logo-section">
         <img className="logo-white" src={logoWhite} alt="logo-white" />
         <div className="footer-main-para mt-3">
           <div className="footer-logo-white-para ">
@@ -29,7 +29,7 @@ function Footer() {
         </div>
       </div>
 
-      <div style={{ marginLeft: "9%" }} className="footer-menues">
+      <div className="footer-menues">
         <div className="footer-menu-main">Menu</div>
         <div className="footer-menu">Home</div>
         <div className="footer-menu">Service</div>
@@ -38,7 +38,13 @@ function Footer() {
         <div className="footer-menu">Our partner</div>
       </div>
 
-      <div style={{ marginLeft: "9%", marginTop:"1.5%" }} className="footer-menues">
+      <div
+        style={{
+          // marginLeft: "9%",
+          marginTop: "1.5%",
+        }}
+        className="footer-menues"
+      >
         <div className="footer-menu">Gallery</div>
         <div className="footer-menu">Contact us</div>
         <div className="footer-menu">About Us</div>
@@ -47,15 +53,16 @@ function Footer() {
         <div className="footer-menu">home</div> */}
       </div>
 
-      <div style={{ marginLeft: "9%" }} className="footer-menues">
+      <div className="footer-menues">
         <div className="footer-menu-main">Help</div>
         <div className="footer-menu-main">Payment</div>
         <div className="footer-menu-main">Returns</div>
         <div className="footer-menu-main">Faqs</div>
-     
       </div>
 
-      <div style={{ marginLeft: "9%" }}>
+      <div
+      // style={{ marginLeft: "9%" }}
+      >
         <div className="footer-quote">click now on quota</div>
         <img src={glow} alt="glow" />
       </div>
