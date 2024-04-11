@@ -21,6 +21,7 @@ function ChooseUs() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef3.current, {
+      width: "25%",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
@@ -105,7 +106,7 @@ function ChooseUs() {
           onMouseEnter={handleThirdLMMouseEnter}
           onMouseLeave={handleThirdLMMouseLeave}
         >
-          <p className="cu-lm-text">
+          <div className="cu-lm-text">
             learn more{" "}
             <span>
               {/* <img
@@ -118,7 +119,7 @@ function ChooseUs() {
                   }}
                 /> */}
             </span>
-          </p>
+          </div>
         </div>
       </div>
       <div className="question-img">

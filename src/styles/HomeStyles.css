@@ -489,7 +489,8 @@
 
 .cu-lm-btn {
     display: flex;
-    padding-top: 12px;
+    justify-content: center;
+    /* padding-top: 12px;
     padding-bottom: 1px;
     padding-left: 16px;
     padding-right: 16px;
@@ -498,10 +499,14 @@
     gap: 10px;
     height: 40px;
     margin-top: 3%;
-    margin-left: -1px;
+    margin-left: -1px; */
     border-radius: 36px;
     border: 2px solid #FFF;
-    width: 20% !important;
+    width: 20% ;
+    margin-top: 3%;
+   align-items: center;
+   height: 10%;
+    
 
 }
 
