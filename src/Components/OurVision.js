@@ -12,7 +12,7 @@ function OurVision() {
   const timeline2 = useRef(gsap.timeline());
   const handleSecondLMMouseEnter = () => {
     timeline.current.to(buttonRef2.current, {
-      width: "25%",
+      width: "30%",
       ease: "linear",
       duration: 1,
     });
@@ -20,6 +20,7 @@ function OurVision() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef2.current, {
+      width: "30%",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });

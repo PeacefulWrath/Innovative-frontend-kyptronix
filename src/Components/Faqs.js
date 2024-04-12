@@ -28,7 +28,7 @@ function Faqs() {
 
   const handleFourthLMMouseEnter = () => {
     timeline.current.to(buttonRef4.current, {
-      width: "25%",
+      width: "45%",
       ease: "linear",
       duration: 1,
     });
@@ -36,6 +36,7 @@ function Faqs() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef4.current, {
+      width: "45%",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });

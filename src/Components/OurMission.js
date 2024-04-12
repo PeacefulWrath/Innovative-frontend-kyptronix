@@ -25,7 +25,7 @@ function OurMission() {
 
   const handleFirstLMMouseEnter = () => {
     timeline.current.to(buttonRef.current, {
-      width: "55%",
+      width: "40%",
       ease: "linear",
       duration: 1,
     });
@@ -33,6 +33,7 @@ function OurMission() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef.current, {
+      width: "40%",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });

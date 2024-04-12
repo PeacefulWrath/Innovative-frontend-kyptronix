@@ -18,7 +18,7 @@ function ProductsTopBar() {
       style={{
         width: "100%",
         backgroundImage: `url(${bg})`,
-        height: "100%",
+        height: "80%",
       }}
     >
       <nav class="Prod_top_bar navbar navbar-expand-lg  ">
