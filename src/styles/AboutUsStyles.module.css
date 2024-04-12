@@ -113,7 +113,7 @@
     margin-left: 10%;
     height: 10px;
     margin-top: 3.5%;
-    width: 40px;
+    width: 6%;
     background: transparent;
 }
 
@@ -128,13 +128,13 @@
     margin-left: 2%;
     height: 10px;
     margin-top: 3.5%;
-    width: 40px;
+    width: 6%;
     background: #FFF;
 }
 
 .Aboutus_login_text {
     color: #2A91DD;
-    padding-top: 8px;
+    padding-top: 55%;
     font-family: "Exo 2";
 
     font-size: 15px;

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
+
+
+.Contact_us_form_left_part {
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.Contact_us_left_part_para {
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 3rem;
+}
+
+.Contact_us_left_part_desc {
+
+    color: #FFF;
+    font-family: "Hind";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    word-wrap: break-word
+}
+
+.Contact_us_form {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.Contact_us_attr_main {
+    display: flex;
+    width: 45%;
+    padding: 20px 24px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: #202020;
+    color: white;
+}
+
+.Contact_us_attr_container:empty:before {
+    content: attr(data-placeholder);
+    color: #CCCCCC;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    opacity: 0.7;
+  
+}
+
+.Contact_us_msg_main {
+    display: flex;
+    width: 92%;
+    padding: 20px 24px ;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: #202020;
+    color: white;
+    height: 10rem;
+}
+
+.Contact_us_msg_container:empty:before {
+    content: attr(data-placeholder);
+    color: #CCCCCC;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    opacity: 0.7;
+ 
+
+}
+.Contact_us_msg_container{
+    margin-top: -9%;
+}
+
+.Contact_us_submit_div_main{
+    display: inline-flex;
+    padding: 24px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 36px;
+border: 2px solid #FFF;
+width: 20%;
+height: 30px;
+margin-top: 3%;
+cursor: pointer;
+}
+
+
+
+
+.Contact_us_submit_text{
+    color: #FFF;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+
+.Contact_us_sub_main {
+    display: flex;
+    width: 92%;
+    padding: 20px 24px ;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: #202020;
+    color: white;
+    height: 4rem;
+    justify-content: space-between;
+}
+
+.Contact_us_sub_container:empty:before {
+    content: attr(data-placeholder);
+    color: #CCCCCC;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    opacity: 0.7;
+ 
+
+}
+.Contact_us_sub_container{
+    margin-top: -1%;
+}

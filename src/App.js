@@ -6,6 +6,7 @@ import Products from "./Pages/Products";
 import Trainings from "./Pages/Trainings";
 import Partners from "./Pages/Partners";
 import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/trainings" element={<Trainings />} />
           <Route exact path="/partners" element={<Partners />} />
           <Route exact path="/aboutus" element={<AboutUs />} />
+          <Route exact path="/contactus" element={<ContactUs />} />
         </Routes>
       </Router>
     </>

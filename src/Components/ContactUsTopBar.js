@@ -10,15 +10,15 @@ import twitter from "../assets/twitter.png";
 import divider from "../assets/divider.png";
 import logo from "../assets/logo.png";
 import styles from "../styles/AboutUsStyles.module.css";
-import bg from "../assets/aboutus-topbar-bg.png";
+import bg from "../assets/contactus-topbar-bg.png";
 
-function AboutUsTopBar() {
+function ContactUsTopBar() {
   return (
     <div
       style={{
         width: "100%",
+        height: "50%",
         backgroundImage: `url(${bg})`,
-        height: "80%",
       }}
     >
       <nav
@@ -98,7 +98,7 @@ function AboutUsTopBar() {
         <div className={styles.Aboutus_menu_list}>
           <p className={styles.Aboutus_home}>Home</p>
           <p className={styles.Aboutus_other_menues}>Services</p>
-          <p className={styles.Aboutus_other_menues}>products</p>
+          <p className={styles.Aboutus_other_menues}>Products</p>
           <p className={styles.Aboutus_other_menues}>Training</p>
           <p className={styles.Aboutus_other_menues}>Our Partner</p>
           <p className={styles.Aboutus_other_menues}>Gallery</p>
@@ -120,10 +120,10 @@ function AboutUsTopBar() {
       <div
         className={`${styles.Aboutus_top_bar_text} d-flex justify-content-center`}
       >
-        About us
+        Contact us
       </div>
     </div>
   );
 }
 
-export default AboutUsTopBar;
+export default ContactUsTopBar;
