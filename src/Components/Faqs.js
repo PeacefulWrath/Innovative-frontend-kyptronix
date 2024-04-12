@@ -49,8 +49,17 @@ function Faqs() {
   };
 
   return (
-    <div className="d-flex">
-      <div style={{ marginLeft: "100px" }}>
+    <div
+      className="d-flex"
+      style={{
+        justifyContent: "space-between",
+        marginLeft: "7%",
+        marginRight: "7%",
+      }}
+    >
+      <div
+      // style={{ marginLeft: "100px" }}
+      >
         <button className="btn" style={buttonStyle}>
           Faqs
         </button>
