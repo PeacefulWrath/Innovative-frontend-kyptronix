@@ -131,7 +131,6 @@
 
 .Prod_bcat-btn {
     display: inline-flex;
-
     padding-top: 12px;
     padding-bottom: 1px;
     padding-left: 16px;
@@ -143,7 +142,7 @@
     background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
     height: 40px;
     margin-top: 167.54px;
-    margin-left: 8%;
+    margin-left: 11%;
 }
 
 .Prod_bcat-text {

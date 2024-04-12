@@ -17,13 +17,13 @@ function Products() {
     >
       <ProductsTopBar />
       <ProductsByCategory />
-      <div style={{ marginTop: "3%" }}>
+      <div style={{ marginTop: "5%" }}>
         <OurProducts />
       </div>
-      <div style={{ marginTop: "3%" }}>
+      <div style={{ marginTop: "5%" }}>
         <Discover />
       </div>
-      <div style={{ marginTop: "3%" }}>
+      <div style={{ marginTop: "5%" }}>
         <ServiceFooter />
       </div>
     </div>

@@ -10,11 +10,16 @@ function ProductsByCategory() {
       <div className="Prod_bcat-btn">
         <p className="Prod_bcat-text">By Catagory</p>
       </div>
-      <div className="d-flex justify-content-center mt-5">
+      <div
+        className="d-flex justify-content-center mt-5"
+        style={{
+          marginLeft: "1rem",
+        }}
+      >
         <img width={300} alt="by1" height={300} src={by1} />
-        <img width={300} alt="by2" height={300} src={by2} className="ms-2" />
-        <img width={300} alt="by3" height={300} src={by3} className="ms-2" />
-        <img width={300} alt="by4" height={300} src={by4} className="ms-2" />
+        <img width={300} alt="by2" height={300} src={by2} className="ms-5" />
+        <img width={300} alt="by3" height={300} src={by3} className="ms-5" />
+        <img width={300} alt="by4" height={300} src={by4} className="ms-5" />
       </div>
     </div>
   );
