@@ -114,6 +114,8 @@
     height: 10px;
     margin-top: 4%;
     width: 40px;
+    background-color: transparent;
+    color :white
 }
 
 .ser_login-btn {
@@ -128,6 +130,7 @@
     height: 10px;
     margin-top: 4%;
     width: 40px;
+    color:#2A91DD;
 }
 
 .ser_os-main {

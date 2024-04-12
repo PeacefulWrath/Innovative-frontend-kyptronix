@@ -109,6 +109,8 @@
     height: 10px;
     margin-top: 3.5%;
     width: 40px;
+    background-color: transparent;
+    color :white
 }
 
 .login-btn {
@@ -123,6 +125,7 @@
     height: 10px;
     margin-top: 3.5%;
     width: 40px;
+    color:#2A91DD;
 }
 
 /* our mission */
