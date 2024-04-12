@@ -86,17 +86,17 @@ function ProductsTopBar() {
           <p className="Prod_other-menues ">Services</p>
           <p className="Prod_other-menues ">Products</p>
           <p className="Prod_other-menues ">Training</p>
-          <p className="Prod_other-menues ">OurPartner</p>
+          <p className="Prod_other-menues ">Our Partner</p>
           <p className="Prod_other-menues ">Gallery</p>
 
-          <p className="Prod_other-menues ">AboutUs</p>
+          <p className="Prod_other-menues ">About Us</p>
 
-          <p className="Prod_other-menues">ContactUs</p>
+          <p className="Prod_other-menues">Contact Us</p>
         </div>
 
         <button className="Prod_signup-btn">signup</button>
 
-        <button className="Prod_login-btn">login</button>
+        <button className="Prod_login_btn">login</button>
       </div>
       <div className="Prod_top_bar_text d-flex justify-content-center">
         Our Products

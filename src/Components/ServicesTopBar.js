@@ -81,12 +81,12 @@ function ServicesTopBar() {
           <p className="ser_other-menues ">Services</p>
           <p className="ser_other-menues ">Products</p>
           <p className="ser_other-menues ">Training</p>
-          <p className="ser_other-menues ">OurPartner</p>
+          <p className="ser_other-menues ">Our Partner</p>
           <p className="ser_other-menues ">Gallery</p>
 
-          <p className="ser_other-menues ">AboutUs</p>
+          <p className="ser_other-menues ">About Us</p>
 
-          <p className="ser_other-menues">ContactUs</p>
+          <p className="ser_other-menues">Contact Us</p>
         </div>
 
         <button className="ser_signup-btn">signup</button>

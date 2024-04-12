@@ -5,25 +5,25 @@
 
 /* top bar */
 
-.Prod_top_bar {
+.Train_top_bar {
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%) !important;
     /* width: 100%; */
 }
 
-.Prod_top_bar_email_text {
+.Train_top_bar_email_text {
     color: rgba(255, 255, 255, 1);
 }
 
-.Prod_top_bar_divider {
+.Train_top_bar_divider {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
 
 }
 
-.Prod_top_bar_phn_no {
+.Train_top_bar_phn_no {
     color: rgba(255, 255, 255, 1)
 }
 
-.Prod_top_bar_fb_icon {
+.Train_top_bar_fb_icon {
 
     width: 32px !important;
     height: 32px !important;
@@ -32,11 +32,11 @@
 
 }
 
-.Prod_top_bar_linkedin_icon {
+.Train_top_bar_linkedin_icon {
     border: round
 }
 
-.Prod_top_bar_get_quota_btn {
+.Train_top_bar_get_quota_btn {
     color: white;
     border-radius: 43px;
     width: 130px;
@@ -46,13 +46,13 @@
 
 }
 
-.Prod_top_bar_icon {
+.Train_top_bar_icon {
     width: 17.99px !important;
     height: 19.55px !important;
 
 }
 
-.Prod_top_bar_text {
+.Train_top_bar_text {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 60px;
@@ -62,23 +62,26 @@
     margin-top: 15%;
 }
 
-.Prod_menu {
+.Train_menu {
     margin-top: 0;
 }
 
-.Prod_logo {
+.Train_logo {
 
-    width: 20%
+    width: 20%;
+    margin-top: 3.5em;
+
 }
 
-.Prod_menu-list {
+.Train_menu_list {
     display: inline-flex;
     align-items: flex-start;
     gap: 10px;
+    margin-top: 4%;
 }
 
 
-.Prod_home {
+.Train_home {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 20px;
@@ -89,7 +92,7 @@
     margin-top: 9%;
 }
 
-.Prod_other-menues {
+.Train_other_menues {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 20px;
@@ -102,7 +105,7 @@
     white-space: nowrap;
 }
 
-.Prod_signup-btn {
+.Train_signup_btn {
     display: inline-flex;
     padding: 20px 40px;
     justify-content: center;
@@ -112,11 +115,11 @@
     border: 2px solid #FFF;
     margin-left: 10%;
     height: 10px;
-    margin-top: 3.5%;
+    margin-top: 7.5%;
     width: 40px;
 }
 
-.Prod_login_btn {
+.Train_login_btn {
     display: inline-flex;
     padding: 20px 40px;
     justify-content: center;
@@ -126,84 +129,6 @@
     border: 2px solid #FFF;
     margin-left: 2%;
     height: 10px;
-    margin-top: 3.5%;
+    margin-top: 7.5%;
     width: 40px;
-}
-
-.Prod_bcat_btn {
-    display: inline-flex;
-    padding-top: 12px;
-    padding-bottom: 1px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-    height: 40px;
-    margin-top: 167.54px;
-    margin-left: 11%;
-}
-
-.Prod_bcat-text {
-    color: #202020;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.Prod_op-btn {
-
-
-    width: 10%;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-}
-
-.Prod_op-btn-text {
-    color: #202020;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 5px 5px;
-}
-
-.Prod_price {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.Prod_base-price {
-    color: #B7B7B7;
-    font-family: "Exo 2";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-decoration-line: line-through
-}
-
-.Prod_name {
-    color: #FFF;
-    font-family: Hind;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 6%;
-}
-
-.Prod_rating {
-    width: 128px;
-    height: 24.744px;
-    flex-shrink: 0;
 }

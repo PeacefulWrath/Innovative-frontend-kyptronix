@@ -5,25 +5,25 @@
 
 /* top bar */
 
-.ser_top_bar {
+.Aboutus_top_bar {
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%) !important;
     /* width: 100%; */
 }
 
-.ser_top_bar_email_text {
+.Aboutus_top_bar_email_text {
     color: rgba(255, 255, 255, 1);
 }
 
-.ser_top_bar_divider {
+.Aboutus_top_bar_divider {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
 
 }
 
-.ser_top_bar_phn_no {
+.Aboutus_top_bar_phn_no {
     color: rgba(255, 255, 255, 1)
 }
 
-.ser_top_bar_fb_icon {
+.Aboutus_top_bar_fb_icon {
 
     width: 32px !important;
     height: 32px !important;
@@ -32,11 +32,11 @@
 
 }
 
-.ser_top_bar_linkedin_icon {
+.Aboutus_top_bar_linkedin_icon {
     border: round
 }
 
-.ser_top_bar_get_quota_btn {
+.Aboutus_top_bar_get_quota_btn {
     color: white;
     border-radius: 43px;
     width: 130px;
@@ -46,39 +46,39 @@
 
 }
 
-.ser_top_bar_icon {
+.Aboutus_top_bar_icon {
     width: 17.99px !important;
     height: 19.55px !important;
 
 }
 
-.ser_top_bar_text {
+.Aboutus_top_bar_text {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
-.ser_menu {
+.Aboutus_menu {
     margin-top: 0;
 }
 
-.ser_logo {
-    /* height: 250px;
-    width:270px */
+.Aboutus_logo {
+
     width: 20%
 }
 
-.ser_menu-list {
+.Aboutus_menu_list {
     display: inline-flex;
     align-items: flex-start;
-    gap: 32px;
+    gap: 10px;
 }
 
-.ser_home {
+
+.Aboutus_home {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 20px;
@@ -89,7 +89,7 @@
     margin-top: 9%;
 }
 
-.ser_other-menues {
+.Aboutus_other_menues {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 20px;
@@ -102,7 +102,7 @@
     white-space: nowrap;
 }
 
-.ser_signup-btn {
+.Aboutus_signup_btn {
     display: inline-flex;
     padding: 20px 40px;
     justify-content: center;
@@ -112,11 +112,12 @@
     border: 2px solid #FFF;
     margin-left: 10%;
     height: 10px;
-    margin-top: 4%;
+    margin-top: 3.5%;
     width: 40px;
+    background: transparent;
 }
 
-.ser_login-btn {
+.Aboutus_login_btn {
     display: inline-flex;
     padding: 20px 40px;
     justify-content: center;
@@ -126,164 +127,55 @@
     border: 2px solid #FFF;
     margin-left: 2%;
     height: 10px;
-    margin-top: 4%;
+    margin-top: 3.5%;
     width: 40px;
+    background: #FFF;
 }
 
-.ser_os-main {
-    /* border: 2px solid red; */
-    position: relative;
-    z-index: 45;
-    margin-top: -13%;
-}
-
-.ser_os-main-2 {
-    width: 80%;
-    height: 15rem;
-    flex-shrink: 0;
-    border-radius: 32px;
-    background: #202020;
-    display: flex;
-}
-
-.ser_os-leftpart {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 5% 5%;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 10px;
-}
-
-.ser_os-btn {
-
-    text-align: center;
-    width: 50%;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-}
-
-.ser_os-btn-text {
-    color: #202020;
+.Aboutus_login_text {
+    color: #2A91DD;
+    padding-top: 8px;
     font-family: "Exo 2";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 5px 9px;
-}
 
-.ser_os-para-main {
-    width: 90%
-}
-
-.ser_os-para {
-    color: #FFF;
-
-    font-family: "Exo 2";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.ser_os-right-part {
-
-
-    margin-right: 5%;
-}
-
-.ser_os-right-main-part {
-    color: #FFF;
-    margin-top: 14%;
-    font-family: Hind;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.ser_left-part {
-    width: 50%;
-
-}
-
-.ser_right-part {
-    width: 50%;
-    margin-top: 15%;
-    
-}
-
-.ser_ns-btn {
-    display: inline-flex;
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-}
-
-.ser_ns-btn-text {
-    color: #202020;
-
+.Aboutus_signup_text {
+    color: #FFF;
+    padding-top: 8px;
     font-family: "Exo 2";
     font-size: 15px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
 }
 
-.ser_subscribe-text {
+.Aboutus_learn_more_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 10%;
+    margin-top: 5%;
+    margin-left: -1px;
+    border-radius: 36px;
+    border: 2px solid #FFF;
+    width: 25%;
+}
+
+.Aboutus_learn_more_text {
     color: #FFF;
     font-family: "Exo 2";
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.ser_ns_desc {
-    color: #FFF;
-    font-family: Hind;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.ser_ns_desc_main {
-    width: 90%
-}
-
-.ser_mail {
-    width: 70%;
-    margin-top: 10%;
-}
-.ser_footer-main{
-    display: inline-flex;
-    flex-direction: column;
-    width: 100%;
-}
-.ser_footer-menues{
-    display: inline-flex;
-align-items: flex-start;
-gap: 32px;
-}
-.ser_footer-menu-active{
-    color: #FFF;
-font-family: "Exo 2";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-.ser_footer-menu{
-    color: #FFF;
-font-family: "Exo 2";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-opacity: 0.5;
+   
 }

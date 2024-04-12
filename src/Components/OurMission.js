@@ -116,10 +116,10 @@ function OurMission() {
           <p className="other-menues ">Services</p>
           <p className="other-menues ">Products</p>
           <p className="other-menues ">Training</p>
-          <p className="other-menues ">OurPartners</p>
+          <p className="other-menues ">Our Partners</p>
           <p className="other-menues ">Gallery</p>
-          <p className="other-menues ">AboutUs</p>
-          <p className="other-menues ">ContactUs</p>
+          <p className="other-menues ">About Us</p>
+          <p className="other-menues ">Contact Us</p>
         </div>
 
         <button className="signup-btn">signup</button>
