@@ -7,6 +7,7 @@ import Trainings from "./Pages/Trainings";
 import Partners from "./Pages/Partners";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
+import Gallery from "./Pages/Gallery";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/partners" element={<Partners />} />
           <Route exact path="/aboutus" element={<AboutUs />} />
           <Route exact path="/contactus" element={<ContactUs />} />
+          <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </>

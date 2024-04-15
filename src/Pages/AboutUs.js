@@ -4,6 +4,7 @@ import AboutUsPrepare from "../Components/AboutUsPrepare";
 import stats from "../assets/stats.png";
 import ServiceFooter from "../Components/ServiceFooter";
 import copyright from "../assets/copyright.png";
+
 function AboutUs() {
   return (
     <div

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
+
+
+
+
+.Gallery_main_btns {
+    display: flex;
+    width: 247px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 33px;
+    border: 1px solid #FFF;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.Gallery_main_btns_text {
+    color: #FFF;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.Gallery_main_btns_active {
+    display: flex;
+    width: 247px;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 33px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    background: linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%);
+    opacity: unset;
+}
+
+.Gallery_main_btns_text_active {
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #202020;
+}
+
+.Gallery_img {
+    width: 350px;
+    height: 352px;
+    border-radius: 32px;
+
+}

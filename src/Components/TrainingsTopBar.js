@@ -80,7 +80,7 @@ function TrainingsTopBar() {
       <img
         src={divider}
         alt="divider"
-        style={{ marginTop: "0.9%", marginBottom: "0px" }}
+        style={{ marginTop: "0.95%", background: "unset", marginBottom: "0px" }}
       />
 
       <div
@@ -106,9 +106,14 @@ function TrainingsTopBar() {
             <p className={styles.Train_other_menues}>Contact Us</p>
           </div>
 
-          <button className={styles.Train_signup_btn}>signup</button>
+          <button className={styles.Train_signup_btn}>
+            {" "}
+            <p className={styles.Train_signup_text}>signup</p>
+          </button>
 
-          <button className={styles.Train_login_btn}>login</button>
+          <button className={styles.Train_login_btn}>
+            <p className={styles.Train_login_text}>login</p>
+          </button>
         </div>
         <div
           className={`${styles.Train_top_bar_text} d-flex justify-content-center`}
