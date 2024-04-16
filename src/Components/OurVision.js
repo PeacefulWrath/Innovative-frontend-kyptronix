@@ -10,9 +10,10 @@ function OurVision() {
   const buttonRef2 = useRef(null);
   const timeline = useRef(gsap.timeline());
   const timeline2 = useRef(gsap.timeline());
+  
   const handleSecondLMMouseEnter = () => {
     timeline.current.to(buttonRef2.current, {
-      width: "30%",
+      width: "160px",
       ease: "linear",
       duration: 1,
     });
@@ -20,7 +21,7 @@ function OurVision() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef2.current, {
-      width: "30%",
+      width: "160px",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
@@ -62,15 +63,12 @@ function OurVision() {
       <div style={{ marginTop: "544px" }}>
         <div className="our-vision-img">
           <div className="our-vision-main-image-bg"> </div>
-          {/* <div style={{ marginTop: "-415px" }}> */}
           <img className="our-vision-main-image" src={telescope} alt="tele" />
-
-          {/* </div> */}
         </div>
 
-        <img className="tele-shad-1" src={teleShad} alt="shad1" />
-        <img className="tele-shad-2" src={teleShad} alt="shad2" />
-        <img className="tele-shad-3" src={teleShad} alt="shad3" />
+        <img className="our-vision-tele-shad-1" src={teleShad} alt="shad1" />
+        <img className="our-vision-tele-shad-2" src={teleShad} alt="shad2" />
+        <img className="our-vision-tele-shad-3" src={teleShad} alt="shad3" />
       </div>
     </>
   );

@@ -9,7 +9,7 @@ function OurPartners() {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <div className={`${styles.Partner_op_div} mt-5`}>
+        <div className={`${styles.Partner_op_div}`} style={{marginTop:"5%"}}>
           <div className={styles.Partner_op_text}>Our Partners</div>
         </div>
       </div>

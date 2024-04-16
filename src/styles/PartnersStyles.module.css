@@ -188,3 +188,10 @@
     font-weight: 400;
     line-height: normal;
 }
+
+.Partner_card_main:hover{
+    background-color: #2DC2E3;
+}
+.Partner_card_main > .Partner_card_title{
+    color: red;
+}

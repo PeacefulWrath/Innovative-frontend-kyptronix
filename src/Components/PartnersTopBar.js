@@ -89,7 +89,7 @@ function PartnersTopBar() {
         style={{
           backgroundImage: `url(${bg})`,
           width: "100%",
-          height: "50%",
+          height: "80%",
         }}
       >
         <div className="d-flex">

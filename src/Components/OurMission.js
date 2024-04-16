@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import mail from "../assets/mail.png";
@@ -16,6 +16,8 @@ import gsap from "gsap";
 // import smallArrow from "../assets/small-arrow.png";
 
 function OurMission() {
+  const [clicked, setClicked] = useState("Home");
+
   const buttonRef = useRef(null);
 
   // const buttonRef4 = useRef(null);
@@ -25,7 +27,7 @@ function OurMission() {
 
   const handleFirstLMMouseEnter = () => {
     timeline.current.to(buttonRef.current, {
-      width: "40%",
+      width: "160px",
       ease: "linear",
       duration: 1,
     });
@@ -33,7 +35,7 @@ function OurMission() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef.current, {
-      width: "40%",
+      width: "160px",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
@@ -45,14 +47,9 @@ function OurMission() {
     timeline2.current.reverse();
   };
 
-  // React.useEffect(() => {
-  //   timeline.current.to(buttonRef.current, {
-  //     width: "105%",
-  //     color: "#ff0000",
-  //     ease: "linear",
-  //     duration: 1,
-  //   });
-  // }, []);
+  const handleClick = (clickedItem) => {
+    setClicked(clickedItem);
+  };
 
   return (
     <>
@@ -111,20 +108,61 @@ function OurMission() {
       <div className="d-flex">
         <img className="logo" src={logo} alt="logo" />
         <div className="menu-list">
-          <p className="home ">Home</p>
+          <p className={`${clicked === "Home"
+              ? "home-menue-active"
+              : "home-menue"
+            }`}
+            onClick={() => {
+              handleClick("Home");
+            }}>Home</p>
 
-          <p className="other-menues ">Services</p>
-          <p className="other-menues ">Products</p>
-          <p className="other-menues ">Training</p>
-          <p className="other-menues ">Our Partners</p>
-          <p className="other-menues ">Gallery</p>
-          <p className="other-menues ">About Us</p>
-          <p className="other-menues ">Contact Us</p>
+          <p className={`${clicked === "Services"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Services");
+            }}>Services</p>
+          <p className={`${clicked === "Products"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Products");
+            }}>Products</p>
+          <p className={`${clicked === "Training"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Training");
+            }}>Training</p>
+          <p className={`${clicked === "Our Partners"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Our Partners");
+            }}>Our Partners</p>
+          <p className={`${clicked === "Gallery"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Gallery");
+            }}>Gallery</p>
+          <p className={`${clicked === "About Us"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("About Us");
+            }}>About Us</p>
+          <p className={`${clicked === "Contact Us"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("Contact Us");
+            }}>Contact Us</p>
         </div>
 
-        <button className="signup-btn">signup</button>
+        <button className="signup-btn">Sign up</button>
 
-        <button className="login-btn">login</button>
+        <button className="login-btn">Login</button>
       </div>
 
       <div className="our-mission-btn">

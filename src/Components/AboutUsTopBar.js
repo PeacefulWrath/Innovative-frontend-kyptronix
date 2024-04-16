@@ -110,7 +110,7 @@ function AboutUsTopBar() {
 
         <button className={styles.Aboutus_signup_btn}>
           {" "}
-          <p className={styles.Aboutus_signup_text}>signup</p>
+          <p className={styles.Aboutus_signup_text}>Sign up</p>
         </button>
 
         <button className={styles.Aboutus_login_btn}>

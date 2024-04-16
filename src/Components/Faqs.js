@@ -28,7 +28,7 @@ function Faqs() {
 
   const handleFourthLMMouseEnter = () => {
     timeline.current.to(buttonRef4.current, {
-      width: "45%",
+      width: "160px",
       ease: "linear",
       duration: 1,
     });
@@ -36,7 +36,7 @@ function Faqs() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef4.current, {
-      width: "45%",
+      width: "160px",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
@@ -117,7 +117,7 @@ function Faqs() {
         </div>
         <div className="faqs-question">
           <p className="faqs-text">Lorem ipsum dolor sit amet?</p>
-          <img className="plus" src={plus} alt="plus3" />
+          <img className="faq-plus" src={plus} alt="plus3" />
         </div>
       </div>
     </div>

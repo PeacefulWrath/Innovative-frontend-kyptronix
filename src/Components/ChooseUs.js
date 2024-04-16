@@ -13,7 +13,7 @@ function ChooseUs() {
 
   const handleThirdLMMouseEnter = () => {
     timeline.current.to(buttonRef3.current, {
-      width: "25%",
+      width: "160px",
       ease: "linear",
       duration: 1,
     });
@@ -21,7 +21,7 @@ function ChooseUs() {
     timeline.current.play();
 
     timeline2.current.to(buttonRef3.current, {
-      width: "25%",
+      width: "160px",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
