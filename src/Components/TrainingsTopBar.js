@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState}from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import mail from "../assets/mail.png";
@@ -11,8 +11,15 @@ import divider from "../assets/divider.png";
 import logo from "../assets/logo.png";
 import styles from "../styles/TrainingsStyles.module.css";
 import bg from "../assets/trainings-top-bar.png";
+import { useNavigate  } from 'react-router-dom';
 
 function TrainingsTopBar() {
+  const [clicked, setClicked] = useState("Home");
+  const navigate = useNavigate ();
+  const handleClick = (clickedItem) => {
+    setClicked(clickedItem);
+    navigate(`/${clickedItem}`);
+  };
   return (
     <>
       <nav
@@ -93,7 +100,7 @@ function TrainingsTopBar() {
       >
         <div className="d-flex">
           <img className={styles.Train_logo} src={logo} alt="logo" />
-          <div className={styles.Train_menu_list}>
+          {/* <div className={styles.Train_menu_list}>
             <p className={styles.Train_home}>Home</p>
             <p className={styles.Train_other_menues}>Services</p>
             <p className={styles.Train_other_menues}>Trainucts</p>
@@ -104,7 +111,60 @@ function TrainingsTopBar() {
             <p className={styles.Train_other_menues}>About Us</p>
 
             <p className={styles.Train_other_menues}>Contact Us</p>
-          </div>
+          </div> */}
+          <div className="menu-list mt-5">
+          <p className={`${clicked === "home"
+              ? "home-menue-active"
+              : "home-menue"
+            }`}
+            onClick={() => {
+              handleClick("home");
+              
+            }}>Home</p>
+
+          <p className={`${clicked === "services"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("services");
+            }}>Services</p>
+          <p className={`${clicked === "products"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("products");
+            }}>Products</p>
+          <p className={`${clicked === "trainings"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("trainings");
+            }}>Trainings</p>
+          <p className={`${clicked === "partners"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("partners");
+            }}>Our Partners</p>
+          <p className={`${clicked === "gallery"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("gallery");
+            }}>Gallery</p>
+          <p className={`${clicked === "aboutus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("aboutus");
+            }}>About Us</p>
+          <p className={`${clicked === "contactus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("contactus");
+            }}>Contact Us</p>
+        </div>
 
           <button className={styles.Train_signup_btn}>
             {" "}

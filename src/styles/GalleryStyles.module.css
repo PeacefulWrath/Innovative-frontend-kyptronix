@@ -54,8 +54,22 @@
 }
 
 .Gallery_img {
-    width: 350px;
-    height: 352px;
+    width: 300px;
+    height: 300px;
+    will-change: transform;
+    transition: transform .2s ease;
     border-radius: 32px;
+   
 
+}
+.Gallery_li{
+
+   color: #FFF;
+text-align: 'center';
+
+font-family: "Exo 2";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }

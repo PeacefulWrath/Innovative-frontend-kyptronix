@@ -14,10 +14,12 @@ import mission from "../assets/mission.png";
 import shadow from "../assets/shadow.png";
 import gsap from "gsap";
 // import smallArrow from "../assets/small-arrow.png";
+import { useNavigate  } from 'react-router-dom';
+
 
 function OurMission() {
   const [clicked, setClicked] = useState("Home");
-
+  const navigate = useNavigate ();
   const buttonRef = useRef(null);
 
   // const buttonRef4 = useRef(null);
@@ -49,6 +51,7 @@ function OurMission() {
 
   const handleClick = (clickedItem) => {
     setClicked(clickedItem);
+    navigate(`/${clickedItem}`);
   };
 
   return (
@@ -108,55 +111,56 @@ function OurMission() {
       <div className="d-flex">
         <img className="logo" src={logo} alt="logo" />
         <div className="menu-list">
-          <p className={`${clicked === "Home"
+          <p className={`${clicked === "home"
               ? "home-menue-active"
               : "home-menue"
             }`}
             onClick={() => {
-              handleClick("Home");
+              handleClick("home");
+              
             }}>Home</p>
 
-          <p className={`${clicked === "Services"
+          <p className={`${clicked === "services"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Services");
+              handleClick("services");
             }}>Services</p>
-          <p className={`${clicked === "Products"
+          <p className={`${clicked === "products"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Products");
+              handleClick("products");
             }}>Products</p>
-          <p className={`${clicked === "Training"
+          <p className={`${clicked === "training"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Training");
+              handleClick("training");
             }}>Training</p>
-          <p className={`${clicked === "Our Partners"
+          <p className={`${clicked === "partners"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Our Partners");
+              handleClick("partners");
             }}>Our Partners</p>
-          <p className={`${clicked === "Gallery"
+          <p className={`${clicked === "gallery"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Gallery");
+              handleClick("gallery");
             }}>Gallery</p>
-          <p className={`${clicked === "About Us"
+          <p className={`${clicked === "aboutus"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("About Us");
+              handleClick("aboutus");
             }}>About Us</p>
-          <p className={`${clicked === "Contact Us"
+          <p className={`${clicked === "contactus"
               ? "other-menues-active"
               : "other-menues"
             }`} onClick={() => {
-              handleClick("Contact Us");
+              handleClick("contactus");
             }}>Contact Us</p>
         </div>
 

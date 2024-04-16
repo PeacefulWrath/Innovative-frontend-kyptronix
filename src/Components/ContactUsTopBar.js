@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import mail from "../assets/mail.png";
@@ -11,13 +11,19 @@ import divider from "../assets/divider.png";
 import logo from "../assets/logo.png";
 import styles from "../styles/AboutUsStyles.module.css";
 import bg from "../assets/contactus-topbar-bg.png";
-
+import { useNavigate  } from 'react-router-dom';
 function ContactUsTopBar() {
+  const [clicked, setClicked] = useState("Home");
+  const navigate = useNavigate ();
+  const handleClick = (clickedItem) => {
+    setClicked(clickedItem);
+    navigate(`/${clickedItem}`);
+  };
   return (
     <div
       style={{
         width: "100%",
-        height: "50%",
+        height: "100%",
         backgroundImage: `url(${bg})`,
       }}
     >
@@ -95,7 +101,7 @@ function ContactUsTopBar() {
 
       <div className="d-flex">
         <img className={styles.Aboutus_logo} src={logo} alt="logo" />
-        <div className={styles.Aboutus_menu_list}>
+        {/* <div className={styles.Aboutus_menu_list}>
           <p className={styles.Aboutus_home}>Home</p>
           <p className={styles.Aboutus_other_menues}>Services</p>
           <p className={styles.Aboutus_other_menues}>Products</p>
@@ -106,8 +112,60 @@ function ContactUsTopBar() {
           <p className={styles.Aboutus_other_menues}>About Us</p>
 
           <p className={styles.Aboutus_other_menues}>Contact Us</p>
-        </div>
+        </div> */}
+<div className="menu-list">
+          <p className={`${clicked === "home"
+              ? "home-menue-active"
+              : "home-menue"
+            }`}
+            onClick={() => {
+              handleClick("home");
+              
+            }}>Home</p>
 
+          <p className={`${clicked === "services"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("services");
+            }}>Services</p>
+          <p className={`${clicked === "products"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("products");
+            }}>Products</p>
+          <p className={`${clicked === "trainings"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("trainings");
+            }}>Trainings</p>
+          <p className={`${clicked === "partners"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("partners");
+            }}>Our Partners</p>
+          <p className={`${clicked === "gallery"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("gallery");
+            }}>Gallery</p>
+          <p className={`${clicked === "aboutus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("aboutus");
+            }}>About Us</p>
+          <p className={`${clicked === "contactus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("contactus");
+            }}>Contact Us</p>
+        </div>
         <button className={styles.Aboutus_signup_btn}>
           {" "}
           <p className={styles.Aboutus_signup_text}>signup</p>

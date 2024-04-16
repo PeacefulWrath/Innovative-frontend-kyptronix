@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import mail from "../assets/mail.png";
@@ -11,8 +11,15 @@ import divider from "../assets/divider.png";
 import logo from "../assets/logo.png";
 import styles from "../styles/PartnersStyles.module.css";
 import bg from "../assets/partners-top-bar.png";
+import { useNavigate  } from 'react-router-dom';
 
 function PartnersTopBar() {
+  const [clicked, setClicked] = useState("Home");
+  const navigate = useNavigate ();
+  const handleClick = (clickedItem) => {
+    setClicked(clickedItem);
+    navigate(`/${clickedItem}`);
+  };
   return (
     <>
       <nav class={`${styles.Partner_top_bar} navbar navbar-expand-lg`}>
@@ -94,7 +101,7 @@ function PartnersTopBar() {
       >
         <div className="d-flex">
           <img className={styles.Partner_logo} src={logo} alt="logo" />
-          <div className={styles.Partner_menu_list}>
+          {/* <div className={styles.Partner_menu_list}>
             <p className={styles.Partner_home}>Home</p>
             <p className={styles.Partner_other_menues}>Services</p>
             <p className={styles.Partner_other_menues}>Products</p>
@@ -105,8 +112,60 @@ function PartnersTopBar() {
             <p className={styles.Partner_other_menues}>About Us</p>
 
             <p className={styles.Partner_other_menues}>Contact Us</p>
-          </div>
+          </div> */}
+     <div className="menu-list">
+          <p className={`${clicked === "home"
+              ? "home-menue-active"
+              : "home-menue"
+            }`}
+            onClick={() => {
+              handleClick("home");
+              
+            }}>Home</p>
 
+          <p className={`${clicked === "services"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("services");
+            }}>Services</p>
+          <p className={`${clicked === "products"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("products");
+            }}>Products</p>
+          <p className={`${clicked === "trainings"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("trainings");
+            }}>Trainings</p>
+          <p className={`${clicked === "partners"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("partners");
+            }}>Our Partners</p>
+          <p className={`${clicked === "gallery"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("gallery");
+            }}>Gallery</p>
+          <p className={`${clicked === "aboutus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("aboutus");
+            }}>About Us</p>
+          <p className={`${clicked === "contactus"
+              ? "other-menues-active"
+              : "other-menues"
+            }`} onClick={() => {
+              handleClick("contactus");
+            }}>Contact Us</p>
+        </div>
           <button className={styles.Partner_signup_btn}>signup</button>
 
           <button className={styles.Partner_login_btn}>login</button>

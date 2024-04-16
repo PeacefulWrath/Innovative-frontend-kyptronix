@@ -509,7 +509,18 @@
     border-radius: 8px;
     border: 1px solid #B6E0FF;
     box-shadow: 0px 0px 8.2px 0px #62D9FF;
-    align-items: center;
+}
+
+
+
+.cus_height_incr_div_text {
+    color: #FFF;
+    font-family: Hind;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 220px;
 }
 
 .question-img {
@@ -594,11 +605,12 @@
     gap: 50px;
     flex-shrink: 0;
     margin-left: 22%;
+    width: 50%;
 }
 
 .faqs-question {
     display: flex;
-    width: 100%;
+    width: 600px;
     justify-content: space-between;
     align-items: center;
 }
@@ -615,10 +627,19 @@
 .faq-plus {
     margin-left: 10px;
     margin-bottom: 2%;
+    cursor: pointer;
 
 }
 
-
+.faqs_height_incr_div_text{
+    color: #FFF;
+    font-family: Hind;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 500px;
+}
 /* footer */
 .footer-logo-section {
     display: inline-flex;
@@ -627,7 +648,6 @@
     align-items: flex-start;
     gap: 20px;
     flex-shrink: 0;
-    /* margin-left: 10%; */
     width: 30%
 }
 
@@ -772,6 +792,29 @@
     line-height: normal;
 }
 
+
+.tmod_card_title_anime {
+
+    font-family: "Exo 2";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(97deg, #2589D2 6.11%, #2DC2E3 92.54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tmod_card_desc_anime {
+    color: #FFF;
+    font-family: Hind;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .tmod_para {
     color: #FFF;
     text-align: center;
@@ -806,4 +849,45 @@
     display: flex;
     justify-content: center;
 
+}
+
+.tmod_view_btn {
+    display: flex;
+    height: 54px;
+    padding: 9px 7px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    background: linear-gradient(97deg, #2589D2 6.11%, #2DC2E3 92.54%)
+}
+
+.tmod_view_btn_2nd_div {
+    display: flex;
+    height: 54px;
+    padding: 9px 7px;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    align-items: center;
+
+}
+
+.tmod_view_btn_text {
+    color: #FFF;
+    font-family: "Exo 2";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.tmod_view_btn_vector {
+    width: 10px;
+    height: 13px;
+    transform: rotate(1deg);
+    stroke-width: 2.5px;
+    stroke: #FFF;
+    margin-top: 2%;
 }
