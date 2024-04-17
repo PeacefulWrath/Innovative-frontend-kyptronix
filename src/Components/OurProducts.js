@@ -24,7 +24,7 @@ function OurProducts() {
             height: "450px",
             border: "2px solid grey",
           }}
-          className="ps-2 pe-2 pt-2"
+          className="ps-2 pe-2 pt-2 Product__hoverEffect"
         >
           <img width={300} alt="p1" height={300} src={p1} />
           <div
@@ -32,7 +32,7 @@ function OurProducts() {
               display: "inline-flex",
               flexDirection: "column",
               marginTop: "4%",
-              marginLeft: "2%",
+              marginLeft: "2%",              
             }}
           >
             <img alt="rating" className="Prod_rating" src={rating} />
@@ -45,7 +45,7 @@ function OurProducts() {
 
         <div
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
-          className="ps-2 pe-2 pt-2 ms-3"
+          className="ps-2 pe-2 pt-2 ms-3 Product__hoverEffect"
         >
           <img width={300} alt="p2" height={300} src={p2} />
           <div
@@ -64,7 +64,7 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3 ps-2 pe-2 pt-2"
+          className="ms-3 ps-2 pe-2 pt-2 Product__hoverEffect"
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p2" height={300} src={p2} />
@@ -84,7 +84,7 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3 ps-2 pe-2 pt-2"
+          className="ms-3 ps-2 pe-2 pt-2 Product__hoverEffect"
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p3" height={300} src={p3} />
@@ -112,7 +112,7 @@ function OurProducts() {
             height: "450px",
             border: "2px solid grey",
           }}
-          className="ps-2 pe-2 pt-2"
+          className="ps-2 pe-2 pt-2 Product__hoverEffect"
         >
           <img width={300} alt="p1" height={300} src={p1} />
           <div
@@ -133,7 +133,7 @@ function OurProducts() {
 
         <div
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
-          className="ps-2 pe-2 pt-2 ms-3"
+          className="ps-2 pe-2 pt-2 ms-3 Product__hoverEffect"
         >
           <img width={300} alt="p2" height={300} src={p2} />
           <div
@@ -152,7 +152,7 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3 ps-2 pe-2 pt-2"
+          className="ms-3 ps-2 pe-2 pt-2 Product__hoverEffect"
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p2" height={300} src={p2} />
@@ -172,7 +172,7 @@ function OurProducts() {
           </div>
         </div>
         <div
-          className="ms-3 ps-2 pe-2 pt-2"
+          className="ms-3 ps-2 pe-2 pt-2 Product__hoverEffect"
           style={{ width: "320px", height: "450px", border: "2px solid grey" }}
         >
           <img width={300} alt="p3" height={300} src={p3} />

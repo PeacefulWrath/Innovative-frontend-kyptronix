@@ -4,6 +4,10 @@ import by2 from "../assets/by2.png";
 import by3 from "../assets/by3.png";
 import by4 from "../assets/by4.png";
 
+import ProductImg2 from "../assets/productImg2.png";
+import ProductImg3 from "../assets/ProductImg3.png";
+import ProductImg4 from "../assets/ProductImg4.png";
+
 function ProductsByCategory() {
   return (
     <div className="mt-2">
@@ -16,10 +20,91 @@ function ProductsByCategory() {
           marginLeft: "1rem",
         }}
       >
-        <img width={300} alt="by1" height={300} src={by1} />
-        <img width={300} alt="by2" height={300} src={by2} className="ms-5" />
-        <img width={300} alt="by3" height={300} src={by3} className="ms-5" />
-        <img width={300} alt="by4" height={300} src={by4} className="ms-5" />
+        <div
+          style={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "24px",
+          }}
+          className="ProductsByCategory__imgWrapper"
+        >
+          <div className="ProductsByCategory__TextWrapperMain">
+            <div className="ProductsByCategory__TextWrapper">
+              <h2>Text Here...</h2>
+            </div>
+          </div>
+          <div className="ProductsByCategory__topLayer" />
+          <img alt="by1" src={by1} style={{ width: "100%", height: "100%" }} />
+        </div>
+
+        <div
+          style={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "24px",
+          }}
+          className="ProductsByCategory__imgWrapper ms-5"
+        >
+        <div className="ProductsByCategory__TextWrapperMain">
+            <div className="ProductsByCategory__TextWrapper">
+              <h2>Text Here...</h2>
+            </div>
+          </div>
+          <div className="ProductsByCategory__topLayer" />
+
+          <img
+            alt="by2"
+            style={{ height: "100%", width: "100%" }}
+            src={ProductImg2}
+            className=""
+          />
+        </div>
+
+        <div
+          style={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "24px",
+          }}
+          className="ProductsByCategory__imgWrapper ms-5"
+        >
+        <div className="ProductsByCategory__TextWrapperMain">
+            <div className="ProductsByCategory__TextWrapper">
+              <h2>Text Here...</h2>
+            </div>
+          </div>
+          <div className="ProductsByCategory__topLayer" />
+
+          <img
+            style={{ height: "100%", width: "100%" }}
+            alt="by3"
+            src={ProductImg3}
+            className=""
+          />
+        </div>
+
+        <div
+          style={{
+            width: "300px",
+            height: "300px",
+            borderRadius: "24px",
+          }}
+          className="ProductsByCategory__imgWrapper ms-5"
+        >
+        <div className="ProductsByCategory__TextWrapperMain">
+            <div className="ProductsByCategory__TextWrapper">
+              <h2>Text Here...</h2>
+            </div>
+          </div>
+          <div className="ProductsByCategory__topLayer" />
+
+          <img
+            style={{ height: "100%", width: "100%" }}
+            alt="by3"
+            src={ProductImg4}
+            className=""
+          />
+        </div>
       </div>
     </div>
   );
