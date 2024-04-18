@@ -1,8 +1,8 @@
 import React from "react";
 import by1 from "../assets/by1.png";
-import by2 from "../assets/by2.png";
-import by3 from "../assets/by3.png";
-import by4 from "../assets/by4.png";
+// import by2 from "../assets/by2.png";
+// import by3 from "../assets/by3.png";
+// import by4 from "../assets/by4.png";
 
 import ProductImg2 from "../assets/productImg2.png";
 import ProductImg3 from "../assets/ProductImg3.png";
