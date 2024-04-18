@@ -45,6 +45,29 @@
     background: linear-gradient(96.58deg, #2589D2 6.11%, #2DC2E3 92.54%);
     height: 40px;
 
+    position: relative;
+    overflow: hidden;
+    transition:.5s;
+    z-index: 2;
+
+}
+
+.top_bar_get_quota_btn::after{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: #fff;
+    transition: .4s;
+    z-index: -1;
+}
+.top_bar_get_quota_btn:hover::after{
+    bottom:0%;
+}
+.top_bar_get_quota_btn:hover{
+    color: #2A91DD;
 }
 
 .top_bar_icon {
@@ -144,7 +167,39 @@
     background-color: transparent;
     color: white;
     white-space: nowrap;
+
+    /* for hoverEffect */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: .5s;
 }
+/* hover effect for signup start */
+
+.signup-btn::after{
+    position: absolute;
+    content: '';
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#fff;
+    
+    z-index: -1;
+    transition: .4s;
+}
+
+.signup-btn:hover::after{
+    bottom: 0%;
+}
+.signup-btn:hover{
+    color: #2A91DD;
+}
+
+/* hover effect for signup end */
+
+
+
 
 .login-btn {
     display: inline-flex;
@@ -160,8 +215,35 @@
     width: 40px;
     color: #2A91DD;
     white-space: nowrap;
+
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 2;
+}
+/* hover effect for .login-btn start */
+
+.login-btn::after{
+    content: "";
+    position: absolute;
+    bottom:100%;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(96.58deg, #2589D2 6.11%, #2DC2E3 92.54%);
+    
+    z-index: -1;
+    transition: .4s;
 }
 
+.login-btn:hover{
+    color: #fff;
+}
+.login-btn:hover::after{
+    bottom:0%;
+}
+
+/* hover effect for .login-btn end */
 
 
 
