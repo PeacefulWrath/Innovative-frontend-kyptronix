@@ -1,8 +1,10 @@
 import React from "react";
-import ContactUsTopBar from "../Components/ContactUsTopBar";
-import ServiceFooter from "../Components/ServiceFooter";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
-import ContactUsForm from "../Components/ContactUsForm";
+import ContactUsForm from "../Components/ContactUsComponents/ContactUsForm";
+import TopBar from "../Components/TopBar/TopBar";
+import contactusBg from "../assets/contactus-topbar-bg.png";
+
 function ContactUs() {
   return (
     <div
@@ -12,7 +14,8 @@ function ContactUs() {
         overflowX: "hidden",
       }}
     >
-      <ContactUsTopBar />
+  
+       <TopBar  page={"contactus"} bg={contactusBg}/>
       <ContactUsForm />
       <div style={{ marginTop: "9%" }}>
         <ServiceFooter />

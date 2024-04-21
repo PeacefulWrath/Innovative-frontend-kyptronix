@@ -1,5 +1,5 @@
 import React from "react";
-import discover from "../assets/discover.png";
+import discover from "../../assets/discover.png";
 
 function Discover() {
   return (

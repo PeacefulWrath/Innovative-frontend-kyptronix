@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import telescope from "../assets/telescope.png";
-import teleShad from "../assets/tele-shad-1.png";
-import "../styles/HomeStyles.css";
+import telescope from "../../assets/telescope.png";
+import teleShad from "../../assets/tele-shad-1.png";
+import styles from "../../styles/HomeStyles.module.css";
 import gsap from "gsap";
 
 function OurVision() {
@@ -32,17 +32,19 @@ function OurVision() {
     timeline.current.reverse();
     timeline2.current.reverse();
   };
+
+
   return (
     <>
-      <div className="our-vision-btn">
-        <p className="our-vision-text">Our Vision</p>
+      <div className={styles.Home_our_vision_btn}>
+        <p className={styles.Home_our_vision_text}>Our Vision</p>
       </div>
 
-      <div className="our-vision-div">
-        <div className="our-vision-heading mt-3">
+      <div className={styles.Home_our_vision_div}>
+        <div className={`${styles.Home_our_vision_heading} mt-3`}>
           Pioneering Seamless Learning Excellence
         </div>
-        <div className="our-vision-main">
+        <div className={styles.Home_our_vision_main}>
           At INNOVATIVE Quality Tech Limited, we envision a future where
           education seamlessly integrates with technology, fostering inclusivity
           and empowering individuals worldwide to unlock their full potential.
@@ -51,24 +53,24 @@ function OurVision() {
           brighter tomorrow.
         </div>
         <div
-          className="our-vision-learn-more-btn"
+          className={styles.Home_our_vision_learn_more_btn}
           ref={buttonRef2}
           onMouseEnter={handleSecondLMMouseEnter}
           onMouseLeave={handleSecondLMMouseLeave}
         >
-          <p className="our-vision-learn-more-text">learn more</p>
+          <p className={styles.Home_our_vision_learn_more_text}>learn more</p>
         </div>
       </div>
 
       <div style={{ marginTop: "544px" }}>
-        <div className="our-vision-img">
-          <div className="our-vision-main-image-bg"> </div>
-          <img className="our-vision-main-image" src={telescope} alt="tele" />
+        <div className={styles.Home_our_vision_img}>
+          <div className={styles.Home_our_vision_main_image_bg}> </div>
+          <img className={styles.Home_our_vision_main_image} src={telescope} alt="tele" />
         </div>
 
-        <img className="our-vision-tele-shad-1" src={teleShad} alt="shad1" />
-        <img className="our-vision-tele-shad-2" src={teleShad} alt="shad2" />
-        <img className="our-vision-tele-shad-3" src={teleShad} alt="shad3" />
+        <img className={styles.Home_our_vision_tele_shad_1} src={teleShad} alt="shad1" />
+        <img className={styles.Home_our_vision_tele_shad_2} src={teleShad} alt="shad2" />
+        <img className={styles.Home_our_vision_tele_shad_3} src={teleShad} alt="shad3" />
       </div>
     </>
   );

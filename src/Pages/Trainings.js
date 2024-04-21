@@ -1,8 +1,9 @@
 import React from "react";
-import TrainingsTopBar from "../Components/TrainingsTopBar";
-import TrainingsProgram from "../Components/TrainingsProgram";
-import ServiceFooter from "../Components/ServiceFooter";
+import TopBar from "../Components/TopBar/TopBar";
+import TrainingsProgram from "../Components/TrainingsComponents/TrainingsProgram";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
+import trainingsBg from "../assets/trainings-top-bar.png";
 
 function Trainings() {
   return (
@@ -13,7 +14,7 @@ function Trainings() {
         overflowX: "hidden",
       }}
     >
-      <TrainingsTopBar />
+     <TopBar  page={"trainings"} bg={trainingsBg}/>
       <TrainingsProgram />
       <ServiceFooter />
       <div className="d-flex justify-content-center mt-5">

@@ -1,9 +1,10 @@
 import React from "react";
-import AboutUsTopBar from "../Components/AboutUsTopBar";
-import AboutUsPrepare from "../Components/AboutUsPrepare";
+import AboutUsPrepare from "../Components/AboutUsComponents/AboutUsPrepare";
 import stats from "../assets/stats.png";
-import ServiceFooter from "../Components/ServiceFooter";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
+import aboutusBg from "../assets/aboutus-topbar-bg.png";
+import TopBar from "../Components/TopBar/TopBar";
 
 function AboutUs() {
   return (
@@ -14,7 +15,7 @@ function AboutUs() {
         overflowX: "hidden",
       }}
     >
-      <AboutUsTopBar />
+       <TopBar  page={"aboutus"} bg={aboutusBg}/>
       <AboutUsPrepare />
       <div className="d-flex justify-content-center mt-5">
         <img

@@ -3,144 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
 
 
+
 /* top bar */
 
-.ser_top_bar {
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%) !important;
-    /* width: 100%; */
-}
-
-.ser_top_bar_email_text {
-    color: rgba(255, 255, 255, 1);
-}
-
-.ser_top_bar_divider {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
-
-}
-
-.ser_top_bar_phn_no {
-    color: rgba(255, 255, 255, 1)
-}
-
-.ser_top_bar_fb_icon {
-
-    width: 32px !important;
-    height: 32px !important;
-    opacity: 1 !important;
-
-
-}
-
-.ser_top_bar_linkedin_icon {
-    border: round
-}
-
-.ser_top_bar_get_quota_btn {
-    color: white;
-    border-radius: 43px;
-    width: 130px;
-    border: none;
-    background: linear-gradient(96.58deg, #2589D2 6.11%, #2DC2E3 92.54%);
-    height: 40px;
-
-}
-
-.ser_top_bar_icon {
-    width: 17.99px !important;
-    height: 19.55px !important;
-
-}
-
-.ser_top_bar_text {
+.Services_top_bar_text{
     color: #FFF;
     font-family: "Exo 2";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
-.ser_menu {
-    margin-top: 0;
+.Services_top_bar{
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    
 }
 
-.ser_logo {
-    /* height: 250px;
-    width:270px */
-    width: 20%
-}
 
-.ser_menu-list {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 32px;
-}
+/* our services */
 
-.ser_home {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-left: 6%;
-    margin-top: 9%;
-}
-
-.ser_other-menues {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    opacity: 0.5;
-    margin-left: 1%;
-    margin-top: 9%;
-    white-space: nowrap;
-}
-
-.ser_signup-btn {
-    display: inline-flex;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 36px;
-    border: 2px solid #FFF;
-    margin-left: 10%;
-    height: 10px;
-    margin-top: 4%;
-    width: 40px;
-    background-color: transparent;
-    color :white
-}
-
-.ser_login-btn {
-    display: inline-flex;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 36px;
-    border: 2px solid #FFF;
-    margin-left: 2%;
-    height: 10px;
-    margin-top: 4%;
-    width: 40px;
-    color:#2A91DD;
-}
-
-.ser_os-main {
-    /* border: 2px solid red; */
+.Services_our_services_main {
     position: relative;
     z-index: 45;
-    margin-top: -13%;
+    margin-top: -22%;
 }
 
-.ser_os-main-2 {
+.Services_our_services_main_2 {
     width: 80%;
     height: 15rem;
     flex-shrink: 0;
@@ -149,7 +39,7 @@
     display: flex;
 }
 
-.ser_os-leftpart {
+.Services_our_services_left_part {
     display: inline-flex;
     flex-direction: column;
     padding: 5% 5%;
@@ -158,7 +48,7 @@
     gap: 10px;
 }
 
-.ser_os-btn {
+.Services_our_services_btn {
 
     text-align: center;
     width: 50%;
@@ -166,7 +56,7 @@
     background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
 }
 
-.ser_os-btn-text {
+.Services_our_services_btn_text {
     color: #202020;
     font-family: "Exo 2";
     font-size: 15px;
@@ -176,11 +66,11 @@
     padding: 5px 9px;
 }
 
-.ser_os-para-main {
+.Services_our_services_para_main {
     width: 90%
 }
 
-.ser_os-para {
+.Services_our_services_para_text {
     color: #FFF;
 
     font-family: "Exo 2";
@@ -190,13 +80,13 @@
     line-height: normal;
 }
 
-.ser_os-right-part {
+.Services_our_services_right_part {
 
 
     margin-right: 5%;
 }
 
-.ser_os-right-main-part {
+.Services_our_services_right_part_text {
     color: #FFF;
     margin-top: 14%;
     font-family: Hind;
@@ -206,18 +96,21 @@
     line-height: normal;
 }
 
-.ser_left-part {
+
+/* newsletter */
+
+.Services_new_sletter_left_part {
     width: 50%;
 
 }
 
-.ser_right-part {
+.Services_new_sletter_right_part {
     width: 50%;
     margin-top: 15%;
     
 }
 
-.ser_ns-btn {
+.Services_new_sletter_btn {
     display: inline-flex;
     padding: 10px 16px;
     justify-content: center;
@@ -227,7 +120,7 @@
     background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
 }
 
-.ser_ns-btn-text {
+.Services_new_sletter_btn_text {
     color: #202020;
 
     font-family: "Exo 2";
@@ -237,7 +130,7 @@
     line-height: normal;
 }
 
-.ser_subscribe-text {
+.Services_new_sletter_subscribe_text {
     color: #FFF;
     font-family: "Exo 2";
     font-size: 48px;
@@ -246,7 +139,7 @@
     line-height: normal;
 }
 
-.ser_ns_desc {
+.Services_new_sletter_desc {
     color: #FFF;
     font-family: Hind;
     font-size: 20px;
@@ -255,25 +148,28 @@
     line-height: normal;
 }
 
-.ser_ns_desc_main {
+.Services_new_sletter_desc_main {
     width: 90%
 }
 
-.ser_mail {
+.Services_new_sletter_mail {
     width: 70%;
     margin-top: 10%;
 }
-.ser_footer-main{
+
+
+/* footer */
+.Services_footer_main{
     display: inline-flex;
     flex-direction: column;
     width: 100%;
 }
-.ser_footer-menues{
+.Services_footer_menues{
     display: inline-flex;
 align-items: flex-start;
 gap: 32px;
 }
-.ser_footer-menu-active{
+.Services_footer_menu_active{
     color: #FFF;
 font-family: "Exo 2";
 font-size: 20px;
@@ -281,7 +177,7 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
-.ser_footer-menu{
+.Services_footer_menu{
     color: #FFF;
 font-family: "Exo 2";
 font-size: 20px;

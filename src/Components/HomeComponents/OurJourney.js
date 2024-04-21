@@ -1,11 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-// import testi1 from "../assets/testi1.png";
-// import testi2 from "../assets/testi2.png";
-// import testi3 from "../assets/testi3.png";
-import "../styles/HomeStyles.css";
-import journey from "../assets/journey.png";
+import styles from "../../styles/HomeStyles.module.css";
+import journey from "../../assets/journey.png";
 
 function OurJourney() {
   const buttonStyle = {
@@ -31,7 +28,7 @@ function OurJourney() {
         </button>
       </div>
       <div className=" d-flex justify-content-center align-items-center mt-3 ">
-        <div className="testi-para w-50 ">
+        <div className={`${styles.Home_testimonials_title_para  } w-50 `}>
           Embark on a Seamless Learning Journey with INNOVATIVE Quality Tech
         </div>
       </div>

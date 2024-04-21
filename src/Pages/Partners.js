@@ -1,8 +1,9 @@
 import React from "react";
-import PartnersTopBar from "../Components/PartnersTopBar";
-import OurPartners from "../Components/OurPartners";
-import ServiceFooter from "../Components/ServiceFooter";
+import OurPartners from "../Components/OurPartnersComponents/OurPartners";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
+import partnerssBg from "../assets/partners-top-bar.png";
+import TopBar from "../Components/TopBar/TopBar";
 
 function Partners() {
   return (
@@ -13,7 +14,7 @@ function Partners() {
         overflowX: "hidden",
       }}
     >
-      <PartnersTopBar />
+       <TopBar  page={"partners"} bg={partnerssBg}/>
       <OurPartners />
       <div className="mt-5">
         <ServiceFooter />

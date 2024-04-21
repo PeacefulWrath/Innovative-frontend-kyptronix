@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/ProductsStyles.css";
-import ProductsTopBar from "../Components/ProductsTopBar";
-import ProductsByCategory from "../Components/ProductsByCategory";
-import ServiceFooter from "../Components/ServiceFooter";
-import OurProducts from "../Components/OurProducts";
-import Discover from "../Components/Discover";
+import ProductsByCategory from "../Components/ProductsComponents/ProductsByCategory";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
+import OurProducts from "../Components/ProductsComponents/OurProducts";
+import Discover from "../Components/ProductsComponents/Discover";
+import TopBar from "../Components/TopBar/TopBar";
+import productsBg from "../assets/products-top-bar.png";
 
 function Products() {
   return (
@@ -15,12 +15,12 @@ function Products() {
         overflowX: "hidden",
       }}
     >
-      <ProductsTopBar />
-      <ProductsByCategory />
-      <div style={{ marginTop: "5%" }}>
+     <TopBar  page={"products"} bg={productsBg}/>
+     <ProductsByCategory />
+     <div style={{ marginTop: "5%" }}>
         <OurProducts />
-      </div>
-      <div style={{ marginTop: "5%" }}>
+     </div>
+          <div style={{ marginTop: "5%" }}>
         <Discover />
       </div>
       <div style={{ marginTop: "5%" }}>

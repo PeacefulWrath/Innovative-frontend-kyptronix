@@ -1,10 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import GalleryTopBar from "../Components/GalleryTopBar";
-import ServiceFooter from "../Components/ServiceFooter";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
-import GalleryMain from "../Components/GalleryMain";
+import GalleryMain from "../Components/GalleryComponents/GalleryMain";
+import galleryBg from "../assets/gallery-topbar-bg.png";
+import TopBar from "../Components/TopBar/TopBar";
 
 function Gallery() {
   return (
@@ -15,7 +16,7 @@ function Gallery() {
         overflowX: "hidden",
       }}
     >
-      <GalleryTopBar />
+       <TopBar  page={"gallery"} bg={galleryBg}/>
       <GalleryMain />
       <div style={{ marginTop: "10%" }}>
         <ServiceFooter />

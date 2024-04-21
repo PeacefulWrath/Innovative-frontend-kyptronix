@@ -1,22 +1,23 @@
 import React from "react";
-import "../styles/ServicesStyles.css";
+import styles from "../../styles/ServicesStyles.module.css";
 
 function OurServices() {
   return (
-    <div className="ser_os-main d-flex justify-content-center">
-      <div className="ser_os-main-2">
-        <div className="ser_os-leftpart">
-          <div className="ser_os-btn">
-            <div className="ser_os-btn-text">Our Services</div>
+    <>
+    <div className={`${styles.Services_our_services_main} d-flex justify-content-center`}>
+      <div className={styles.Services_our_services_main_2}>
+        <div className={styles.Services_our_services_left_part}>
+          <div className={styles.Services_our_services_btn }>
+            <div className={styles.Services_our_services_btn_text}>Our Services</div>
           </div>
-          <div className="ser_os-para-main">
-            <div className="ser_os-para">
+          <div className={styles.Services_our_services_para_main }>
+            <div className={styles.Services_our_services_para_text}>
               Explore Our Comprehensive Services
             </div>
           </div>
         </div>
-        <div className="ser_os-right-part">
-          <div className="ser_os-right-main-part">
+        <div className={styles.Services_our_services_right_part }>
+          <div className={styles.Services_our_services_right_part_text}>
             Discover the full spectrum of our offerings designed to meet your
             needs effectively. From expert consultation to seamless
             implementation, our services are tailored to ensure your success.
@@ -28,6 +29,7 @@ function OurServices() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

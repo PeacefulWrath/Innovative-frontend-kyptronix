@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import styles from "../styles/GalleryStyles.module.css";
-import gallery1 from "../assets/gallery-1.png";
-import gallery2 from "../assets/gallery-2.png";
-import gallery3 from "../assets/gallery-3.png";
-import gallery4 from "../assets/gallery-4.png";
+import styles from "../../styles/GalleryStyles.module.css";
+import gallery1 from "../../assets/gallery-1.png";
+import gallery2 from "../../assets/gallery-2.png";
+import gallery3 from "../../assets/gallery-3.png";
+import gallery4 from "../../assets/gallery-4.png";
 import gsap from "gsap";
 
 function GalleryMain() {

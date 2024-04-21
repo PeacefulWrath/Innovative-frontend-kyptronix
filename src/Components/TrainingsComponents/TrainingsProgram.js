@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/training-module.png";
+import image from "../../assets/training-module.png";
 
 function TrainingsProgram() {
   return (

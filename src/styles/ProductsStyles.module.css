@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
+
+
+/*products by category */
+.Products_ProductsByCategory_btn {
+  display: inline-flex;
+  padding-top: 12px;
+  padding-bottom: 1px;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 33px;
+  background: var(
+    --blue-green-gradient,
+    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+  );
+  height: 40px;
+  margin-top: 167.54px;
+  margin-left: 11%;
+}
+
+.Products_ProductsByCategory_text {
+  color: #202020;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Products_ProductsByCategory__imgWrapper {
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.Products_ProductsByCategory__TextWrapperMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.Products_ProductsByCategory__TextWrapper {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Products_ProductsByCategory__TextWrapper h2 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.Products_ProductsByCategory__topLayer {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 100%;
+  border-radius: 24px;
+  transition: 0.5s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.Products_ProductsByCategory__imgWrapper:hover {
+  transform: scale(1.1);
+}
+
+.Products_ProductsByCategory__imgWrapper:hover .Products_ProductsByCategory__topLayer {
+  z-index: -1;
+}
+
+
+/* our products */
+
+.Products_our_products_btn {
+  width: 10%;
+  border-radius: 33px;
+  background: var(
+    --blue-green-gradient,
+    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+  );
+}
+
+.Products_our_products_btn_text {
+  color: #202020;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px 5px;
+}
+
+.Products_our_products_price {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Products_our_products_base_price {
+  color: #b7b7b7;
+  font-family: "Exo 2";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: line-through;
+}
+
+.Products_our_products_name {
+  color: #fff;
+  font-family: Hind;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 6%;
+}
+
+.Products_our_products_rating {
+  width: 128px;
+  height: 24.744px;
+  flex-shrink: 0;
+}
+
+.Products_our_products_Product__hoverEffect{
+    transition: .5s ease-in-out;
+}
+
+.Products_our_products_Product__hoverEffect:hover {
+  border-radius: 32px;
+  border: 1px solid  rgba(255, 255, 255, 0.6);
+  background: 
+    linear-gradient(
+      158deg,
+      rgba(255, 255, 255, 0.3) 2.79%,
+      rgba(190, 190, 190, 0.3) 40.05%,
+      rgba(255, 255, 255, 0.3) 99.21%
+    )
+  ;
+}

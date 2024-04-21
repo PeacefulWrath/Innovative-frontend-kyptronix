@@ -1,11 +1,32 @@
 import React from "react";
-import ServicesTopBar from "../Components/ServicesTopBar";
-import OurServices from "../Components/OurServices";
-import TrainingModules from "../Components/TrainingModules";
-import NewSletter from "../Components/NewSletter";
-import ServiceFooter from "../Components/ServiceFooter";
+import OurServices from "../Components/ServicesComponents/OurServices";
+import TrainingModules from "../Components/HomeComponents/TrainingModules";
+import NewSletter from "../Components/ServicesComponents/NewSletter";
+import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
+import TopBar from "../Components/TopBar/TopBar";
+import servicesBg from "../assets/services-top-bar.png";
+import iso from "../assets/iso.png";
 
 function Services() {
+  
+  const traininingModulesItems = [
+    {
+      image: iso,
+      title: "hi",
+      description: "redddy",
+      hoverTitle: "hello",
+      hoverDesc: "go redddy",
+    },
+
+    {
+      image: iso,
+      title: "hi",
+      description: "redddy",
+      hoverTitle: "hello",
+      hoverDesc: "go redddy",
+    },
+  ];
+
   return (
     <div
       style={{
@@ -14,17 +35,19 @@ function Services() {
         overflowX: "hidden",
       }}
     >
-      <ServicesTopBar />
+      <TopBar  page={"services"} bg={servicesBg}/>
+      <div style={{ marginTop: "15%" }}>
       <OurServices />
-      <div style={{ marginTop: "10%" }}>
-        <TrainingModules />
       </div>
-      <div style={{ marginTop: "3%" }}>
+       <div style={{ marginTop: "10%" }}>
+        <TrainingModules  items={traininingModulesItems} />
+      </div>
+     <div style={{ marginTop: "3%" }}>
         <NewSletter />
       </div>
       <div style={{ marginTop: "3%" }}>
         <ServiceFooter />
-      </div>
+      </div> 
     </div>
   );
 }

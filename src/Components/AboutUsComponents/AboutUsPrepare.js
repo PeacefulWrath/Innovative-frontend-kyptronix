@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import aboutUsGroup from "../assets/aboutUsGroup.png";
-import about from "../assets/about.png";
-import text from "../assets/text.png";
+import aboutUsGroup from "../../assets/aboutUsGroup.png";
+import about from "../../assets/about.png";
+import text from "../../assets/text.png";
 import gsap from "gsap";
-import styles from "../styles/AboutUsStyles.module.css";
+import styles from "../../styles/AboutUsStyles.module.css";
 
 function AboutUsPrepare() {
   const buttonRef = useRef(null);

@@ -1,9 +1,9 @@
 import React from "react";
-import right from "../assets/contactus-right.png";
-import divider from "../assets/contactus-divider.png";
-import contactus from "../assets/contactus-btn.png";
-import styles from "../styles/ContactUsStyles.module.css";
-import dropdown from "../assets/dropdown.png";
+import right from "../../assets/contactus-right.png";
+import divider from "../../assets/contactus-divider.png";
+import contactus from "../../assets/contactus-btn.png";
+import styles from "../../styles/ContactUsStyles.module.css";
+import dropdown from "../../assets/dropdown.png";
 
 function ContactUsForm() {
   return (
