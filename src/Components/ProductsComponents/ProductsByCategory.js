@@ -7,7 +7,7 @@ import styles from "../../styles/ProductsStyles.module.css";
 
 function ProductsByCategory() {
   return (
-    <div className="mt-2">
+    <div className="mt-0">
       <div className={styles.Products_ProductsByCategory_btn}>
         <p className={styles.Products_ProductsByCategory_text }>By Catagory</p>
       </div>

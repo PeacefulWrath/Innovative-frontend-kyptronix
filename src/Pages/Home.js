@@ -18,6 +18,8 @@ function Home() {
 
   const[faqs,setFaqs]=useState([])
 
+ 
+
   const traininingModulesItems = [
     {
       image: iso,
@@ -97,7 +99,7 @@ function Home() {
       <div style={{ marginTop: "10%" }}>
         <OurMission />
       </div>
-      <div style={{ marginTop: "10%" }}>
+      <div>
         <OurVision />
       </div>
       <div style={{ marginTop: "10%" }}>

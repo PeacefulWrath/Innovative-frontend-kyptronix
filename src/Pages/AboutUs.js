@@ -15,8 +15,22 @@ function AboutUs() {
         overflowX: "hidden",
       }}
     >
-       <TopBar  page={"aboutus"} bg={aboutusBg}/>
+      <TopBar page={"aboutus"} bg={aboutusBg} />
       <AboutUsPrepare />
+
+      <div
+        style={{
+          width: "85%",
+          margin: "50px auto",
+        }}
+      >
+        <h1 style={{ color: "white", textAlign: "center", fontSize: "45px" }}>
+          {" "}
+          &ldquo; Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
+          sit amet, consectetur &rdquo;
+        </h1>
+      </div>
+
       <div className="d-flex justify-content-center mt-5">
         <img
           src={stats}

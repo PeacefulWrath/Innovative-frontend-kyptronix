@@ -42,10 +42,10 @@ function Services() {
        <div style={{ marginTop: "10%" }}>
         <TrainingModules  items={traininingModulesItems} />
       </div>
-     <div style={{ marginTop: "3%" }}>
+     <div>
         <NewSletter />
       </div>
-      <div style={{ marginTop: "3%" }}>
+      <div>
         <ServiceFooter />
       </div> 
     </div>
