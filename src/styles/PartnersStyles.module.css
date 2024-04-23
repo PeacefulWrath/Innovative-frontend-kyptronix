@@ -1,197 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
 /* top bar */
 
 .Partner_top_bar {
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%) !important;
-    /* width: 100%; */
+  background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+  /* width: 100%; */
 }
 
 .Partner_top_bar_email_text {
-    color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .Partner_top_bar_divider {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
-
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .Partner_top_bar_phn_no {
-    color: rgba(255, 255, 255, 1)
+  color: rgba(255, 255, 255, 1);
 }
 
 .Partner_top_bar_fb_icon {
-
-    width: 32px !important;
-    height: 32px !important;
-    opacity: 1 !important;
-
-
+  width: 32px !important;
+  height: 32px !important;
+  opacity: 1 !important;
 }
 
 .Partner_top_bar_linkedin_icon {
-    border: round
+  border: round;
 }
 
 .Partner_top_bar_get_quota_btn {
-    color: white;
-    border-radius: 43px;
-    width: 130px;
-    border: none;
-    background: linear-gradient(96.58deg, #2589D2 6.11%, #2DC2E3 92.54%);
-    height: 40px;
-
+  color: white;
+  border-radius: 43px;
+  width: 130px;
+  border: none;
+  background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
+  height: 40px;
 }
 
 .Partner_top_bar_icon {
-    width: 17.99px !important;
-    height: 19.55px !important;
-
+  width: 17.99px !important;
+  height: 19.55px !important;
 }
 
 .Partner_top_bar_text {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 15%;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 15%;
 }
 
 .Partner_menu {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .Partner_logo {
-
-    width: 20%;
-    /* margin-top: 3.5sem; */
-
+  width: 20%;
+  /* margin-top: 3.5sem; */
 }
 
 .Partner_menu_list {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 10px;
-    /* margin-top: 4%; */
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  /* margin-top: 4%; */
 }
 
-
 .Partner_home {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-left: 6%;
-    margin-top: 9%;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 6%;
+  margin-top: 9%;
 }
 
 .Partner_other_menues {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    opacity: 0.5;
-    margin-left: 1%;
-    margin-top: 9%;
-    white-space: nowrap;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+  margin-left: 1%;
+  margin-top: 9%;
+  white-space: nowrap;
 }
 
 .Partner_signup_btn {
-    display: inline-flex;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 36px;
-    border: 2px solid #FFF;
-    margin-left: 10%;
-    height: 10px;
-    margin-top: 3.5%;
-    width: 40px;
-    background-color: transparent;
-    color :white
+  display: inline-flex;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 36px;
+  border: 2px solid #fff;
+  margin-left: 10%;
+  height: 10px;
+  margin-top: 3.5%;
+  width: 40px;
+  background-color: transparent;
+  color: white;
 }
 
 .Partner_login_btn {
-    display: inline-flex;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 36px;
-    border: 2px solid #FFF;
-    margin-left: 2%;
-    height: 10px;
-    margin-top: 3.5%;
-    width: 40px;
-    color:#2A91DD;
+  display: inline-flex;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 36px;
+  border: 2px solid #fff;
+  margin-left: 2%;
+  height: 10px;
+  margin-top: 3.5%;
+  width: 40px;
+  color: #2a91dd;
 }
 
 .Partner_op_div {
-    display: inline-flex;
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 33px;
+  background: var(
+    --blue-green-gradient,
+    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+  );
 }
 
 .Partner_op_text {
-    color: #202020;
-    text-align: center;
-    font-family: "Exo 2";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #202020;
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .Partner_card_main {
-    display: inline-flex;
-    flex-direction: column;
-    width: 25rem;
-    height: 30rem;
-    border-radius: 16px;
-    border: 1.5px solid #FFF;
-
+  display: inline-flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 30rem;
+  border-radius: 16px;
+  border: 1.5px solid #fff;
 }
 
 .Partner_card_logo {
-    width: 25%;
+  width: 25%;
 }
 
 .Partner_card_title {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .Partner_card_desc {
-    color: #FFF;
-    width: 100%;
-    font-family: Hind;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #fff;
+  width: 100%;
+  font-family: Hind;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.Partner_card_main:hover{
-    background-color: #2DC2E3;
+.Partner_card_main:hover {
+  background-color: #2dc2e3;
 }
-.Partner_card_main > .Partner_card_title{
-    color: red;
+.Partner_card_main > .Partner_card_title {
+  color: red;
 }
+
+.Partner_op_marqueeWrapper {
+  background-color: #000000;
+  margin: 30px 0;
+  height: 30%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.Partner_op_marqueeLogoWrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+ flex: 1;
+
+  animation: scroll 8.8s linear infinite;
+  animation-delay: 1s;
+}
+
+
+.Partner_op_marqueeLogoWrapper:hover .Partner_op_marqueeLogoWrapper img{
+    opacity: 1;
+}
+
+
+
+@keyframes scroll {
+    0%{
+      transform: translateX(-120px);
+    }
+    100% {
+      transform: translateX(calc(100% - 1px));
+    }
+   
+    
+  }

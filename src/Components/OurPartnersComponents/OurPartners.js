@@ -9,12 +9,12 @@ function OurPartners() {
   return (
     <>
       <div className="d-flex justify-content-center">
-        <div className={`${styles.Partner_op_div}`} style={{marginTop:"5%"}}>
+        <div className={`${styles.Partner_op_div}`} style={{ marginTop: "2%" }}>
           <div className={styles.Partner_op_text}>Our Partners</div>
         </div>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      {/* <div className="d-flex justify-content-center mt-5">
         <div className={styles.Partner_card_main}>
           <div className="p-2">
             <img
@@ -140,6 +140,33 @@ function OurPartners() {
               facilisis augue pretium semper ac eget justo.
             </div>
           </div>
+        </div>
+      </div> */}
+
+      <div className={styles.Partner_op_marqueeWrapper}>
+        {/* <h1 style={{ color: "whitesmoke" }}>Hello world</h1> */}
+        <div className={styles.Partner_op_marqueeLogoWrapper}>
+          <img src={partner1} alt="partners-logo" />
+          <img src={partner2} alt="partners-logo" />
+          <img src={partner3} alt="partners-logo" />
+          <img src={partner4} alt="partners-logo" />
+          <img src={partner1} alt="partners-logo" />
+          <img src={partner2} alt="partners-logo" />
+          <img src={partner3} alt="partners-logo" />
+          <img src={partner4} alt="partners-logo" />
+
+        </div>
+
+        <div className={styles.Partner_op_marqueeLogoWrapper}>
+          <img src={partner1} alt="partners-logo" />
+          <img src={partner2} alt="partners-logo" />
+          <img src={partner3} alt="partners-logo" />
+          <img src={partner4} alt="partners-logo" />
+          <img src={partner1} alt="partners-logo" />
+          <img src={partner2} alt="partners-logo" />
+          <img src={partner3} alt="partners-logo" />
+          <img src={partner4} alt="partners-logo" />
+          
         </div>
       </div>
     </>
