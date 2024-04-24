@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
-.Register__main__div {
+.Login__main__div {
   background-color: #202020;
   color: #fff;
   font-family: "Exo 2";
@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.Register__rgt__Wrapper {
+.Login__rgt__Wrapper {
   width: 50%;
   height: 100%;
 
@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
 }
-.Register__rgt__LogoAndTitle__Wrapper {
+.Login__rgt__LogoAndTitle__Wrapper {
   width: 60%;
   height: 50%;
   display: flex;
@@ -32,7 +32,7 @@
   align-items: start;
 }
 
-.Register__rgt__LogoAndTitle__Wrapper h1 {
+.Login__rgt__LogoAndTitle__Wrapper h1 {
   color: #fff;
   font-family: "Exo 2";
   font-size: 44px;
@@ -41,7 +41,7 @@
   line-height: normal;
 }
 
-.Register__lft__Wrapper {
+.Login__lft__Wrapper {
   width: 50%;
   height: 100%;
   display: flex;
@@ -50,11 +50,11 @@
   padding: 0 30px;
 }
 
-.Register__lft__content__wrapper {
+.Login__lft__content__wrapper {
   width: 90%;
-  height: 70%;
+  height: 60%;
 }
-.Register__lft__contentTitle {
+.Login__lft__contentTitle {
   color: #fff;
   font-family: "Exo 2";
   font-size: 28px;
@@ -62,7 +62,7 @@
   font-weight: 700;
   line-height: normal;
 }
-.Register__lft__cotentPara {
+.Login__lft__cotentPara {
   color: #fff;
   font-family: "Hind";
   font-size: 17px;
@@ -72,32 +72,31 @@
   margin-top: 18px;
 }
 
-.Register__lft__inputs__Wrapper {
+.Login__lft__inputs__Wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
 }
 
-.Register__lft__input_wrapper {
+.Login__lft__input_wrapper {
   width: 48%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-
 .Login__lft__EyeIcon{
-  position: absolute;
-  right: 5%;
-  bottom: -30%;
-  cursor: pointer;
+    position: absolute;
+    right: 5%;
+    bottom: -30%;
+    cursor: pointer;
 }
 .Login__lft__EyeIcon img{
-  width: 18px;
+    width: 18px;
 }
 
-.Register__lft__input_wrapper input {
+.Login__lft__input_wrapper input {
   width: 100%;
   color: #ccc;
   font-family: "Montserrat";
@@ -113,18 +112,18 @@
   outline: none;
 }
 
-.Register__lft__selection__Wrapper {
+.Login__lft__selection__Wrapper {
   width: 100%;
 
   margin-top: 20px;
 }
-.Register__lft__select__Wrapper {
+.Login__lft__select__Wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Register__lft__select__Wrapper select {
+.Login__lft__select__Wrapper select {
   width: 100%;
   color: #ccc;
   font-family: "Montserrat";
@@ -140,7 +139,7 @@
   outline: none;
 }
 
-.Register__lft__SignIn__BTN {
+.Login__lft__SignIn__BTN {
   color: #fff;
   font-family: "Exo 2";
   font-size: 18px;
@@ -153,7 +152,7 @@
   padding: 10px 25px;
 }
 
-.Register__lft__LoginPara {
+.Login__lft__LoginPara {
   color: #fff;
   font-family: "Hind";
   font-size: 17px;
@@ -162,7 +161,7 @@
   line-height: normal;
   margin: 15px 0;
 }
-.Register__lft__Link {
+.Login__lft__Link {
   color: #008ed7;
   font-family: "Hind";
   font-size: 17px;
@@ -173,7 +172,7 @@
   text-decoration: none;
 }
 
-.Register__lft__SocialloginOp__wrapper {
+.Login__lft__SocialloginOp__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,13 +181,13 @@
   margin-top: 30px;
   gap: 40px;
 }
-.Register__lft__SoptionPara__wrapper {
+.Login__lft__SoptionPara__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
  
 }
-.Register__lft__SoptionPara {
+.Login__lft__SoptionPara {
   color: #fff;
   font-family: "Hind";
   font-size: 18px;
@@ -197,13 +196,13 @@
   line-height: normal;
   margin: 0 0 !important;
 }
-.Register__lft__optionIcon__wrapper {
+.Login__lft__optionIcon__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.Register__lft__IconWrapper{
+.Login__lft__IconWrapper{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -214,10 +213,10 @@
     cursor: pointer;
     transition: .3s ease-in-out;
 }
-.Register__lft__IconWrapper img{
+.Login__lft__IconWrapper img{
     width: 60%;
 }
-.Register__lft__IconWrapper:hover{
+.Login__lft__IconWrapper:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 8.5px 0px rgba(0, 0, 0, 0.25);
 }
