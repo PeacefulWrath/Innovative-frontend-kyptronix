@@ -8,6 +8,8 @@ import Partners from "./Pages/Partners";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
 import Gallery from "./Pages/Gallery";
+import { Register } from "./Pages/Register";
+import { Login } from "./Pages/Login";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path="/aboutus" element={<AboutUs />} />
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/login" element={<Login />} />
         </Routes>
       </Router>
     </>
