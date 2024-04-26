@@ -214,9 +214,9 @@ function TopBar({ page, bg }) {
             </p>
           </div>
 
-          <button className={styles.Home_signup_btn}>Sign up</button>
+          <button onClick={()=> navigate('/register')} className={styles.Home_signup_btn}>Sign up</button>
 
-          <button className={styles.Home_login_btn}>Login</button>
+          <button onClick={()=> navigate('/login')} className={styles.Home_login_btn}>Login</button>
         </div>
 
         {page === "services" && (
