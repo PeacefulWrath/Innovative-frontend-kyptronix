@@ -221,3 +221,9 @@
     transform: scale(1.1);
     box-shadow: 5px 5px 8.5px 0px rgba(0, 0, 0, 0.25);
 }
+
+.Register__password_is_not_matched{
+  white-space: nowrap;
+  font-size: 1rem;
+color: #ff0000;
+}

@@ -8,26 +8,46 @@ import GoogleIcon from "../assets/googleIcon.png";
 import FacebookIcon from "../assets/facebookIcon.png";
 import LinkedinIcon from "../assets/linkedinIcon.png";
 import EyeIcon from "../assets/EyeIcon.png";
+import { signUp } from "../api-calls/apiCalls";
 
 export const Register = () => {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [passwordIsNotMatched, setPasswordIsNotMatched] = useState(false)
+
   const [hideAndShowPass, setHideAndShowPass] = useState(false);
   const [hideAndShowPasswordCom, sethideAndShowPasswordCom] = useState(false);
 
   const handleClick = (ID) => {
-    
+
 
     if (ID === "Password") {
       setHideAndShowPass(!hideAndShowPass);
       setTimeout(() => {
         setHideAndShowPass(false);
       }, 10000);
-    }else if(ID === 'PasswordConfirm'){
+    } else if (ID === 'PasswordConfirm') {
       sethideAndShowPasswordCom(!hideAndShowPasswordCom);
       setTimeout(() => {
         sethideAndShowPasswordCom(false);
       }, 10000);
     }
   };
+
+  const handleSignUp = async () => {
+    const userData = {
+      first_name: firstName,
+      last_name: lastName,
+      phone_no: phone,
+      email: email,
+      role: document.getElementById("role_select").value,
+      password: password
+    }
+    await signUp(userData)
+  }
 
   return (
     <div className={`${Styles.Register__main__div}`}>
@@ -56,25 +76,25 @@ export const Register = () => {
           <div className={`${Styles.Register__lft__form__wrapper}`}>
             <div className={`${Styles.Register__lft__inputs__Wrapper}`}>
               <div className={`${Styles.Register__lft__input_wrapper}`}>
-                <input type="text" placeholder="First Name" />
+                <input type="text" placeholder="First Name" onChange={(e) => { setFirstName(e.target.value) }} />
               </div>
               <div className={`${Styles.Register__lft__input_wrapper}`}>
-                <input type="text" placeholder="Last Name" />
+                <input type="text" placeholder="Last Name" onChange={(e) => { setLastName(e.target.value) }} />
               </div>
             </div>
 
             <div className={`${Styles.Register__lft__inputs__Wrapper}`}>
               <div className={`${Styles.Register__lft__input_wrapper}`}>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Phone Number" onChange={(e) => { setPhone(e.target.value) }} />
               </div>
               <div className={`${Styles.Register__lft__input_wrapper}`}>
-                <input type="text" placeholder="Email ID" />
+                <input type="text" placeholder="Email ID" onChange={(e) => { setEmail(e.target.value) }} />
               </div>
             </div>
 
             <div className={`${Styles.Register__lft__selection__Wrapper}`}>
               <div className={`${Styles.Register__lft__select__Wrapper}`}>
-                <select>
+                <select id="role_select">
                   <option defaultValue="select role">Select Role</option>
                   <option>User 1</option>
                   <option>User 2</option>
@@ -88,9 +108,10 @@ export const Register = () => {
                 <input
                   type={`${hideAndShowPass ? "text" : "password"}`}
                   placeholder="Password"
+                  onChange={(e) => { setPassword(e.target.value) }}
                 />
                 <span
-                  onClick={()=>handleClick('Password')}
+                  onClick={() => handleClick('Password')}
                   className={`${Styles.Login__lft__EyeIcon}`}
                 >
                   <img src={EyeIcon} alt="eye-icon" />
@@ -100,17 +121,28 @@ export const Register = () => {
                 <input
                   type={`${hideAndShowPasswordCom ? "text" : "password"}`}
                   placeholder="Confirm Password"
+                  onChange={(e) => {
+                    if (e.target.value !== password) {
+                      setPasswordIsNotMatched(true)
+                    } else {
+                      setPasswordIsNotMatched(false)
+                    }
+                  }}
                 />
+
                 <span
-                  onClick={()=>handleClick('PasswordConfirm')}
+                  onClick={() => handleClick('PasswordConfirm')}
                   className={`${Styles.Login__lft__EyeIcon}`}
                 >
                   <img src={EyeIcon} alt="eye-icon" />
                 </span>
               </div>
+
             </div>
 
-            <button className={`${Styles.Register__lft__SignIn__BTN}`}>
+            {passwordIsNotMatched == true && <div className="d-flex justify-content-end"><p className={`${Styles.Register__password_is_not_matched}`}>password is not matched</p></div>}
+
+            <button className={`${Styles.Register__lft__SignIn__BTN}`} onClick={() => { handleSignUp() }}>
               Sign up
             </button>
           </div>

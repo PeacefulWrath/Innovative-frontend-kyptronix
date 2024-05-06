@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import Styles from "../styles/LoginStyles.module.css";
 import { Link } from "react-router-dom";
-
 import SingUpBg from "../assets/SignUpBg.png";
 import Logo from "../assets/logo-white.png";
 import GoogleIcon from "../assets/googleIcon.png";
 import FacebookIcon from "../assets/facebookIcon.png";
 import LinkedinIcon from "../assets/linkedinIcon.png";
 import EyeIcon from "../assets/EyeIcon.png";
+import { logIn } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
+
 
 export const Login = () => {
   const [hideAndShowPass, setHideAndShowPass] = useState(false);
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setHideAndShowPass(!hideAndShowPass);
@@ -19,6 +25,20 @@ export const Login = () => {
       setHideAndShowPass(false);
     }, 10000);
   };
+
+  const handleLogin = async () => {
+    const userData = {
+      email: email,
+      password: password
+    }
+    const loginData = await logIn(userData)
+    if (loginData.success == true) {
+      localStorage.setItem("token",loginData.token)
+      navigate('/');
+    } else {
+      alert("error in sign in")
+    }
+  }
 
   return (
     <div className={`${Styles.Login__main__div}`}>
@@ -47,7 +67,7 @@ export const Login = () => {
           <div className={`${Styles.Login__lft__form__wrapper}`}>
             <div className={`${Styles.Login__lft__inputs__Wrapper}`}>
               <div className={`${Styles.Login__lft__input_wrapper}`}>
-                <input type="text" placeholder="Email ID" />
+                <input type="text" placeholder="Email ID" onChange={(e) => { setEmail(e.target.value) }} />
               </div>
             </div>
 
@@ -56,6 +76,7 @@ export const Login = () => {
                 <input
                   type={`${hideAndShowPass ? "text" : "password"}`}
                   placeholder="Password"
+                  onChange={(e) => { setPassword(e.target.value) }}
                 />
                 <span
                   onClick={handleClick}
@@ -66,15 +87,15 @@ export const Login = () => {
               </div>
             </div>
 
-            <button className={`${Styles.Login__lft__SignIn__BTN}`}>
+            <button className={`${Styles.Login__lft__SignIn__BTN}`} onClick={() => { handleLogin() }}>
               Log in
             </button>
           </div>
 
           <p className={`${Styles.Login__lft__LoginPara}`}>
-          Don’t have an account? 
+            Don’t have an account?
             <Link className={`${Styles.Login__lft__Link}`} to="/register">
-            Sign up
+              Sign up
             </Link>
           </p>
 
