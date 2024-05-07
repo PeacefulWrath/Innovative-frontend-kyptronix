@@ -1104,3 +1104,83 @@
 
   padding: 14px 18px;
 }
+
+@media(max-width:1280px){
+  .Home_logo {
+    width: 15%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .Home_menue {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-left: 2%;
+    margin-top: 6%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .Home_other_menues {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-left: 1%;
+    margin-top: 6%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .Home_signup_btn {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    border: 2px solid #fff;
+    margin-left: 8%;
+    height: 10px;
+    margin-top: 2%;
+    width: 40px;
+    background-color: transparent;
+    color: white;
+    white-space: nowrap;
+    font-size: 15px;
+  
+    /* for hoverEffect */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .Home_login_btn {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    border: 2px solid #fff;
+    margin-left: 2%;
+    height: 10px;
+    margin-top:2%;
+    width: 40px;
+    color: #2a91dd;
+    white-space: nowrap;
+    font-size: 15px;
+  
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+}
