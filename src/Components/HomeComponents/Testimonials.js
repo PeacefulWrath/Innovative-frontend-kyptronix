@@ -201,6 +201,8 @@ function Testimonials({items}) {
             style={{
               width: 150,
               height: 150,
+              objectFit:'cover',
+              objectPosition:'top'
             }}
           />
           <img
@@ -210,6 +212,8 @@ function Testimonials({items}) {
             style={{
               width: 150,
               height: 150,
+              objectFit:'cover',
+              objectPosition:'top'
             }}
             className="ms-2"
           />
@@ -220,6 +224,8 @@ function Testimonials({items}) {
             style={{
               width: 200,
               height: 300,
+              objectFit:'cover',
+              objectPosition:'top'
             }}
             className="ms-2"
           />
@@ -231,6 +237,8 @@ function Testimonials({items}) {
             width: "35%",
             marginRight: "20%",
           }}
+
+           className={`${styles.Home_testimonials_contentWrapper}`}
         >
           <p className={`${styles.Home_testimonials_para} Home_testimonials_temp_para`}>
            {desc3}
@@ -243,13 +251,15 @@ function Testimonials({items}) {
               alt="prev"
               style={{ cursor: "pointer" }}
               onClick={handleClick}
+              className={`${styles.Home_testimonials_prev_Btn}`}
             />
             <img
-              className="ms-5"
+              
               onClick={handleClick}
               src={next}
               alt="next"
               style={{ cursor: "pointer" }}
+              className={`${styles.Home_testimonials_next_Btn} ms-4`}
             />
           </div>
         </div>

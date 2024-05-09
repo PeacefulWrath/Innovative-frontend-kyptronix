@@ -108,7 +108,7 @@ function Faqs({ items, tempFaqs }) {
 
   return (
     <div
-      className="d-flex"
+      className={`d-flex ${styles.Home_faq_mainWrapper}`}
       style={{
         justifyContent: "space-between",
         marginLeft: "7%",

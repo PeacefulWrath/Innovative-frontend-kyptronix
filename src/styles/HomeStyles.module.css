@@ -1105,7 +1105,10 @@
   padding: 14px 18px;
 }
 
-@media(max-width:1280px){
+@media (max-width: 1280px) {
+  .Home__heroSec{
+    margin-top: 5% !important;
+  }
   .Home_logo {
     width: 15%;
     object-fit: cover;
@@ -1154,7 +1157,7 @@
     color: white;
     white-space: nowrap;
     font-size: 15px;
-  
+
     /* for hoverEffect */
     position: relative;
     z-index: 2;
@@ -1172,15 +1175,267 @@
     border: 2px solid #fff;
     margin-left: 2%;
     height: 10px;
-    margin-top:2%;
+    margin-top: 2%;
     width: 40px;
     color: #2a91dd;
     white-space: nowrap;
     font-size: 15px;
-  
+
     position: relative;
     overflow: hidden;
     transition: 0.5s;
     z-index: 2;
+  }
+
+  .Home_our_mission_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: 33px;
+  }
+
+  .Home_our_mission_btn {
+    margin-left: 33px;
+  }
+  .Home_our_mission_heading {
+    width: 450px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .Home_our_mission_main {
+    width: 450px;
+    left: 0px;
+    top: 150px;
+    position: absolute;
+    color: white;
+    font-size: 17px;
+    font-family: Hind;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .Home_our_mission_learn_more_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    margin-top: 300px;
+    margin-left: -1px;
+    border-radius: 24px;
+    border: 2px solid #fff;
+    width: 140px;
+    white-space: nowrap;
+  }
+  .Home_our_mission_learn_more_text {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .Home_our_mission_main_image_bg {
+    margin-left: 420px;
+  }
+  .Home_our_mission_main_image {    
+    margin-left: 280px;
+    margin-right: 100px;
+    margin-top: -78px;
+  }
+  .Home_our_vision_main_image_bg {
+    height: 400px !important;
+    width: 450px !important;
+    border-radius: 532px;
+    opacity: 0.3;
+    background: #2a91dd;
+    filter: blur(100px);
+    margin-right: 650px;
+    margin-left: 10px;
+    margin-top: -975px;
+  }
+  .Home_our_vision_main_image {
+    height: 400px !important;
+    width: 450px !important;
+    margin-left: 10px;
+    margin-right: 650px;
+    margin-top: -420px;
+  }
+  .Home_our_vision_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 33px;
+    background: var(
+      --blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+    );
+    height: 40px;
+    margin-top: 108.54px;
+    margin-left: 50%;
+  }
+
+  .Home_our_vision_div {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin-left: 50%;
+  }
+
+  .Home_our_vision_heading {
+    width: 450px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .Home_our_vision_main {
+    width: 450px;
+    left: 0px;
+    top: 100px;
+    position: absolute;
+    color: white;
+    font-size: 17px;
+    font-family: Hind;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .Home_our_vision_learn_more_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    margin-top: 310px;
+    margin-left: -1px;
+    border-radius: 36px;
+    border: 2px solid #fff;
+    width: 150px;
+    height: 30%;
+  }
+
+  .Home_testimonials_contentWrapper{
+    margin-right: 0% !important;
+  }
+
+  .Home_testimonials_para {
+    color: #fff;
+    font-family: Hind;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .Home_testimonials_prev_Btn{
+    width: 40px;
+    height: 40px;
+  }
+  .Home_testimonials_next_Btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  .Home_choose_us_question_img {
+    zoom: 50%;
+  }
+
+  .Home_choose_us_contentWrapper{
+    margin-left: 4% !important;
+  }
+  .Home_choose_us_headingWrapper{
+    width: 90% !important;
+  }
+  .Home_choose_us_cards_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 50%;
+  }
+  .Home_choose_us_para_div {
+    border-radius: 8px;
+    border: 1px solid #b6e0ff;
+    box-shadow: 0px 0px 8.2px 0px #62d9ff;
+    width: 100%;
+  }
+  .Home_choose_us_dropDownWrapper{
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .Home_faq_mainWrapper{
+    margin-left: 4% !important;
+    margin-right: 4% !important;
+  }
+  .Home_faq_all_ques {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    flex-shrink: 0;
+    margin-left: 0%;
+    width: 50%;
+  }
+  .Home_faq_question {
+    display: flex;
+    width: 425px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Home_footer_logo_section {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 25%;
+  }
+
+  .Home_footer_quoteWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Home_footer_quoteImg{
+    width: 80%;
+  }
+  .Home_footer_menues {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 10%;
   }
 }
