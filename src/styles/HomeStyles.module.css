@@ -1705,5 +1705,70 @@
     padding: 8px 12px;
     background: transparent;
   }
+
+
+  .Home_our_mission__mainWrapper{
+    display: none !important;
+  }
+  .Home_our_mission__mainWrapperTab{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home_our_mission__textMainWrapper{    
+    width: 90%;
+  }
+  .Home_our_mission__titleWrapper{
+    width:20%;
+    background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  .Home_our_mission__titleWrapper h2{
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 0px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+  }
+  .Home_our_mission__EmpowerText{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 29px;
+  }
+  .Home_our_mission__Empowerpara{
+    color: white;
+    margin-top: 15px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .Home_our_mission__learnMoreBtn{
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    border-radius: 26px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+    outline: none;
+    background: transparent;
+    transition: all .3s ease-in-out;
+  }
+  .Home_our_mission__learnMoreBtn:hover{
+   background:linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%);
+  }
+
+  .Home_our_mission__imgMainWrapper{
+    
+  }
+
 }
 
