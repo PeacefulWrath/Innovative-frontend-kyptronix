@@ -13,10 +13,15 @@ import styles from "../../styles/HomeStyles.module.css";
 import serviceStyles from "../../styles/ServicesStyles.module.css";
 import { useNavigate } from "react-router-dom";
 import GetCloseIcon from "../../assets/GetCloneIcon.png";
+import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { motion } from "framer-motion";
 
 function TopBar({ page, bg }) {
   const [clicked, setClicked] = useState("Home");
   const [isGetquotes, setIsGetquotes] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = (clickedItem) => {
@@ -31,6 +36,7 @@ function TopBar({ page, bg }) {
           width: "100%",
           height: "80%",
           backgroundImage: `url(${bg})`,
+          position: "relative",
         }}
       >
         <nav
@@ -40,7 +46,7 @@ function TopBar({ page, bg }) {
               : `${serviceStyles.Services_top_bar} navbar navbar-expand-lg `
           }
         >
-          <div className="container">
+          <div className={`container ${styles.Annoucement__wrapper}`}>
             <ul className="navbar-nav mx-auto gap-3">
               <li className="nav-item">
                 <p className="me-2">
@@ -105,15 +111,22 @@ function TopBar({ page, bg }) {
               Get Quote
             </button>
           </div>
+
+          <TopBarTab setIsGetquotes={setIsGetquotes} />
         </nav>
+
         <img
           style={{ marginTop: "0.3%", marginBottom: "0px" }}
           src={divider}
           alt="divider"
         />
 
-        <div className="d-flex" style={{ marginTop: "-0.7%" }}>
+        <div
+          className={`d-flex ${styles.Home__navBar__outerWrapper}`}
+          style={{ marginTop: "-0.7%" }}
+        >
           <img className={styles.Home_logo} src={logo} alt="logo" />
+
           <div className={styles.Home_menu_list}>
             <p
               className={`${
@@ -214,9 +227,47 @@ function TopBar({ page, bg }) {
             </p>
           </div>
 
-          <button onClick={()=> navigate('/register')} className={styles.Home_signup_btn}>Sign up</button>
+          {showMenu && <NavMenuTab setShowMenu={setShowMenu} />}
 
-          <button onClick={()=> navigate('/login')} className={styles.Home_login_btn}>Login</button>
+          <div className={styles.Home__navBar__BTNSWrapper}>
+            <button
+              className={styles.Home__navBar__signUp__BTN}
+              onClick={() => navigate("/register")}
+            >
+              Sign up
+            </button>
+            <button
+              className={styles.Home__navBar__logoIn__BTN}
+              onClick={() => navigate("/login")}
+            >
+              Log In
+            </button>
+            <button
+              onClick={() => setShowMenu(true)}
+              className={styles.Home__navBar__menuBTN}
+            >
+              <MenuIcon
+                style={{
+                  color: "white",
+                  fontSize: "40px",
+                }}
+              />
+            </button>
+          </div>
+
+          <button
+            onClick={() => navigate("/register")}
+            className={styles.Home_signup_btn}
+          >
+            Sign up
+          </button>
+
+          <button
+            onClick={() => navigate("/login")}
+            className={styles.Home_login_btn}
+          >
+            Login
+          </button>
         </div>
 
         {page === "services" && (
@@ -333,25 +384,26 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   placeholder="Phone number"
                   className={styles.Get__Quotes_input}
                 >
-                  <option default value='hello'>Select subject</option>
-                  <option value='hello'>hello</option>
-                  <option value='hello'>hello</option>
-                  <option value='hello'>hello</option>
-                  <option value='hello'>hello</option>
+                  <option default value="hello">
+                    Select subject
+                  </option>
+                  <option value="hello">hello</option>
+                  <option value="hello">hello</option>
+                  <option value="hello">hello</option>
+                  <option value="hello">hello</option>
                 </select>
               </div>
             </div>
 
-
             <div className={styles.Get__Quotes_MessageWrapper}>
-                <div className={styles.Get__Quotes_TextareaWrapper}>
-                      <textarea
-                        type="text"
-                        placeholder="Message"
-                        className={styles.Get__Quotes_input}
-                        rows='5'
-                      />
-                </div>
+              <div className={styles.Get__Quotes_TextareaWrapper}>
+                <textarea
+                  type="text"
+                  placeholder="Message"
+                  className={styles.Get__Quotes_input}
+                  rows="5"
+                />
+              </div>
             </div>
           </div>
 
@@ -360,6 +412,111 @@ const GetQuotes = ({ setIsGetquotes }) => {
           </div>
         </div>
       </div>
+    </>
+  );
+};
+
+const TopBarTab = ({ setIsGetquotes }) => {
+  return (
+    <>
+      <div className={styles.Home__topBar__mainWrapper}>
+        <div className={styles.Home__topBar__telAndMailWrapper}>
+          <div className={styles.Home__topBar__iconAndLinkWrapper}>
+            <span className={styles.topBar_iconWrapper}>
+              <img src={telephone} alt="telephone" />
+            </span>
+            <a
+              className={styles.Home__topBar__telLink}
+              href="tel:+1-323-566-7866"
+            >
+              +1-323-566-7866
+            </a>
+          </div>
+
+          <div className={styles.Home__topBar__iconAndLinkWrapper}>
+            <span className={styles.topBar_iconWrapper}>
+              <img src={mail} alt="mail" />
+            </span>
+            <a
+              className={styles.Home__topBar__telLink}
+              href="mailto:Example@gmail.com"
+            >
+              Example@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.Home__topBar__socialMedia__mainWrapper}>
+          {[fb, linkedin, insta, twitter].map((cur, id) => (
+            <li key={id} className={styles.Home__topBar__socialLink}>
+              <a>
+                <img
+                  src={cur}
+                  alt="facebook"
+                  className={styles.Home__topBar__socialIcon}
+                />
+              </a>
+            </li>
+          ))}
+        </div>
+
+        <button
+          onClick={() => setIsGetquotes(true)}
+          className={styles.Home__topBar__getQuote__BTN}
+        >
+          Get Quote
+        </button>
+      </div>
+    </>
+  );
+};
+
+const NavMenuTab = ({ setShowMenu }) => {
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: -150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "backInOut" }}
+        className={styles.Home__navMenu__mainWrapper}
+      >
+        <CloseIcon
+          onClick={() => setShowMenu(false)}
+          style={{
+            position: "absolute",
+            top: "8px",
+            right: "40px",
+            cursor: "pointer",
+            color: "white",
+            fontSize: "40px",
+          }}
+        />
+        <motion.ul
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "backInOut", delay: 0.1 }}
+        >
+          {[
+            { title: "Home", path: "/" },
+            { title: "Services", path: "/services" },
+            { title: "Products", path: "/products" },
+            { title: "Trainings", path: "/trainings" },
+            { title: "Our Partners", path: "/partners" },
+            { title: "Gallery", path: "/gallery" },
+            { title: "About Us", path: "/aboutus" },
+            { title: "Contact Us", path: "/contactus" },
+          ].map((cur, id) => (
+            <Link
+              onClick={() => setShowMenu(false)}
+              className={styles.Home__navMenu__Links}
+              to={cur.path}
+              key={id}
+            >
+              {cur.title}
+            </Link>
+          ))}
+        </motion.ul>
+      </motion.div>
     </>
   );
 };

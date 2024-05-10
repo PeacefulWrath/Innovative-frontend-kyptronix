@@ -1105,8 +1105,20 @@
   padding: 14px 18px;
 }
 
+.Home__topBar__mainWrapper {
+  display: none;
+}
+
+.Home__navMenu__mainWrapper {
+  display: none;
+}
+
+.Home__navBar__BTNSWrapper {
+  display: none;
+}
+
 @media (max-width: 1280px) {
-  .Home__heroSec{
+  .Home__heroSec {
     margin-top: 5% !important;
   }
   .Home_logo {
@@ -1250,7 +1262,7 @@
   .Home_our_mission_main_image_bg {
     margin-left: 420px;
   }
-  .Home_our_mission_main_image {    
+  .Home_our_mission_main_image {
     margin-left: 280px;
     margin-right: 100px;
     margin-top: -78px;
@@ -1341,7 +1353,7 @@
     height: 30%;
   }
 
-  .Home_testimonials_contentWrapper{
+  .Home_testimonials_contentWrapper {
     margin-right: 0% !important;
   }
 
@@ -1354,11 +1366,11 @@
     line-height: normal;
   }
 
-  .Home_testimonials_prev_Btn{
+  .Home_testimonials_prev_Btn {
     width: 40px;
     height: 40px;
   }
-  .Home_testimonials_next_Btn{
+  .Home_testimonials_next_Btn {
     width: 40px;
     height: 40px;
   }
@@ -1367,10 +1379,10 @@
     zoom: 50%;
   }
 
-  .Home_choose_us_contentWrapper{
+  .Home_choose_us_contentWrapper {
     margin-left: 4% !important;
   }
-  .Home_choose_us_headingWrapper{
+  .Home_choose_us_headingWrapper {
     width: 90% !important;
   }
   .Home_choose_us_cards_btns {
@@ -1386,12 +1398,12 @@
     box-shadow: 0px 0px 8.2px 0px #62d9ff;
     width: 100%;
   }
-  .Home_choose_us_dropDownWrapper{
+  .Home_choose_us_dropDownWrapper {
     justify-content: space-between;
     width: 90%;
   }
 
-  .Home_faq_mainWrapper{
+  .Home_faq_mainWrapper {
     margin-left: 4% !important;
     margin-right: 4% !important;
   }
@@ -1422,13 +1434,13 @@
     width: 25%;
   }
 
-  .Home_footer_quoteWrapper{
+  .Home_footer_quoteWrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
-  .Home_footer_quoteImg{
+  .Home_footer_quoteImg {
     width: 80%;
   }
   .Home_footer_menues {
@@ -1439,3 +1451,259 @@
     width: 10%;
   }
 }
+
+@media (max-width: 768px) {
+  .Annoucement__wrapper {
+    display: none !important;
+  }
+  .Home__topBar__mainWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .Home__topBar__iconAndLinkWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .topBar_iconWrapper {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .topBar_iconWrapper img {
+    width: 60%;
+  }
+  .Home__topBar__telLink {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Exo 2";
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .Home__topBar__telLink:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .Home__topBar__telAndMailWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .Home__topBar__socialMedia__mainWrapper {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .Home__topBar__socialLink {
+    list-style: none;
+    background-color: white;
+    border-radius: 50%;
+    height: 25px;
+    width: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home__topBar__socialIcon {
+    width: 25px;
+  }
+
+  .Home__topBar__getQuote__BTN {
+    width: 15%;
+    border: none;
+    border-radius: 43px;
+    padding: 6px 0;
+    font-weight: 500;
+    font-family: "Exo 2";
+    background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .Home__topBar__getQuote__BTN::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  .Home__topBar__getQuote__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__topBar__getQuote__BTN:hover {
+    color: #2a91dd;
+  }
+
+  .Home_menu_list {
+    display: none;
+  }
+
+  .Home__navBar__outerWrapper {
+    justify-content: space-between;
+  }
+
+  .Home__navMenu__mainWrapper {
+    position: absolute;
+    background-color: #202020;
+    padding: 20px 0px !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px !important;
+  }
+  .Home__navMenu__mainWrapper ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .Home__navMenu__Links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 !important;
+    /* padding: 0 !important; */
+    text-align: center !important;
+    padding: 5px;
+    transition: all 0.32s ease-in-out;
+  }
+  .Home__navMenu__Links:hover {
+    background-color: rgb(110, 110, 110);
+    transform: scale(1.1);
+  }
+  .Home__navMenu__Links {
+    color: white;
+    font-size: 25px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 !important;
+  }
+  .Home_logo {
+    width: 20%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .Home_signup_btn,
+  .Home_login_btn {
+    display: none;
+  }
+
+  .Home__navBar__BTNSWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+  }
+
+  .Home__navBar__signUp__BTN {
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    font-family: "Exo 2";
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* for hoverEffect */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  /* hover effect for signup start */
+
+  .Home__navBar__signUp__BTN::after {
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    z-index: -1;
+    transition: 0.4s;
+  }
+
+  .Home__navBar__signUp__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__navBar__signUp__BTN:hover {
+    color: #2a91dd;
+  }
+  .Home__navBar__logoIn__BTN {
+    font-family: "Exo 2";
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    color: #2a91dd;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  
+  /* hover effect for .login-btn start */
+  
+  .Home__navBar__logoIn__BTN::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
+  
+    z-index: -1;
+    transition: 0.4s;
+  }
+  
+  .Home__navBar__logoIn__BTN:hover {
+    color: #fff;
+  }
+  
+  .Home__navBar__logoIn__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__navBar__menuBTN{
+    border: none; 
+    padding: 8px 12px;
+    background: transparent;
+  }
+}
+
