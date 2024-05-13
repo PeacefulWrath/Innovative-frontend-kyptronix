@@ -11,7 +11,7 @@ import twitter from "../../assets/twitter.png";
 
 function Footer() {
   return (
-    <div className="d-flex justify-content-center ">
+    <div className={`d-flex justify-content-center ${styles.Home_footer__mainWrapper}`}>
       <div className={styles.Home_footer_logo_section}>
         <img className={styles.Home_footer_logo_white} src={logoWhite} alt="logo-white" />
         <div className={`${styles.Home_footer_main_para} mt-3`}>

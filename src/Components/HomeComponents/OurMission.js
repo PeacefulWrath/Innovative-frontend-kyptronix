@@ -106,8 +106,11 @@ function OurMission() {
           </button>
         </div>
         <div className={styles.Home_our_mission__imgMainWrapper}>
-          <div className={styles.Home_our_mission_main_image_bg}> </div>
-         
+          <div className={styles.Home_our_mission_main_image_bg} />
+          <div className={styles.Home_our_mission__imagesWrapper}>
+            <img className={styles.Home_our_mission__imageTab} src={mission} alt='mission-pic' />
+          </div>
+
         </div>
       </div>
     </>
