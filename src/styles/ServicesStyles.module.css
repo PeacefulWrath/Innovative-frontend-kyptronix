@@ -186,3 +186,20 @@ font-weight: 500;
 line-height: normal;
 opacity: 0.5;
 }
+
+
+@media (max-width: 1280px) {
+    .HomeStyles_Home_other_menues {
+      color: #fff;
+      font-family: "Exo 2";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: 0.5;
+      margin-left: 1%;
+      margin-top: 6%;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }

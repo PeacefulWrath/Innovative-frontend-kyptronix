@@ -104,11 +104,11 @@ function ChooseUs({ items }) {
 
   return (
     <div className="d-flex">
-      <div style={{ marginLeft: "8%" }}>
+      <div style={{ marginLeft: "8%" }} className={`${styles.Home_choose_us_contentWrapper}`}>
         <button className="btn" style={buttonStyle}>
           why Choose Us?
         </button>
-        <div className="mt-3" style={{ width: "70%" }}>
+        <div className={`${styles.Home_choose_us_headingWrapper} mt-3`} style={{ width: "70%" }}>
           <div className={styles.Home_choose_us_para}>
             Explore the Advantages of Choosing Our Exam Preparation Portal
           </div>
@@ -123,7 +123,7 @@ function ChooseUs({ items }) {
               // ref={cusParaDiv1}
               className={`${styles.Home_choose_us_para_div} cusParaDiv1`}
             >
-              <div className="d-flex ms-2 me-2">
+              <div className={`d-flex ms-2 me-2 ${styles.Home_choose_us_dropDownWrapper}`}>
                 <img src={cr} alt="cr" className={styles.Home_choose_us_cr} />
                 <p
                   className={`${styles.Home_choose_us_para_2} ms-2 me-2 mt-3 `}

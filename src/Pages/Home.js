@@ -12,6 +12,7 @@ import testi1 from "../assets/testi1.png";
 import testi2 from "../assets/testi2.png";
 import testi3 from "../assets/testi3.png";
 import TopBar from "../Components/TopBar/TopBar";
+import Styles from '../styles/HomeStyles.module.css'
 
 
 function Home() {
@@ -96,7 +97,7 @@ function Home() {
       <div>
         <TopBar page={"home"}/>
       </div>
-      <div style={{ marginTop: "10%" }}>
+      <div className={Styles.Home__heroSec} style={{ marginTop: "10%" }}>
         <OurMission />
       </div>
       <div>

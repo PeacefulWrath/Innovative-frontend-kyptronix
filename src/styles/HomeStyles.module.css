@@ -1104,3 +1104,671 @@
 
   padding: 14px 18px;
 }
+
+.Home__topBar__mainWrapper {
+  display: none;
+}
+
+.Home__navMenu__mainWrapper {
+  display: none;
+}
+
+.Home__navBar__BTNSWrapper {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .Home__heroSec {
+    margin-top: 5% !important;
+  }
+  .Home_logo {
+    width: 15%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .Home_menue {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-left: 2%;
+    margin-top: 6%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .Home_other_menues {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-left: 1%;
+    margin-top: 6%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .Home_signup_btn {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    border: 2px solid #fff;
+    margin-left: 8%;
+    height: 10px;
+    margin-top: 2%;
+    width: 40px;
+    background-color: transparent;
+    color: white;
+    white-space: nowrap;
+    font-size: 15px;
+
+    /* for hoverEffect */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .Home_login_btn {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    border: 2px solid #fff;
+    margin-left: 2%;
+    height: 10px;
+    margin-top: 2%;
+    width: 40px;
+    color: #2a91dd;
+    white-space: nowrap;
+    font-size: 15px;
+
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .Home_our_mission_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: 33px;
+  }
+
+  .Home_our_mission_btn {
+    margin-left: 33px;
+  }
+  .Home_our_mission_heading {
+    width: 450px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .Home_our_mission_main {
+    width: 450px;
+    left: 0px;
+    top: 150px;
+    position: absolute;
+    color: white;
+    font-size: 17px;
+    font-family: Hind;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .Home_our_mission_learn_more_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    margin-top: 300px;
+    margin-left: -1px;
+    border-radius: 24px;
+    border: 2px solid #fff;
+    width: 140px;
+    white-space: nowrap;
+  }
+  .Home_our_mission_learn_more_text {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .Home_our_mission_main_image_bg {
+    margin-left: 420px;
+  }
+  .Home_our_mission_main_image {
+    margin-left: 280px;
+    margin-right: 100px;
+    margin-top: -78px;
+  }
+  .Home_our_vision_main_image_bg {
+    height: 400px !important;
+    width: 450px !important;
+    border-radius: 532px;
+    opacity: 0.3;
+    background: #2a91dd;
+    filter: blur(100px);
+    margin-right: 650px;
+    margin-left: 10px;
+    margin-top: -975px;
+  }
+  .Home_our_vision_main_image {
+    height: 400px !important;
+    width: 450px !important;
+    margin-left: 10px;
+    margin-right: 650px;
+    margin-top: -420px;
+  }
+  .Home_our_vision_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 33px;
+    background: var(
+      --blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+    );
+    height: 40px;
+    margin-top: 108.54px;
+    margin-left: 50%;
+  }
+
+  .Home_our_vision_div {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    margin-left: 50%;
+  }
+
+  .Home_our_vision_heading {
+    width: 450px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+  .Home_our_vision_main {
+    width: 450px;
+    left: 0px;
+    top: 100px;
+    position: absolute;
+    color: white;
+    font-size: 17px;
+    font-family: Hind;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+
+  .Home_our_vision_learn_more_btn {
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    margin-top: 310px;
+    margin-left: -1px;
+    border-radius: 36px;
+    border: 2px solid #fff;
+    width: 150px;
+    height: 30%;
+  }
+
+  .Home_testimonials_contentWrapper {
+    margin-right: 0% !important;
+  }
+
+  .Home_testimonials_para {
+    color: #fff;
+    font-family: Hind;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .Home_testimonials_prev_Btn {
+    width: 40px;
+    height: 40px;
+  }
+  .Home_testimonials_next_Btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Home_choose_us_question_img {
+    zoom: 50%;
+  }
+
+  .Home_choose_us_contentWrapper {
+    margin-left: 4% !important;
+  }
+  .Home_choose_us_headingWrapper {
+    width: 90% !important;
+  }
+  .Home_choose_us_cards_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 50%;
+  }
+  .Home_choose_us_para_div {
+    border-radius: 8px;
+    border: 1px solid #b6e0ff;
+    box-shadow: 0px 0px 8.2px 0px #62d9ff;
+    width: 100%;
+  }
+  .Home_choose_us_dropDownWrapper {
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .Home_faq_mainWrapper {
+    margin-left: 4% !important;
+    margin-right: 4% !important;
+  }
+  .Home_faq_all_ques {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    flex-shrink: 0;
+    margin-left: 0%;
+    width: 50%;
+  }
+  .Home_faq_question {
+    display: flex;
+    width: 425px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Home_footer_logo_section {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 25%;
+  }
+
+  .Home_footer_quoteWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Home_footer_quoteImg {
+    width: 80%;
+  }
+  .Home_footer_menues {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Annoucement__wrapper {
+    display: none !important;
+  }
+  .Home__topBar__mainWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .Home__topBar__iconAndLinkWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .topBar_iconWrapper {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .topBar_iconWrapper img {
+    width: 60%;
+  }
+  .Home__topBar__telLink {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Exo 2";
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .Home__topBar__telLink:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .Home__topBar__telAndMailWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .Home__topBar__socialMedia__mainWrapper {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .Home__topBar__socialLink {
+    list-style: none;
+    background-color: white;
+    border-radius: 50%;
+    height: 25px;
+    width: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home__topBar__socialIcon {
+    width: 25px;
+  }
+
+  .Home__topBar__getQuote__BTN {
+    width: 15%;
+    border: none;
+    border-radius: 43px;
+    padding: 6px 0;
+    font-weight: 500;
+    font-family: "Exo 2";
+    background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .Home__topBar__getQuote__BTN::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.4s;
+    z-index: -1;
+  }
+
+  .Home__topBar__getQuote__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__topBar__getQuote__BTN:hover {
+    color: #2a91dd;
+  }
+
+  .Home_menu_list {
+    display: none;
+  }
+
+  .Home__navBar__outerWrapper {
+    justify-content: space-between;
+  }
+
+  .Home__navMenu__mainWrapper {
+    position: absolute;
+    background-color: #202020;
+    padding: 20px 0px !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px !important;
+  }
+  .Home__navMenu__mainWrapper ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .Home__navMenu__Links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 !important;
+    /* padding: 0 !important; */
+    text-align: center !important;
+    padding: 5px;
+    transition: all 0.32s ease-in-out;
+  }
+  .Home__navMenu__Links:hover {
+    background-color: rgb(110, 110, 110);
+    transform: scale(1.1);
+  }
+  .Home__navMenu__Links {
+    color: white;
+    font-size: 25px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 !important;
+  }
+  .Home_logo {
+    width: 20%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .Home_signup_btn,
+  .Home_login_btn {
+    display: none;
+  }
+
+  .Home__navBar__BTNSWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+  }
+
+  .Home__navBar__signUp__BTN {
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    font-family: "Exo 2";
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* for hoverEffect */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  /* hover effect for signup start */
+
+  .Home__navBar__signUp__BTN::after {
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    z-index: -1;
+    transition: 0.4s;
+  }
+
+  .Home__navBar__signUp__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__navBar__signUp__BTN:hover {
+    color: #2a91dd;
+  }
+  .Home__navBar__logoIn__BTN {
+    font-family: "Exo 2";
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    color: #2a91dd;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  
+  /* hover effect for .login-btn start */
+  
+  .Home__navBar__logoIn__BTN::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
+  
+    z-index: -1;
+    transition: 0.4s;
+  }
+  
+  .Home__navBar__logoIn__BTN:hover {
+    color: #fff;
+  }
+  
+  .Home__navBar__logoIn__BTN:hover::after {
+    bottom: 0%;
+  }
+
+  .Home__navBar__menuBTN{
+    border: none; 
+    padding: 8px 12px;
+    background: transparent;
+  }
+
+
+  .Home_our_mission__mainWrapper{
+    display: none !important;
+  }
+  .Home_our_mission__mainWrapperTab{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home_our_mission__textMainWrapper{    
+    width: 90%;
+  }
+  .Home_our_mission__titleWrapper{
+    width:20%;
+    background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  .Home_our_mission__titleWrapper h2{
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 0px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+  }
+  .Home_our_mission__EmpowerText{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 29px;
+  }
+  .Home_our_mission__Empowerpara{
+    color: white;
+    margin-top: 15px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .Home_our_mission__learnMoreBtn{
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    border-radius: 26px;
+    font-family: 'Exo 2';
+    font-weight: 500;
+    outline: none;
+    background: transparent;
+    transition: all .3s ease-in-out;
+  }
+  .Home_our_mission__learnMoreBtn:hover{
+   background:linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%);
+  }
+
+  .Home_our_mission__imgMainWrapper{
+    
+  }
+
+}
+

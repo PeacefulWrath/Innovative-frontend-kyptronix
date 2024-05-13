@@ -56,9 +56,9 @@ function Footer() {
         <div className={styles.Home_footer_menu_main}>Faqs</div>
       </div>
 
-      <div>
+      <div className={styles.Home_footer_quoteWrapper}>
         <div className={styles.Home_footer_quote}>click now on quota</div>
-        <img src={glow} alt="glow" />
+        <img className={styles.Home_footer_quoteImg} src={glow} alt="glow" />
       </div>
     </div>
   );
