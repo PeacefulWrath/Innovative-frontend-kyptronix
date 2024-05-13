@@ -1451,7 +1451,7 @@
     width: 10%;
   }
 }
-
+/* tablet view */
 @media (max-width: 768px) {
   .Annoucement__wrapper {
     display: none !important;
