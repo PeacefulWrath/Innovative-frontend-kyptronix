@@ -1123,6 +1123,8 @@
   display: none;
 }
 
+/* laptop view */
+
 @media (max-width: 1280px) {
   .Home__heroSec {
     margin-top: 5% !important;
