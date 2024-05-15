@@ -1116,6 +1116,14 @@
 .Home__navBar__BTNSWrapper {
   display: none;
 }
+.Home_our_mission__mainWrapperTab {
+  display: none;
+}
+.Home_our_vision__mainWrapperTab {
+  display: none;
+}
+
+/* laptop view */
 
 @media (max-width: 1280px) {
   .Home__heroSec {
@@ -1676,9 +1684,9 @@
     transition: 0.5s;
     z-index: 2;
   }
-  
+
   /* hover effect for .login-btn start */
-  
+
   .Home__navBar__logoIn__BTN::after {
     content: "";
     position: absolute;
@@ -1687,42 +1695,40 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(96.58deg, #2589d2 6.11%, #2dc2e3 92.54%);
-  
+
     z-index: -1;
     transition: 0.4s;
   }
-  
+
   .Home__navBar__logoIn__BTN:hover {
     color: #fff;
   }
-  
+
   .Home__navBar__logoIn__BTN:hover::after {
     bottom: 0%;
   }
 
-  .Home__navBar__menuBTN{
-    border: none; 
+  .Home__navBar__menuBTN {
+    border: none;
     padding: 8px 12px;
     background: transparent;
   }
 
-
-  .Home_our_mission__mainWrapper{
+  .Home_our_mission__mainWrapper {
     display: none !important;
   }
-  .Home_our_mission__mainWrapperTab{
-   
+  .Home_our_mission__mainWrapperTab {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .Home_our_mission__textMainWrapper{    
+  .Home_our_mission__textMainWrapper {
     width: 90%;
   }
-  .Home_our_mission__titleWrapper{
-    width:20%;
+  .Home_our_mission__titleWrapper {
+    width: 20%;
     background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
     padding: 8px;
     display: flex;
@@ -1730,45 +1736,244 @@
     align-items: center;
     border-radius: 30px;
   }
-  .Home_our_mission__titleWrapper h2{
+  .Home_our_mission__titleWrapper h2 {
     font-size: 18px;
     text-align: center;
     margin: 0px 0px;
-    font-family: 'Exo 2';
-    font-weight: 500;
+    font-family: "Exo 2";
+    font-weight: 700;
   }
-  .Home_our_mission__EmpowerText{
+  .Home_our_mission__EmpowerText {
     color: white;
     margin-top: 10px;
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-weight: 700;
     font-size: 29px;
   }
-  .Home_our_mission__Empowerpara{
+  .Home_our_mission__Empowerpara {
     color: white;
     margin-top: 15px;
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-weight: 500;
     font-size: 17px;
   }
-  .Home_our_mission__learnMoreBtn{
+  .Home_our_mission__learnMoreBtn {
     color: white;
     border: 2px solid white;
     padding: 8px 12px;
     border-radius: 26px;
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-weight: 500;
     outline: none;
     background: transparent;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
-  .Home_our_mission__learnMoreBtn:hover{
-   background:linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%);
-  }
-
-  .Home_our_mission__imgMainWrapper{
-    
+  .Home_our_mission__learnMoreBtn:hover {
+    background: linear-gradient(to top left, #2589d2 100%, #2dc2e3 100%);
   }
 
+  .Home_our_mission__imgMainWrapper {
+    position: relative;
+  }
+
+  .Home_our_mission_main_image_bg {
+    margin-left: 0px;
+    width: 400px !important;
+    height: 400px !important;
+  }
+
+  .Home_our_mission__imagesWrapper {
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .Home_our_mission__imageTab {
+    width: 85%;
+  }
+
+  .Home_our_vision__mainWrapper {
+    display: none;
+  }
+  .Home_our_vision__mainWrapperTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .Home_our_vision__imageWrapper {
+    position: relative;
+  }
+
+  .Home_our_vision_main_image_bgTab {
+    height: 400px !important;
+    width: 400px !important;
+    border-radius: 532px;
+    opacity: 0.3;
+    background: #2a91dd;
+    filter: blur(100px);
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .Home_our_vision__imageWrapperTab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home_our_vision__imageTab {
+    width: 90%;
+  }
+  .Home_our_vision__mainContentWrapper {
+    /* background: red; */
+    width: 90%;
+    margin: 0 auto;
+  }
+  .Home_our_vision__titleWrapper {
+    width: 20%;
+    background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  .Home_our_vision__titleWrapper h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 0px;
+    font-family: "Exo 2";
+    font-weight: 700;
+  }
+  .Home_our_vision__pioneeringText {
+    color: white;
+    margin-top: 10px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    font-size: 29px;
+  }
+  .Home_our_vision__pioneeringPara {
+    color: white;
+    margin-top: 15px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .Home_our_vision__learnMoreBtn {
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    border-radius: 26px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  .Home_our_vision__learnMoreBtn:hover {
+    background: linear-gradient(to top left, #2589d2 100%, #2dc2e3 100%);
+  }
+
+  .Home_training_modules_para {
+    color: #fff;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 90%;
+  }
+
+  .Home_training_modules_semi_para {
+    color: #fff;
+    text-align: center;
+    font-family: Hind;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+  }
+
+  .Home_testimonials__sliderMainWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .Home_testimonials__sliderImageWrapper {
+    width: 90% !important;
+    justify-content: center !important;
+  }
+
+  .Home_testimonials_contentWrapper {
+    width: 90% !important;
+    margin: 0 auto;
+    margin-left: 6%;
+  }
+
+  .Home_testimonials_title_para {
+    width: 90% !important;
+  }
+
+  .Home_choose_us_mainWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Home_choose_us_question_img {
+    zoom: 65%;
+  }
+
+  .Home_faq_mainWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .Home_faq_text {
+    font-size: 17px;
+  }
+
+  .Home_faq_mainContentWrapper {
+    width: 90% !important;
+  }
+  .Home_faq_all_ques {
+    width: 90%;
+  }
+
+  .Home_footer__mainWrapper {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .Home_footer_logo_section {
+    display: inline-flex;
+    height: 20%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .Home_footer_menues {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .Home_footer_quoteImg {
+    width: 35%;
+  }
 }
-

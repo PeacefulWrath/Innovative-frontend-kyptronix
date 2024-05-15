@@ -103,7 +103,7 @@ function ChooseUs({ items }) {
   };
 
   return (
-    <div className="d-flex">
+    <div className={`d-flex ${styles.Home_choose_us_mainWrapper}`}>
       <div style={{ marginLeft: "8%" }} className={`${styles.Home_choose_us_contentWrapper}`}>
         <button className="btn" style={buttonStyle}>
           why Choose Us?

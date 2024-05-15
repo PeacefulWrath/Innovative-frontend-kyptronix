@@ -6,7 +6,7 @@ import styles from "../../styles/ServicesStyles.module.css";
 
 function NewSletter() {
   return (
-    <div className="d-flex justify-content-center">
+    <div className={`d-flex justify-content-center ${styles.Services_new_sletter_mainWrapper}`}>
       <div className={styles.Services_new_sletter_left_part }>
         <img className={styles.Services_new_sletter_mail} src={mail2} alt="mail" />
       </div>

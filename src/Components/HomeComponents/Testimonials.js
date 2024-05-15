@@ -175,7 +175,7 @@ function Testimonials({items}) {
 
   return (
     <>
-      <div className=" d-flex justify-content-center align-items-center ">
+      <div className="d-flex justify-content-center align-items-center ">
         <button className="btn" style={buttonStyle}>
           Testimonials
         </button>
@@ -186,13 +186,13 @@ function Testimonials({items}) {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center mt-5">
+      <div className={`d-flex justify-content-center mt-5 ${styles.Home_testimonials__sliderMainWrapper}`}>
         <div
           style={{
             display: "flex",
             justifyContent: "flex-end",
           }}
-          className="w-50 me-5"
+          className={`w-50 me-5 ${styles.Home_testimonials__sliderImageWrapper}`}
         >
           <img
             ref={img1Ref}

@@ -1,205 +1,286 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
 /* top bar */
 
-.Services_top_bar_text{
-    color: #FFF;
+.Services_top_bar_text {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 5%;
+}
+
+.Services_top_bar {
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* our services */
+
+.Services_our_services_main {
+  position: relative;
+  z-index: 45;
+  margin-top: -22%;
+}
+
+.Services_our_services_main_2 {
+  width: 80%;
+  height: 15rem;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #202020;
+  display: flex;
+}
+
+.Services_our_services_left_part {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 5% 5%;
+  /* justify-content: center;
+    align-items: center; */
+  gap: 10px;
+}
+
+.Services_our_services_btn {
+  text-align: center;
+  width: 50%;
+  border-radius: 33px;
+  background: var(
+    --blue-green-gradient,
+    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+  );
+}
+
+.Services_our_services_btn_text {
+  color: #202020;
+  font-family: "Exo 2";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px 9px;
+}
+
+.Services_our_services_para_main {
+  width: 90%;
+}
+
+.Services_our_services_para_text {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Services_our_services_right_part {
+  margin-right: 5%;
+}
+
+.Services_our_services_right_part_text {
+  color: #fff;
+  margin-top: 14%;
+  font-family: Hind;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* newsletter */
+
+.Services_new_sletter_left_part {
+  width: 50%;
+}
+
+.Services_new_sletter_right_part {
+  width: 50%;
+  margin-top: 10%;
+}
+
+.Services_new_sletter_btn {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 33px;
+  background: var(
+    --blue-green-gradient,
+    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+  );
+}
+
+.Services_new_sletter_btn_text {
+  color: #202020;
+
+  font-family: "Exo 2";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Services_new_sletter_subscribe_text {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Services_new_sletter_desc {
+  color: #fff;
+  font-family: Hind;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Services_new_sletter_desc_main {
+  width: 90%;
+}
+
+.Services_new_sletter_mail {
+  width: 70%;
+  margin-top: 1%;
+}
+
+/* footer */
+.Services_footer_main {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Services_footer_menues {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.Services_footer_menu_active {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Services_footer_menu {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+@media (max-width: 1280px) {
+  .HomeStyles_Home_other_menues {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin-left: 1%;
+    margin-top: 6%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .Services_top_bar_text {
+    color: #fff;
     font-family: "Exo 2";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 5%;
-}
-
-.Services_top_bar{
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-    
-}
-
-
-/* our services */
-
-.Services_our_services_main {
-    position: relative;
-    z-index: 45;
-    margin-top: -22%;
-}
-
-.Services_our_services_main_2 {
-    width: 80%;
+    margin-top: 12%;
+  }
+  .Services_our_services_main_2 {
+    width: 95%;
     height: 15rem;
     flex-shrink: 0;
     border-radius: 32px;
     background: #202020;
     display: flex;
-}
-
-.Services_our_services_left_part {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 5% 5%;
-    /* justify-content: center;
-    align-items: center; */
-    gap: 10px;
-}
-
-.Services_our_services_btn {
-
-    text-align: center;
-    width: 50%;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-}
-
-.Services_our_services_btn_text {
-    color: #202020;
+  }
+  .Services_our_services_para_text {
+    color: #fff;
     font-family: "Exo 2";
-    font-size: 15px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 5px 9px;
-}
+  }
+  .Services_our_services_right_part {
+    margin-right: 2%;
+  }
 
-.Services_our_services_para_main {
-    width: 90%
-}
-
-.Services_our_services_para_text {
-    color: #FFF;
-
-    font-family: "Exo 2";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.Services_our_services_right_part {
-
-
-    margin-right: 5%;
-}
-
-.Services_our_services_right_part_text {
-    color: #FFF;
-    margin-top: 14%;
+  .Services_our_services_right_part_text {
+    color: #fff;
+    margin-top: 10%;
     font-family: Hind;
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+  }
 
-
-/* newsletter */
-
-.Services_new_sletter_left_part {
-    width: 50%;
-
-}
-
-.Services_new_sletter_right_part {
-    width: 50%;
-    margin-top: 10%;
-    
-}
-
-.Services_new_sletter_btn {
-    display: inline-flex;
-    padding: 10px 16px;
+  .Services_new_sletter_mainWrapper {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 33px;
-    background: var(--blue-green-gradient, linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%));
-}
-
-.Services_new_sletter_btn_text {
-    color: #202020;
-
-    font-family: "Exo 2";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.Services_new_sletter_subscribe_text {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.Services_new_sletter_desc {
-    color: #FFF;
-    font-family: Hind;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.Services_new_sletter_desc_main {
-    width: 90%
-}
-
-.Services_new_sletter_mail {
-    width: 70%;
-    margin-top: 1%;
-}
-
-
-/* footer */
-.Services_footer_main{
-    display: inline-flex;
-    flex-direction: column;
-    width: 100%;
-}
-.Services_footer_menues{
-    display: inline-flex;
-align-items: flex-start;
-gap: 32px;
-}
-.Services_footer_menu_active{
-    color: #FFF;
-font-family: "Exo 2";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
-.Services_footer_menu{
-    color: #FFF;
-font-family: "Exo 2";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-opacity: 0.5;
-}
-
-
-@media (max-width: 1280px) {
-    .HomeStyles_Home_other_menues {
-      color: #fff;
-      font-family: "Exo 2";
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      opacity: 0.5;
-      margin-left: 1%;
-      margin-top: 6%;
-      white-space: nowrap;
-      cursor: pointer;
-    }
+    margin: 25px 0;
   }
+  .Services_new_sletter_left_part {
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Services_new_sletter_mail{
+    width:60%;
+    margin-top: 0%;
+  }
+
+  .Services_new_sletter_right_part{
+    width: 90%;
+    margin-top: 0%;
+  }
+  .Services_new_sletter_subscribe_text{
+    font-size: 45px;
+  }
+  .Services_new_sletter_desc{
+    font-size: 16px;
+  }
+
+  .Services_footer_main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .Services_footer_menues{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:22px;
+    margin: 10px 0;
+  }
+  .Services_footer_menu,.Services_footer_menu_active{
+    font-size: 17px;
+    margin-bottom: 0rem;
+  }
+}

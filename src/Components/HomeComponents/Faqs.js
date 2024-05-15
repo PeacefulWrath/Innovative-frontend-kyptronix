@@ -115,7 +115,7 @@ function Faqs({ items, tempFaqs }) {
         marginRight: "7%",
       }}
     >
-      <div>
+      <div className={styles.Home_faq_mainContentWrapper}>
         <button className="btn" style={buttonStyle}>
           Faqs
         </button>

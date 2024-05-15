@@ -20,7 +20,7 @@ function GalleryMain() {
 
   const handle1stMouseEnter = () => {
     timeline1.current.to(imgRef1.current, {
-      scale:1.2,
+      scale: 1.2,
       ease: "expo.out",
       duration: 1
     });
@@ -142,7 +142,7 @@ function GalleryMain() {
       {clicked === "Engineering" && (
         <>
           <div
-            className="d-flex justify-content-center"
+            className={`d-flex justify-content-center ${styles.Gallery__mainWrapperOne}`}
             style={{ marginTop: "10%" }}
           >
             <div className="d-flex">
@@ -169,14 +169,14 @@ function GalleryMain() {
                 <div
                   ref={divRef1}
                   style={{
-                    marginLeft:"10px",
+                    marginLeft: "10px",
                     display: "none",
                     background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.53) 42.71%, #000 80.63%)',
                     width: '300px',
                     height: '143px',
                     marginTop: '-47%',
                     borderRadius: "36px",
-                    zIndex:1000
+                    zIndex: 1000
                   }}
                 >
                   <div className={`${styles.Gallery_li} ms-3`}>
@@ -205,7 +205,7 @@ function GalleryMain() {
             </div>
           </div>
           <div
-            className="d-flex justify-content-center"
+            className={`d-flex justify-content-center ${styles.Gallery__mainWrapperOne}`}
             style={{ marginTop: "1.5rem" }}
           >
             <div className="d-flex">
@@ -235,7 +235,7 @@ function GalleryMain() {
             </div>
           </div>
           <div
-            className="d-flex justify-content-center"
+            className={`d-flex justify-content-center ${styles.Gallery__mainWrapperOne}`}
             style={{ marginTop: "1.5rem" }}
           >
             <div className="d-flex">
@@ -265,7 +265,7 @@ function GalleryMain() {
             </div>
           </div>
           <div
-            className="d-flex justify-content-center"
+            className={`d-flex justify-content-center ${styles.Gallery__mainWrapperOne}`}
             style={{ marginTop: "1.5rem" }}
           >
             <div className="d-flex">
@@ -294,6 +294,8 @@ function GalleryMain() {
               />
             </div>
           </div>
+
+          <GalleryMainTab />
         </>
       )}
     </>
@@ -301,3 +303,22 @@ function GalleryMain() {
 }
 
 export default GalleryMain;
+
+const GalleryMainTab = () => {
+  return (
+    <>
+      <div className={styles.Gallery__mainWrapperTab}>
+
+        {
+          ['1', '2', '3', '4', '5', '6', '7', '8'].map((cur, id) => (
+
+            <div className={styles.Gallery__imageWrapper}>
+              <img src={gallery1} alt="gallery-pics" />
+            </div>
+          ))
+        }
+
+      </div>
+    </>
+  )
+}
