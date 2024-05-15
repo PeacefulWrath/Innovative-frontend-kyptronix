@@ -1,144 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
 .Contact_us_form_left_part {
-    display: inline-flex;
-    flex-direction: column;
-    width: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .Contact_us_left_part_para {
-    color: #FFF;
-    font-family: "Exo 2";
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 3rem;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 3rem;
 }
 
 .Contact_us_left_part_desc {
-
-    color: #FFF;
-    font-family: "Hind";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    word-wrap: break-word
+  color: #fff;
+  font-family: "Hind";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-wrap: break-word;
 }
 
 .Contact_us_form {
-    display: inline-flex;
-    flex-direction: column;
-    margin-top: 5%;
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 5%;
 }
 
 .Contact_us_attr_main {
-    display: flex;
-    width: 45%;
-    padding: 20px 24px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.40);
-    background: #202020;
-    color: white;
+  display: flex;
+  width: 45%;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #202020;
+  color: white;
 }
 
 .Contact_us_attr_container:empty:before {
-    content: attr(data-placeholder);
-    color: #CCCCCC;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-    opacity: 0.7;
-  
+  content: attr(data-placeholder);
+  color: #cccccc;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  opacity: 0.7;
 }
 
 .Contact_us_msg_main {
-    display: flex;
-    width: 92%;
-    padding: 20px 24px ;
-    align-items: center;
-    gap: 10px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.40);
-    background: #202020;
-    color: white;
-    height: 10rem;
+  display: flex;
+  width: 92%;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #202020;
+  color: white;
+  height: 10rem;
 }
 
 .Contact_us_msg_container:empty:before {
-    content: attr(data-placeholder);
-    color: #CCCCCC;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-    opacity: 0.7;
- 
-
+  content: attr(data-placeholder);
+  color: #cccccc;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  opacity: 0.7;
 }
-.Contact_us_msg_container{
-    margin-top: -9%;
+.Contact_us_msg_container {
+  margin-top: -9%;
 }
 
-.Contact_us_submit_div_main{
-    display: inline-flex;
-    padding: 24px 48px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 36px;
-border: 2px solid #FFF;
-width: 20%;
-height: 30px;
-margin-top: 3%;
-cursor: pointer;
+.Contact_us_submit_div_main {
+  display: inline-flex;
+  padding: 24px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 36px;
+  border: 2px solid #fff;
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  cursor: pointer;
 }
 
-
-
-
-.Contact_us_submit_text{
-    color: #FFF;
-    text-align: center;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.Contact_us_submit_text {
+  color: #fff;
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-
-
-
 
 .Contact_us_sub_main {
-    display: flex;
-    width: 92%;
-    padding: 20px 24px ;
-    align-items: center;
-    gap: 10px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.40);
-    background: #202020;
-    color: white;
-    height: 4rem;
-    justify-content: space-between;
+  display: flex;
+  width: 92%;
+  padding: 20px 24px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #202020;
+  color: white;
+  height: 4rem;
+  justify-content: space-between;
 }
 
 .Contact_us_sub_container:empty:before {
-    content: attr(data-placeholder);
-    color: #CCCCCC;
-    font-size: 20px;
-    font-family: Montserrat;
-    font-weight: 400;
-    opacity: 0.7;
- 
-
+  content: attr(data-placeholder);
+  color: #cccccc;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 400;
+  opacity: 0.7;
 }
-.Contact_us_sub_container{
-    margin-top: -1%;
+.Contact_us_sub_container {
+  margin-top: -1%;
+}
+.ContactUsForm__mainWrapperTab {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ContactusForm__mainWrapper {
+    display: none !important;
+  }
+
+  .ContactUsForm__mainWrapperTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5% 0px;
+  }
+  .ContactUsForm__smallHeadingWrapper {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(92.29deg, #53b3fa 5.18%, #abd021 99.12%);
+    padding: 8px 0px;
+    border-radius: 30px;
+  }
+  .ContactUsForm__smallHeadingWrapper h2 {
+    font-size: 20px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    margin: 0px 0px !important;
+  }
+
+  .ContactUsForm__topContainerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin-top: 20px;
+  }
+  .ContactUsForm__topContainerMainContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+  }
+  .CallUsText {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "Exo 2";
+    font-weight: 600;
+  }
+  .callus__para {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Exo 2";
+    font-weight: 400;
+  }
+  .callus__iconAndNumberWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .CallUs__NumberLink {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Hind";
+    font-weight: 500;
+  }
+
+  .ContactUsForm__mainFormWrapper {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .FormWrapper__heading{
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Exo 2';
+  }
+  .FormWrapper__para{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Exo 2';
+  }
+  .Form__firstAndLastInputWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .Form__inputWrapper{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  .Form__inputWrapper input {
+    width: 90%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+  }
 }
