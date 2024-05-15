@@ -152,6 +152,10 @@
   );
 }
 
+.Products__mainWrapperTab{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .Products_our_products_btn {
     width: 30%;

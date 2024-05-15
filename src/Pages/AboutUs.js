@@ -5,6 +5,7 @@ import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
 import aboutusBg from "../assets/aboutus-topbar-bg.png";
 import TopBar from "../Components/TopBar/TopBar";
+import styles from '../styles/AboutUsStyles.module.css';
 
 function AboutUs() {
   return (
@@ -23,6 +24,7 @@ function AboutUs() {
           width: "85%",
           margin: "50px auto",
         }}
+        className={styles.Aboutus__quotesWrapper}
       >
         <h1 style={{ color: "white", textAlign: "center", fontSize: "45px" }}>
           {" "}
