@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
-
 /*products by category */
 .Products_ProductsByCategory_btn {
   display: inline-flex;
@@ -77,10 +76,10 @@
   transform: scale(1.1);
 }
 
-.Products_ProductsByCategory__imgWrapper:hover .Products_ProductsByCategory__topLayer {
+.Products_ProductsByCategory__imgWrapper:hover
+  .Products_ProductsByCategory__topLayer {
   z-index: -1;
 }
-
 
 /* our products */
 
@@ -138,19 +137,76 @@
   flex-shrink: 0;
 }
 
-.Products_our_products_Product__hoverEffect{
-    transition: .5s ease-in-out;
+.Products_our_products_Product__hoverEffect {
+  transition: 0.5s ease-in-out;
 }
 
 .Products_our_products_Product__hoverEffect:hover {
   border-radius: 32px;
-  border: 1px solid  rgba(255, 255, 255, 0.6);
-  background: 
-    linear-gradient(
-      158deg,
-      rgba(255, 255, 255, 0.3) 2.79%,
-      rgba(190, 190, 190, 0.3) 40.05%,
-      rgba(255, 255, 255, 0.3) 99.21%
-    )
-  ;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(
+    158deg,
+    rgba(255, 255, 255, 0.3) 2.79%,
+    rgba(190, 190, 190, 0.3) 40.05%,
+    rgba(255, 255, 255, 0.3) 99.21%
+  );
+}
+
+@media (max-width: 768px) {
+  .Products_our_products_btn {
+    width: 30%;
+    border-radius: 33px;
+    background: var(
+      --blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+    );
+  }
+
+  .Products__mainWrapper {
+    display: none;
+  }
+  .Products__mainWrapperTab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(84.66deg, #318ec1 1.01%, #6ec1ef 100%);
+    padding: 20px 10px;
+  }
+  .Products__contentMainWrapper {
+    width: 47%;
+  }
+  .Products__contentHeading {
+    font-size: 24px;
+    font-family: "Exo 2";
+    font-weight: 700;
+  }
+  .Products__contentPara{
+    font-size: 14px;
+    font-family: "Hind";
+    font-weight: 500;
+  }
+  .Products__contentBuyBTN{
+    background: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 36px;
+    padding: 7px 20px;
+
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Hind';
+    
+  }
+  .Products__imageMainWrapper {
+    width: 47%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .Products__imageMainWrapper img{
+    width: 100%;
+  }
 }
