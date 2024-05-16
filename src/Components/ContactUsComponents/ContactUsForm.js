@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import right from "../../assets/contactus-right.png";
 import divider from "../../assets/contactus-divider.png";
 import contactus from "../../assets/contactus-btn.png";
@@ -6,6 +6,7 @@ import styles from "../../styles/ContactUsStyles.module.css";
 import dropdown from "../../assets/dropdown.png";
 import PhoneIcon from "../../assets/phoneIcon.png";
 import EmailIcon from "../../assets/emailIcon.png";
+import gsap from "gsap";
 
 function ContactUsForm() {
   return (
@@ -125,6 +126,32 @@ function ContactUsForm() {
 export default ContactUsForm;
 
 const ContactUsFormTab = () => {
+  const buttonRef = useRef(null);
+
+  const timeline = useRef(gsap.timeline());
+  const timeline2 = useRef(gsap.timeline());
+
+  const handleFirstLMMouseEnter = () => {
+    timeline.current.to(buttonRef.current, {
+      width: "100%",
+      ease: "linear",
+      duration: 1,
+    });
+
+    timeline.current.play();
+
+    timeline2.current.to(buttonRef.current, {
+      width: "100%",
+      background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
+      duration: 1,
+    });
+    timeline2.current.play();
+  };
+
+  const handleFirstLMMouseLeave = () => {
+    timeline.current.reverse();
+    timeline2.current.reverse();
+  };
   return (
     <>
       <div className={styles.ContactUsForm__mainWrapperTab}>
@@ -182,11 +209,63 @@ const ContactUsFormTab = () => {
           <div>
             <div className={styles.Form__firstAndLastInputWrapper}>
               <div className={styles.Form__inputWrapper}>
-                <input type="text" placeholder="Frist Name..." />
+                <input
+                  className={styles.Form__inputs}
+                  type="text"
+                  placeholder="Frist Name..."
+                />
               </div>
               <div className={styles.Form__inputWrapper}>
-                <input type="text" placeholder="Last Name..." />
+                <input
+                  className={styles.Form__inputs}
+                  type="text"
+                  placeholder="Last Name..."
+                />
               </div>
+            </div>
+
+            <div className={styles.Form__firstAndLastInputWrapper}>
+              <div className={styles.Form__inputWrapper}>
+                <input
+                  className={styles.Form__inputs}
+                  type="text"
+                  placeholder="Phone Number..."
+                />
+              </div>
+              <div className={styles.Form__inputWrapper}>
+                <input
+                  className={styles.Form__inputs}
+                  type="text"
+                  placeholder="Email ID..."
+                />
+              </div>
+            </div>
+            <div className={styles.Form__firstAndLastInputWrapper}>
+              <div className={styles.Form__selectWrapper}>
+                <select className={styles.Form__selectField}>
+                  <option default>Subject</option>
+                  <option>Subject</option>
+                  <option>Subject</option>
+                  <option>Subject</option>
+                </select>
+              </div>
+            </div>
+            <div className={styles.Form__textareaWrapper}>
+              <textarea
+                className={styles.Form__textarea}
+                placeholder="Message.."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <div className={styles.Form__BTNWrapper}>
+              <button
+                ref={buttonRef}
+                onMouseEnter={handleFirstLMMouseEnter}
+                onMouseLeave={handleFirstLMMouseLeave}
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>
