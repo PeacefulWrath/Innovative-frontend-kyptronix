@@ -280,3 +280,45 @@
     margin-bottom: 70px;
   }
 }
+
+@media (max-width: 480px) {
+  .AboutUsPrepare__contentTitle {
+    font-size: 35px;
+    font-family: "Exo 2";
+    font-weight: 700;
+
+    margin: 10px 0px !important;
+    color: #ffffff;
+  }
+  .AboutUsPrepare__contentPara {
+    font-size: 13px;
+  }
+  .Aboutus__quotesWrapper {
+    width: 95% !important;
+    margin: 25px auto !important;
+  }
+  .Aboutus__quotesWrapper h1 {
+    font-size: 25px !important;
+  }
+  .AboutUsPrepare__learnMoreBTN {
+    margin: 7px 0px;
+    padding: 8px 0px;
+    border-radius: 36px;
+    border: 2px solid #fff;
+    width: 35%;
+    background: transparent;
+    outline: none;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Exo 2";
+    font-weight: 600;
+  }
+  .AboutUsPrepare__twoImageWrapper {
+    z-index: 2;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

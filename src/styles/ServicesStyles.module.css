@@ -250,19 +250,19 @@
     justify-content: center;
     align-items: center;
   }
-  .Services_new_sletter_mail{
-    width:60%;
+  .Services_new_sletter_mail {
+    width: 60%;
     margin-top: 0%;
   }
 
-  .Services_new_sletter_right_part{
+  .Services_new_sletter_right_part {
     width: 90%;
     margin-top: 0%;
   }
-  .Services_new_sletter_subscribe_text{
+  .Services_new_sletter_subscribe_text {
     font-size: 45px;
   }
-  .Services_new_sletter_desc{
+  .Services_new_sletter_desc {
     font-size: 16px;
   }
 
@@ -272,15 +272,59 @@
     width: 90%;
     margin: 0 auto;
   }
-  .Services_footer_menues{
+  .Services_footer_menues {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap:22px;
+    gap: 22px;
     margin: 10px 0;
   }
-  .Services_footer_menu,.Services_footer_menu_active{
+  .Services_footer_menu,
+  .Services_footer_menu_active {
     font-size: 17px;
     margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Services_top_bar_text {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 27%;
+  }
+  .Services_our_services_main {
+    position: relative;
+    z-index: 45;
+    margin-top: -50%;
+  }
+  .Services_our_services_main_2 {
+    height: 22rem;
+
+    flex-direction: column;
+  }
+  .Services_our_services_right_part {
+    margin-right: 0%;
+    padding: 8px;
+  }
+  .Services_our_services_para_text {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .Services_our_services_right_part_text {
+    color: #fff;
+    margin-top: 0%;
+    font-family: Hind;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }
