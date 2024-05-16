@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState ,useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
@@ -6,8 +6,30 @@ import copyright from "../assets/copyright.png";
 import GalleryMain from "../Components/GalleryComponents/GalleryMain";
 import galleryBg from "../assets/gallery-topbar-bg.png";
 import TopBar from "../Components/TopBar/TopBar";
+import { fetchGalleries } from "../api-calls/apiCalls";
 
 function Gallery() {
+  const [galleries, setGalleries] = useState([])
+  const [galleryCategories, setGalleryCategories] = useState([])
+
+  useEffect(() => {
+    const fetcher = async () => {
+      const galleriesData = await fetchGalleries()
+      setGalleries([...galleriesData])
+
+      const galleryCategoriesData = []
+      galleriesData.forEach((item)=>{
+        if(galleryCategoriesData.includes(item?.category)==false){
+          galleryCategoriesData.push(item?.category)
+        }
+      })
+      setGalleryCategories([...galleryCategoriesData])
+
+    }
+
+    fetcher()
+  }, [])
+
   return (
     <div
       style={{
@@ -16,8 +38,8 @@ function Gallery() {
         overflowX: "hidden",
       }}
     >
-       <TopBar  page={"gallery"} bg={galleryBg}/>
-      <GalleryMain />
+      <TopBar page={"gallery"} bg={galleryBg} />
+      {galleries && galleries.length !== 0 && <GalleryMain galleries={galleries} galleriesCategories={galleryCategories} />}
       <div style={{ marginTop: "10%" }}>
         <ServiceFooter />
       </div>

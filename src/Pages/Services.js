@@ -1,32 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import OurServices from "../Components/ServicesComponents/OurServices";
-import TrainingModules from "../Components/HomeComponents/TrainingModules";
+import ServicesList from "../Components/ServicesComponents/ServicesList";
 import NewSletter from "../Components/ServicesComponents/NewSletter";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import TopBar from "../Components/TopBar/TopBar";
 import servicesBg from "../assets/services-top-bar.png";
 import iso from "../assets/iso.png";
+import { fetchServices } from "../api-calls/apiCalls";
 
 function Services() {
   
-  const traininingModulesItems = [
-    {
-      image: iso,
-      title: "hi",
-      description: "redddy",
-      hoverTitle: "hello",
-      hoverDesc: "go redddy",
-    },
+  const [servicesItems,setServicesItems] =useState([])
 
-    {
-      image: iso,
-      title: "hi",
-      description: "redddy",
-      hoverTitle: "hello",
-      hoverDesc: "go redddy",
-    },
-  ];
+  useEffect(()=>{
+    const fetcher = async () => {
+      const servicesData = await fetchServices()
+      setServicesItems([...servicesData])
 
+     
+    }
+
+    fetcher()
+  },[])
   return (
     <div
       style={{
@@ -39,9 +34,9 @@ function Services() {
       <div style={{ marginTop: "15%" }}>
       <OurServices />
       </div>
-       <div style={{ marginTop: "10%" }}>
-        <TrainingModules  items={traininingModulesItems} />
-      </div>
+       {servicesItems&&servicesItems.length!==0&&<div style={{ marginTop: "10%" }}>
+        <ServicesList  items={servicesItems} />
+      </div>}
      <div>
         <NewSletter />
       </div>

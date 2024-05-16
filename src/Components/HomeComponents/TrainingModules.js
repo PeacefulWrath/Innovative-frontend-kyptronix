@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import gear from "../../assets/gear.png";
@@ -84,6 +84,8 @@ function TrainingModules({items}) {
     };
   }, []);
 
+
+
   return (
     <>
       <div style={divStyle}>
@@ -106,7 +108,7 @@ function TrainingModules({items}) {
             </div>
           </div>
         </div>
-        <div className="row  justify-content-center mt-3" ref={mainDivRef1}>
+       { items&&items.length!==0&&<div className="row  justify-content-center mt-3" ref={mainDivRef1}>
           {items.map((item, index) => (
             <div
               className={`${styles.Home_training_modules_card_main} ms-5 mt-5 col-md-2 particular_column `}
@@ -140,12 +142,12 @@ function TrainingModules({items}) {
                   <div
                     className={`${styles.Home_training_modules_card_title_anime} mt-3`}
                   >
-                    {item?.title}
+                    {item?.hover_title}
                   </div>
                   <div
                     className={`${styles.Home_training_modules_card_desc_anime} mt-3`}
                   >
-                   {item?.description}
+                   {item?.hover_description}
                   </div>
 
                   <div
@@ -171,7 +173,7 @@ function TrainingModules({items}) {
               </div>
             </div>
           ))}
-        </div>
+        </div>}
       </div>
     </>
   );

@@ -137,7 +137,7 @@ function Faqs({ items, tempFaqs }) {
           <div style={{ height: "unset" }} className="faqParaDiv1">
             <div className={styles.Home_faq_question}>
               <p className={styles.Home_faq_text}>{item?.question}</p>
-              {console.log(clickedFaqs)}
+              {/* {console.log(clickedFaqs)} */}
               {clickedFaqs[ind]?.sign== "plus" ? (
                 <img
                   onClick={() => {

@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import OurMission from "../Components/HomeComponents/OurMission";
 import OurVision from "../Components/HomeComponents/OurVision";
 import TrainingModules from "../Components/HomeComponents/TrainingModules";
@@ -13,78 +13,46 @@ import testi2 from "../assets/testi2.png";
 import testi3 from "../assets/testi3.png";
 import TopBar from "../Components/TopBar/TopBar";
 import Styles from '../styles/HomeStyles.module.css'
+import { fetchCus, fetchFaqs, fetchTestimonials, fetchTrainingModules } from "../api-calls/apiCalls";
 
 
 function Home() {
-
-  const[faqs,setFaqs]=useState([])
-
+  const [traininingModulesItems, setTraininingModulesItems] = useState([])
+  const [testimonialsItems, setTestimonialsItems] = useState([])
+  const [faqItems, setFaqItems] = useState([])
+  const [tempFaqs,setTempFaqs]= useState([])
+  const [cusItems, setCusItems] = useState([])
  
 
-  const traininingModulesItems = [
-    {
-      image: iso,
-      title: "hi",
-      description: "redddy",
-      hoverTitle: "hello",
-      hoverDesc: "go redddy",
-    },
-
-    {
-      image: iso,
-      title: "hi",
-      description: "redddy",
-      hoverTitle: "hello",
-      hoverDesc: "go redddy",
-    },
-  ];
-
-
-  const testimonialsItems = [
-    {
-      image: testi1,
-      description: "desc1",
-      profession: "student",
-      name: "digantaleena",
-    },
-    {
-      image: testi2,
-      description: "The platform has completely transformed my exam preparation. It offers a comprehensive range of study materials and practice tests that helped me ace my exams with confidence.",
-      profession: "student",
-      name: "rima",
-    },
-    {
-      image: testi3,
-      description: "The platform has completely transformed my exam preparation. It offers a comprehensive range of study materials and practice tests that helped me ace my exams with confidence.",
-      profession: "student",
-      name: "rajesh",
-    },
-  ];
-
-  const chooseUsItems=[
-
-    {
-      question:"how are you",
-      answer:"good"
-    },
-    {
-      question:"how are you",
-      answer:"bad"
-    },
-    {
-      question:"how are you",
-      answer:"red"
-    }
-  ]
-
   useEffect(() => {
-    let tempFaqs = [];
-    chooseUsItems.forEach((item) => {
-      tempFaqs.push({sign: "plus"});
-    });
-    setFaqs([...tempFaqs]);
-  },[]);
   
+
+
+    const fetcher = async () => {
+      const tempTrainingModuleData = await fetchTrainingModules()
+      setTraininingModulesItems([...tempTrainingModuleData])
+
+      const testimonialsData = await fetchTestimonials()
+      setTestimonialsItems([...testimonialsData])
+
+      const faqData = await fetchFaqs()
+      setFaqItems([...faqData])
+
+      let tempFaqs = [];
+
+      faqData.forEach((item) => {
+        tempFaqs.push({sign: "plus"});
+      });
+      setTempFaqs([...tempFaqs]);
+
+
+      const cusData = await fetchCus()
+      setCusItems([...cusData])
+    }
+
+    fetcher()
+  }, []);
+
 
   return (
     <div
@@ -95,7 +63,7 @@ function Home() {
       }}
     >
       <div>
-        <TopBar page={"home"}/>
+        <TopBar page={"home"} />
       </div>
       <div className={Styles.Home__heroSec} style={{ marginTop: "10%" }}>
         <OurMission />
@@ -103,24 +71,24 @@ function Home() {
       <div>
         <OurVision />
       </div>
+      {traininingModulesItems && traininingModulesItems.length !== 0 && <div style={{ marginTop: "10%" }}>
+        <TrainingModules items={traininingModulesItems} />
+      </div>}
+
+      {/* {testimonialsItems && testimonialsItems.length !== 0 && <div style={{ marginTop: "10%" }}><Testimonials items={testimonialsItems} />  </div>} */}
+
       <div style={{ marginTop: "10%" }}>
-        <TrainingModules  items={traininingModulesItems}/>
-      </div>
-      <div style={{ marginTop: "10%" }}>
-        <Testimonials items={testimonialsItems} />
-      </div>
-       <div style={{ marginTop: "10%" }}>
         <OurJourney />
       </div>
-      <div style={{ marginTop: "10%" }}>
-        <ChooseUs  items={chooseUsItems}/>
-      </div>
-      {faqs.length!==0&&<div style={{ marginTop: "10%" }}>
-        <Faqs  items={chooseUsItems} tempFaqs={faqs}/>
+    {cusItems&&cusItems.length!==0&&<div style={{ marginTop: "10%" }}>
+        <ChooseUs items={cusItems} />
+      </div>}
+      {faqItems&&faqItems.length !== 0 && <div style={{ marginTop: "10%" }}>
+        <Faqs items={faqItems} tempFaqs={tempFaqs} />
       </div>}
       <div style={{ marginTop: "10%" }}>
         <Footer />
-      </div> 
+      </div>
     </div>
   );
 }
