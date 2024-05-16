@@ -208,36 +208,93 @@
     width: 90%;
     margin: 20px auto;
   }
-  .FormWrapper__heading{
+  .FormWrapper__heading {
     color: #ffffff;
     font-size: 35px;
     font-weight: 600;
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
   }
-  .FormWrapper__para{
+  .FormWrapper__para {
     color: #ffffff;
     font-size: 15px;
     font-weight: 400;
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
   }
-  .Form__firstAndLastInputWrapper{
+  .Form__firstAndLastInputWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
+    margin: 15px auto;
+    width: 90%;
   }
-  .Form__inputWrapper{
+  .Form__inputWrapper {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
   }
-  .Form__inputWrapper input {
+  .Form__selectWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Form__textareaWrapper {
     width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Form__inputWrapper input,
+  select,
+  textarea {
+    width: 100%;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 10px;
     border-radius: 8px;
     outline: none;
+  }
+  .Form__selectField,
+  .Form__inputs,
+  .Form__textarea {
+    color: #cccccc;
+    font-family: "Montserrat" !important;
+    font-size: 17px;
+    padding: 12px;
+  }
+  .Form__inputs::placeholder {
+    color: #cccccc;
+    font-family: "Montserrat" !important;
+  }
+  .Form__textarea::placeholder {
+    color: #cccccc;
+    font-family: "Montserrat" !important;
+  }
+  .Form__selectField option {
+    color: #ffffff;
+    font-family: "Exo 2" !important;
+    font-size: 15px;
+    background-color: #000;
+  }
+
+  .Form__BTNWrapper {
+    width: 90%;
+    margin: 20px auto;
+    
+  }
+  .Form__BTNWrapper button {
+    width: 100%;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px 0px;
+    background-color: transparent;
+    color: #ffffff;
+
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: 500;
   }
 }
