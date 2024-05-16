@@ -64,7 +64,7 @@ function GalleryMain() {
     <>
       <div
         className="d-flex justify-content-center"
-        style={{ marginTop: "10%" }}
+        style={{ marginTop: "10%",flexWrap:'wrap',rowGap:'15px' }}
       >
         <div
           className={`${clicked === "Engineering"

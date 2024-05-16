@@ -1,128 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
 .Gallery_main_btns {
-    display: flex;
-    width: 247px;
-    padding: 10px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 33px;
-    border: 1px solid #FFF;
-    opacity: 0.6;
-    cursor: pointer;
+  display: flex;
+  width: 247px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 33px;
+  border: 1px solid #fff;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .Gallery_main_btns_text {
-    color: #FFF;
-    text-align: center;
-    font-family: "Exo 2";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-
 .Gallery_main_btns_active {
+  display: flex;
+  width: 247px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 33px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
+  opacity: unset;
+}
+
+.Gallery_main_btns_text_active {
+  text-align: center;
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #202020;
+}
+
+.Gallery_img {
+  width: 300px;
+  height: 300px;
+  will-change: transform;
+  transition: transform 0.2s ease;
+  border-radius: 32px;
+}
+.Gallery_li {
+  color: #fff;
+  text-align: "center";
+
+  font-family: "Exo 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .Gallery__mainWrapperOne {
+    display: none !important;
+  }
+  .Gallery_main_btns {
     display: flex;
-    width: 247px;
+    width: 24%;
     padding: 10px 16px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 33px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
+    opacity: 0.6;
     cursor: pointer;
-    background: linear-gradient(92deg, #53B3FA 5.18%, #ABD021 99.12%);
-    opacity: unset;
-}
-
-.Gallery_main_btns_text_active {
+    margin-left: 1rem !important;
+  }
+  .Gallery_main_btns_active {
+    display: flex;
+    width: 24%;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 33px;
+    border: 1px solid #fff;
+    opacity: 0.6;
+    cursor: pointer;
+    margin-left: 1rem !important;
+  }
+  .Gallery_main_btns_text,
+  .Gallery_main_btns_text_active {
+    color: #fff;
     text-align: center;
     font-family: "Exo 2";
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: #202020;
+  }
+  .Gallery__mainWrapperTab {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .Gallery__imageWrapper img {
+    width: 100%;
+  }
 }
 
-.Gallery_img {
-    width: 300px;
-    height: 300px;
-    will-change: transform;
-    transition: transform .2s ease;
-    border-radius: 32px;
-   
+@media (max-width: 480px) {
+  .Gallery_main_btns {
+    width: 33%;
 
-}
-.Gallery_li{
+    border-radius: 15px;
 
-   color: #FFF;
-text-align: 'center';
+    margin-left: 0.7rem !important;
+  }
+  .Gallery_main_btns_active {
+    width: 33%;
 
-font-family: "Exo 2";
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
+    border-radius: 15px;
 
-@media(max-width:768px){
-    .Gallery__mainWrapperOne{
-        display: none !important;
-    }
-    .Gallery_main_btns {
-        display: flex;
-        width: 24%;
-        padding: 10px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 33px;
-        border: 1px solid #FFF;
-        opacity: 0.6;
-        cursor: pointer;
-        margin-left: 1rem !important;
-    }
-    .Gallery_main_btns_active {
-        display: flex;
-        width: 24%;
-        padding: 10px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 33px;
-        border: 1px solid #FFF;
-        opacity: 0.6;
-        cursor: pointer;
-        margin-left: 1rem !important;
-    }
-    .Gallery_main_btns_text,.Gallery_main_btns_text_active {
-        color: #FFF;
-        text-align: center;
-        font-family: "Exo 2";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-    .Gallery__mainWrapperTab{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 90%;
-        margin: 0 auto;
-        gap:20px;
-        margin-top: 40px;
-    }
-    .Gallery__imageWrapper img{
-        width: 100%;
-        
-    }
+    margin-left: 0.7rem !important;
+  }
+  .Gallery__mainWrapperTab {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    margin-top: 40px;
+  }
 }

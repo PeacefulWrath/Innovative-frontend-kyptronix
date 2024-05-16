@@ -87,13 +87,13 @@
   position: relative;
 }
 
-.Login__lft__EyeIcon{
+.Login__lft__EyeIcon {
   position: absolute;
   right: 5%;
   bottom: -30%;
   cursor: pointer;
 }
-.Login__lft__EyeIcon img{
+.Login__lft__EyeIcon img {
   width: 18px;
 }
 
@@ -186,7 +186,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 .Register__lft__SoptionPara {
   color: #fff;
@@ -203,27 +202,201 @@
   align-items: center;
   gap: 20px;
 }
-.Register__lft__IconWrapper{
-    width: 35px;
-    height: 35px;
+.Register__lft__IconWrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.Register__lft__IconWrapper img {
+  width: 60%;
+}
+.Register__lft__IconWrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 8.5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Register__password_is_not_matched {
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .Register__main__div {
+    background-color: #202020;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 40px;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Register__rgt__Wrapper {
+    width: 35%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Register__lft__Wrapper {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 30px;
+  }
+  .Register__rgt__LogoAndTitle__Wrapper {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .Register__rgt__LogoAndTitle__Wrapper h1 {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .Register__lft__SocialloginOp__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    font-size: 0px;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .Register__lft__input_wrapper input {
+    padding: 10px 12px;
+  }
+  .Login__lft__EyeIcon {
+    bottom: -12%;
+  }
+}
+
+@media(max-width:480px){
+  .Register__rgt__Wrapper {
+    display: none;
+  }
+  .Register__lft__Wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .Register__lft__inputs__Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    row-gap: 15px;
+  }
+  .Register__lft__input_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .Register__lft__content__wrapper {
+    width: 95%;
+    height: 97%;
+  }
+  .Register__lft__SocialloginOp__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    font-size: 0px;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  .Register__lft__cotentPara {
+    color: #fff;
+    font-family: "Hind";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  .Register__lft__LoginPara {
+    color: #fff;
+    font-family: "Hind";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0;
+  }
+  .Register__lft__Link {
+    color: #008ed7;
+    font-family: "Hind";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  .Register__lft__SignIn__BTN {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    background: #202020;
+    padding: 8px 25px;
+  }
+  .Register__lft__SoptionPara {
+    color: #fff;
+    font-family: "Hind";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0 !important;
+  }
+  .Register__lft__optionIcon__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .Register__lft__IconWrapper {
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: .3s ease-in-out;
-}
-.Register__lft__IconWrapper img{
+    transition: 0.3s ease-in-out;
+  }
+  .Register__lft__IconWrapper img {
     width: 60%;
-}
-.Register__lft__IconWrapper:hover{
-    transform: scale(1.1);
-    box-shadow: 5px 5px 8.5px 0px rgba(0, 0, 0, 0.25);
-}
-
-.Register__password_is_not_matched{
-  white-space: nowrap;
-  font-size: 1rem;
-color: #ff0000;
+  }
 }

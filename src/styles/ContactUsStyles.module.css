@@ -298,3 +298,39 @@
     font-weight: 500;
   }
 }
+@media(max-width:480px){
+  .ContactUsForm__smallHeadingWrapper {
+    width: 35%;
+    border-radius: 20px;
+  }
+  .ContactUsForm__smallHeadingWrapper h2 {
+    font-size: 16px;
+    font-family: "Exo 2";
+    font-weight: 700;
+    margin: 0px 0px !important;
+  }
+  .ContactUsForm__topContainerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%;
+    margin-top: 20px;
+  }
+  .Form__firstAndLastInputWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px auto;
+    width: 90%;
+  }
+  .Form__inputWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

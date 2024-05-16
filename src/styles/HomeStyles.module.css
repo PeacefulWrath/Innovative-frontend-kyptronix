@@ -1085,13 +1085,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 .Get__Quotes_SubmitBtnWrapper button {
   color: #fff;
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "Montserrat";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1975,5 +1975,167 @@
   }
   .Home_footer_quoteImg {
     width: 35%;
+  }
+
+  .Get__Quotes_FormWrapper {
+    width: 85%;
+    height: 75%;
+  }
+  .Get__Quotes_SubmitBtnWrapper {
+    gap: 10px;
+    margin: 10px auto !important;
+  }
+  .Get__Quotes_FormContainer {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* mobile view */
+@media (max-width: 480px) {
+  .Home__topBar__socialMedia__mainWrapper {
+    display: none;
+  }
+  .Home__topBar__getQuote__BTN {
+    width: 25%;
+    border-radius: 25px;
+    font-size: 14px;
+  }
+  .Home__topBar__iconAndLinkWrapper {
+    gap: 3px;
+  }
+  .topBar_iconWrapper {
+    height: 20px;
+    width: 20px;
+  }
+  .topBar_iconWrapper img {
+    width: 60%;
+  }
+  .Home__topBar__telLink {
+    font-size: 12px;
+  }
+  .Home_logo {
+    width: 30%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .Home__navBar__BTNSWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+  }
+  .Home__navBar__signUp__BTN {
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  .Home__navBar__logoIn__BTN {
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  .Home_our_mission__titleWrapper {
+    width: 35%;
+
+    border-radius: 25px;
+  }
+  .Home_our_mission__titleWrapper h2 {
+    font-size: 16px;
+  }
+  .Home_our_mission__EmpowerText {
+    font-size: 27px;
+  }
+  .Home_our_mission__Empowerpara {
+    font-size: 13px;
+  }
+  .Home_our_vision__titleWrapper {
+    width: 35%;
+    background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  .Home_our_vision__titleWrapper h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 0px 0px;
+    font-family: "Exo 2";
+    font-weight: 700;
+  }
+  .Home_our_vision__pioneeringPara {
+    color: white;
+    margin-top: 15px;
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .Home_training_modules_para {
+    color: #fff;
+    text-align: center;
+    font-family: "Exo 2";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 95%;
+  }
+  .Home_training_modules_card_main {
+    margin-left: 0px !important;
+    margin-top: 2rem !important;
+  }
+  .Home_testimonials_title_para {
+    width: 95% !important;
+    font-size: 27px;
+  }
+  .Home_choose_us_cards_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+  }
+  .Home_choose_us_question_img {
+    zoom: 40%;
+  }
+  .Home_choose_us_lm_btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 36px;
+    border: 2px solid #fff;
+    width: 140px;
+    margin-top: 3%;
+    align-items: center;
+    height: 40px;
+  }
+
+  .Home_choose_us_lm_text {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .Home_faq_question {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Home_our_vision_main_image_bgTab {
+    height: 350px !important;
+    width: 360px !important;
+  }
+  .Home_our_vision__mainWrapperTab {
+    margin-top: 0px;
+  }
+  .Home_our_mission_main_image_bg {
+    margin-left: 0px;
+    width: 360px !important;
+    height: 350px !important;
   }
 }

@@ -152,7 +152,7 @@
   );
 }
 
-.Products__mainWrapperTab{
+.Products__mainWrapperTab {
   display: none;
 }
 
@@ -185,13 +185,13 @@
     font-family: "Exo 2";
     font-weight: 700;
   }
-  .Products__contentPara{
+  .Products__contentPara {
     font-size: 14px;
     font-family: "Hind";
     font-weight: 500;
   }
-  .Products__contentBuyBTN{
-    background: #FFFFFF;
+  .Products__contentBuyBTN {
+    background: #ffffff;
     border: none;
     outline: none;
     border-radius: 36px;
@@ -199,8 +199,7 @@
 
     font-size: 15px;
     font-weight: 600;
-    font-family: 'Hind';
-    
+    font-family: "Hind";
   }
   .Products__imageMainWrapper {
     width: 47%;
@@ -208,9 +207,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
   }
-  .Products__imageMainWrapper img{
+  .Products__imageMainWrapper img {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Products_our_products_btn {
+    width: 37%;
+    border-radius: 25px;
+    background: var(
+      --blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
+    );
+  }
+  .Products__mainWrapperTab {
+    flex-direction: column;
+    gap: 7px;
+  }
+  .Products__contentMainWrapper {
+    width: 95%;
+  }
+  .Products__imageMainWrapper {
+    width: 90%;
   }
 }
