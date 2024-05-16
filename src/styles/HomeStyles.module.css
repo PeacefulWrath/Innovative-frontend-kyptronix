@@ -1085,13 +1085,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 .Get__Quotes_SubmitBtnWrapper button {
   color: #fff;
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "Montserrat";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1975,5 +1975,18 @@
   }
   .Home_footer_quoteImg {
     width: 35%;
+  }
+
+  .Get__Quotes_FormWrapper {
+    width: 85%;
+    height: 75%;
+  }
+  .Get__Quotes_SubmitBtnWrapper {
+    gap: 10px;
+    margin: 10px auto !important;
+  }
+  .Get__Quotes_FormContainer {
+    width: 90%;
+    margin: 20px auto;
   }
 }
