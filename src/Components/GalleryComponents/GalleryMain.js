@@ -94,16 +94,16 @@ function GalleryMain({galleries,galleriesCategories}) {
     ))}
       </div>
   
-
+      <div
+                className={`d-flex  ${styles.Gallery__mainWrapperOne}`}
+                style={{ marginTop: "10%",marginLeft:"15rem" }}
+              >
       {galleries.map((gallery, gIndex) => (
         <>
           {clicked === gallery.category && (
             <>
-              <div
-                className={`d-flex justify-content-center ${styles.Gallery__mainWrapperOne}`}
-                style={{ marginTop: "10%" }}
-              >
-                <div className="d-flex">
+              
+                {/* <div className="d-flex"> */}
 
 
                   <div style={{ display: "inline-flex", flexDirection: "column" }}>
@@ -143,38 +143,38 @@ function GalleryMain({galleries,galleriesCategories}) {
                     </div>
                   </div>
                 
-                </div>
-              </div>
+                {/* </div> */}
+             
 
 
 
-              <GalleryMainTab />
+              {/* <GalleryMainTab /> */}
             </>
           )}
 </>
 ))}
-     
+      </div>
     </>
   );
 }
 
 export default GalleryMain;
 
-const GalleryMainTab = () => {
-  return (
-    <>
-      <div className={styles.Gallery__mainWrapperTab}>
+// const GalleryMainTab = () => {
+//   return (
+//     <>
+//       <div className={styles.Gallery__mainWrapperTab}>
 
-        {
-          ['1', '2', '3', '4', '5', '6', '7', '8'].map((cur, id) => (
+//         {
+//           ['1', '2', '3', '4', '5', '6', '7', '8'].map((cur, id) => (
 
-            <div className={styles.Gallery__imageWrapper}>
-              <img src={gallery1} alt="gallery-pics" />
-            </div>
-          ))
-        }
+//             <div className={styles.Gallery__imageWrapper}>
+//               <img src={gallery1} alt="gallery-pics" />
+//             </div>
+//           ))
+//         }
 
-      </div>
-    </>
-  )
-}
+//       </div>
+//     </>
+//   )
+// }
