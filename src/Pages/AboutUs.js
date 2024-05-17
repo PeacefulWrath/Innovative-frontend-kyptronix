@@ -18,7 +18,7 @@ function AboutUs() {
     >
       <TopBar page={"aboutus"} bg={aboutusBg} />
       <AboutUsPrepare />
-
+{/* 
       <div
         style={{
           width: "85%",
@@ -31,7 +31,7 @@ function AboutUs() {
           &ldquo; Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor
           sit amet, consectetur &rdquo;
         </h1>
-      </div>
+      </div> */}
 
       <div className="d-flex justify-content-center mt-5">
         <img

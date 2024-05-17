@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
@@ -9,26 +9,25 @@ import TopBar from "../Components/TopBar/TopBar";
 import { fetchGalleries } from "../api-calls/apiCalls";
 
 function Gallery() {
-  const [galleries, setGalleries] = useState([])
-  const [galleryCategories, setGalleryCategories] = useState([])
+  const [galleries, setGalleries] = useState([]);
+  const [galleryCategories, setGalleryCategories] = useState([]);
 
   useEffect(() => {
     const fetcher = async () => {
-      const galleriesData = await fetchGalleries()
-      setGalleries([...galleriesData])
+      const galleriesData = await fetchGalleries();
+      setGalleries([...galleriesData]);
 
-      const galleryCategoriesData = []
-      galleriesData.forEach((item)=>{
-        if(galleryCategoriesData.includes(item?.category)==false){
-          galleryCategoriesData.push(item?.category)
+      const galleryCategoriesData = [];
+      galleriesData.forEach((item) => {
+        if (galleryCategoriesData.includes(item?.category) == false) {
+          galleryCategoriesData.push(item?.category);
         }
-      })
-      setGalleryCategories([...galleryCategoriesData])
+      });
+      setGalleryCategories([...galleryCategoriesData]);
+    };
 
-    }
-
-    fetcher()
-  }, [])
+    fetcher();
+  }, []);
 
   return (
     <div
@@ -39,7 +38,14 @@ function Gallery() {
       }}
     >
       <TopBar page={"gallery"} bg={galleryBg} />
-      {galleries && galleries.length !== 0 && <GalleryMain galleries={galleries} galleriesCategories={galleryCategories} />}
+      {galleries &&
+        galleries.length !== 0 &&
+        galleryCategories.length !== 0 && (
+          <GalleryMain
+            galleries={galleries}
+            galleriesCategories={galleryCategories}
+          />
+        )}
       <div style={{ marginTop: "10%" }}>
         <ServiceFooter />
       </div>
