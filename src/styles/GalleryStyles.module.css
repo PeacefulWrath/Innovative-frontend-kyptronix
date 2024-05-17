@@ -66,6 +66,9 @@
   font-weight: 700;
   line-height: normal;
 }
+.Gallery__mainWrapperTab{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .Gallery__mainWrapperOne {
@@ -108,7 +111,7 @@
     line-height: normal;
   }
   .Gallery__mainWrapperTab {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
     margin: 0 auto;
