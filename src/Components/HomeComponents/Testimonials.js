@@ -5,27 +5,31 @@ import styles from "../../styles/HomeStyles.module.css";
 import prev from "../../assets/prev.png";
 import next from "../../assets/next.png";
 import gsap from "gsap";
+import testi1 from "../../assets/testi1.png";
+import testi2 from "../../assets/testi2.png";
+import testi3 from "../../assets/testi3.png";
+
 
 function Testimonials({items}) {
  
+  
+  const [image1,setImage1]=useState(testi1)
+  const [image2,setImage2]=useState(testi2)
+  const [image3,setImage3]=useState(testi3)
 
-  const [image1,setImage1]=useState(items[0].image)
-  const [image2,setImage2]=useState(items[1].image)
-  const [image3,setImage3]=useState(items[2].image)
-
-  const [name1,setName1]=useState(items[0].name)
-  const [name2,setName2]=useState(items[1].name)
-  const [name3,setName3]=useState(items[2].name)
+  const [name1,setName1]=useState(items[0]?.user_details[0]?.user_name)
+  const [name2,setName2]=useState(items[0]?.user_details[1]?.user_name)
+  const [name3,setName3]=useState(items[0]?.user_details[2]?.user_name)
 
   
-  const [desc1,setDesc1]=useState(items[0].description)
-  const [desc2,setDesc2]=useState(items[1].description)
-  const [desc3,setDesc3]=useState(items[2].description)
+  const [desc1,setDesc1]=useState(items[0]?.user_details[0]?.description)
+  const [desc2,setDesc2]=useState(items[0]?.user_details[1]?.description)
+  const [desc3,setDesc3]=useState(items[0]?.user_details[2]?.description)
 
 
-  const [proff1,setProff1]=useState(items[0].profession)
-  const [proff2,setProff2]=useState(items[1].profession)
-  const [proff3,setProff3]=useState(items[2].profession)
+  const [proff1,setProff1]=useState(items[0]?.user_details[0]?.profession)
+  const [proff2,setProff2]=useState(items[0]?.user_details[1]?.profession)
+  const [proff3,setProff3]=useState(items[0]?.user_details[2]?.profession)
 
 
   const img1Ref = useRef(null);

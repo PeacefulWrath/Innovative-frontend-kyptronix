@@ -20,12 +20,12 @@ function Home() {
   const [traininingModulesItems, setTraininingModulesItems] = useState([])
   const [testimonialsItems, setTestimonialsItems] = useState([])
   const [faqItems, setFaqItems] = useState([])
-  const [tempFaqs,setTempFaqs]= useState([])
+  const [tempFaqs, setTempFaqs] = useState([])
   const [cusItems, setCusItems] = useState([])
- 
+
 
   useEffect(() => {
-  
+
 
 
     const fetcher = async () => {
@@ -41,7 +41,7 @@ function Home() {
       let tempFaqs = [];
 
       faqData.forEach((item) => {
-        tempFaqs.push({sign: "plus"});
+        tempFaqs.push({ sign: "plus" });
       });
       setTempFaqs([...tempFaqs]);
 
@@ -75,15 +75,17 @@ function Home() {
         <TrainingModules items={traininingModulesItems} />
       </div>}
 
-      {/* {testimonialsItems && testimonialsItems.length !== 0 && <div style={{ marginTop: "10%" }}><Testimonials items={testimonialsItems} />  </div>} */}
+      {testimonialsItems && testimonialsItems.length !== 0 && <div style={{ marginTop: "10%" }}>
+        <Testimonials items={testimonialsItems} />
+      </div>}
 
       <div style={{ marginTop: "10%" }}>
         <OurJourney />
       </div>
-    {cusItems&&cusItems.length!==0&&<div style={{ marginTop: "10%" }}>
+      {cusItems && cusItems.length !== 0 && <div style={{ marginTop: "10%" }}>
         <ChooseUs items={cusItems} />
       </div>}
-      {faqItems&&faqItems.length !== 0 && <div style={{ marginTop: "10%" }}>
+      {faqItems && faqItems.length !== 0 && <div style={{ marginTop: "10%" }}>
         <Faqs items={faqItems} tempFaqs={tempFaqs} />
       </div>}
       <div style={{ marginTop: "10%" }}>

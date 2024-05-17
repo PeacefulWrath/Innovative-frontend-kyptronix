@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../../styles/PartnersStyles.module.css";
-import partner1 from "../../assets/partner1.png";
-import partner2 from "../../assets/partner2.png";
-import partner3 from "../../assets/partner3.png";
-import partner4 from "../../assets/partner4.png";
+// import partner1 from "../../assets/partner1.png";
+// import partner2 from "../../assets/partner2.png";
+// import partner3 from "../../assets/partner3.png";
+// import partner4 from "../../assets/partner4.png";
 
-function OurPartners() {
+function OurPartners({ partners }) {
   return (
     <>
       <div className="d-flex justify-content-center">
@@ -146,18 +146,23 @@ function OurPartners() {
       <div className={styles.Partner_op_marqueeWrapper}>
         {/* <h1 style={{ color: "whitesmoke" }}>Hello world</h1> */}
         <div className={styles.Partner_op_marqueeLogoWrapper}>
-          <img src={partner1} alt="partners-logo" />
-          <img src={partner2} alt="partners-logo" />
+          {partners.map((part, ind) => (
+            <>
+              <img src={part?.image} alt="partners-logo" />
+            </>
+          ))}
+
+          {/* <img src={partner2} alt="partners-logo" />
           <img src={partner3} alt="partners-logo" />
           <img src={partner4} alt="partners-logo" />
           <img src={partner1} alt="partners-logo" />
           <img src={partner2} alt="partners-logo" />
           <img src={partner3} alt="partners-logo" />
-          <img src={partner4} alt="partners-logo" />
+          <img src={partner4} alt="partners-logo" /> */}
 
         </div>
 
-        <div className={styles.Partner_op_marqueeLogoWrapper}>
+        {/* <div className={styles.Partner_op_marqueeLogoWrapper}>
           <img src={partner1} alt="partners-logo" />
           <img src={partner2} alt="partners-logo" />
           <img src={partner3} alt="partners-logo" />
@@ -167,7 +172,7 @@ function OurPartners() {
           <img src={partner3} alt="partners-logo" />
           <img src={partner4} alt="partners-logo" />
           
-        </div>
+        </div> */}
       </div>
     </>
   );

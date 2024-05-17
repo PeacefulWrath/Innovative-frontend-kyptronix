@@ -162,3 +162,17 @@ export const fetchGalleries = async () => {
         return galleriesData;
     }
 }
+
+export const fetchPartners = async () => {
+    let partnersData = [];
+    try {
+        const response = await axios.get(
+            `${process.env.REACT_APP_BASE_URL}/api/partner`
+        );
+        partnersData = response.data.allPartnerData;
+    } catch (error) {
+        console.log("err", error);
+    } finally {
+        return partnersData;
+    }
+}
