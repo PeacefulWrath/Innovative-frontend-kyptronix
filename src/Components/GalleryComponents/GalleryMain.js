@@ -91,10 +91,7 @@ function GalleryMain({ galleries, galleriesCategories }) {
       >
         {galleries.map((gallery, gIndex) => (
           <>
-            {/* {clicked === gallery.category && ( */}
             <>
-              {/* <div className="d-flex"> */}
-
               <div
                 style={{ display: "inline-flex", flexDirection: "column" }}
                 className="semiDivRef"
@@ -141,36 +138,33 @@ function GalleryMain({ galleries, galleriesCategories }) {
                   </div>
                 </div>
               </div>
-
-              {/* </div> */}
-
-              {/* <GalleryMainTab /> */}
             </>
-            {/* )} */}
           </>
         ))}
       </div>
+      <GalleryMainTab galleries={galleries} clicked={clicked} />
     </>
   );
 }
 
 export default GalleryMain;
 
-// const GalleryMainTab = () => {
-//   return (
-//     <>
-//       <div className={styles.Gallery__mainWrapperTab}>
-
-//         {
-//           ['1', '2', '3', '4', '5', '6', '7', '8'].map((cur, id) => (
-
-//             <div className={styles.Gallery__imageWrapper}>
-//               <img src={gallery1} alt="gallery-pics" />
-//             </div>
-//           ))
-//         }
-
-//       </div>
-//     </>
-//   )
-// }
+const GalleryMainTab = ({ galleries, clicked }) => {
+  return (
+    <>
+      <div className={styles.Gallery__mainWrapperTab}>
+        {galleries.map((cur, id) => (
+          <div key={id} className={styles.Gallery__imageWrapper}>
+            <img
+              src={cur?.image}
+              style={{
+                display: clicked === cur.category ? "" : "none",
+              }}
+              alt="gallery-pics"
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
