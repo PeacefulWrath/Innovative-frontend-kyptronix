@@ -6,15 +6,20 @@ import partnerssBg from "../assets/partners-top-bar.png";
 import TopBar from "../Components/TopBar/TopBar";
 import { useEffect, useState } from "react";
 import { fetchPartners } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 function Partners() {
   const [partnerItems, setPartnerItems] = useState([])
-
+const navigate=useNavigate()
   useEffect(() => {
     const fetcher = async () => {
       const tempPartnersData = await fetchPartners()
-      setPartnerItems([...tempPartnersData])
 
+      if (tempPartnersData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+      setPartnerItems([...tempPartnersData])
+      }
 
 
 

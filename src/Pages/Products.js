@@ -5,18 +5,27 @@ import Discover from "../Components/ProductsComponents/Discover";
 import TopBar from "../Components/TopBar/TopBar";
 import productsBg from "../assets/products-top-bar.png";
 import { fetchCategories, fetchProducts } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [categories, setCategories] = useState([])
   const [products, setProducts] = useState([])
+const navigate=useNavigate()
 
   useEffect(() => {
     const fetcher = async () => {
       const categoriesData = await fetchCategories()
+      if (categoriesData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
       setCategories([...categoriesData])
-
+      }
       const productsData = await fetchProducts()
+      if (productsData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
       setProducts([...productsData])
+      }
     }
 
     fetcher()

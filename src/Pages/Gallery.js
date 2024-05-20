@@ -7,19 +7,25 @@ import GalleryMain from "../Components/GalleryComponents/GalleryMain";
 import galleryBg from "../assets/gallery-topbar-bg.png";
 import TopBar from "../Components/TopBar/TopBar";
 import { fetchGalleries } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 function Gallery() {
   const [galleries, setGalleries] = useState([]);
   const [galleryCategories, setGalleryCategories] = useState([]);
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     const fetcher = async () => {
       const galleriesData = await fetchGalleries();
-      setGalleries([...galleriesData]);
-
+      if (galleriesData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+        setGalleries([...galleriesData]);
+      }
       const galleryCategoriesData = [];
       galleriesData.forEach((item) => {
-        if (galleryCategoriesData.includes(item?.category) == false) {
+        if (galleryCategoriesData.includes(item?.category) === false) {
           galleryCategoriesData.push(item?.category);
         }
       });

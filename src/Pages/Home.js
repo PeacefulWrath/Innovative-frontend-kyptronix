@@ -7,13 +7,10 @@ import OurJourney from "../Components/HomeComponents/OurJourney";
 import ChooseUs from "../Components/HomeComponents/ChooseUs";
 import Faqs from "../Components/HomeComponents/Faqs";
 import Footer from "../Components/HomeComponents/Footer";
-import iso from "../assets/iso.png";
-import testi1 from "../assets/testi1.png";
-import testi2 from "../assets/testi2.png";
-import testi3 from "../assets/testi3.png";
 import TopBar from "../Components/TopBar/TopBar";
 import Styles from '../styles/HomeStyles.module.css'
 import { fetchCus, fetchFaqs, fetchTestimonials, fetchTrainingModules } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
@@ -22,21 +19,33 @@ function Home() {
   const [faqItems, setFaqItems] = useState([])
   const [tempFaqs, setTempFaqs] = useState([])
   const [cusItems, setCusItems] = useState([])
-
+ 
+  const navigate=useNavigate()
 
   useEffect(() => {
-
-
-
     const fetcher = async () => {
       const tempTrainingModuleData = await fetchTrainingModules()
-      setTraininingModulesItems([...tempTrainingModuleData])
+      if (tempTrainingModuleData?.message === "jwt expired"||tempTrainingModuleData?.message ===  "jwt not present") {
+        return navigate("/login");
 
+      } else {
+        setTraininingModulesItems([...tempTrainingModuleData])
+      }
       const testimonialsData = await fetchTestimonials()
-      setTestimonialsItems([...testimonialsData])
+
+      if (testimonialsData?.message === "jwt expired"||testimonialsData?.message ===  "jwt not present") {
+        return navigate("/login");
+      } else {
+        setTestimonialsItems([...testimonialsData])
+      }
 
       const faqData = await fetchFaqs()
-      setFaqItems([...faqData])
+
+      if (faqData?.message === "jwt expired"||faqData?.message ===  "jwt not present") {
+        return navigate("/login");
+      } else {
+        setFaqItems([...faqData])
+      }
 
       let tempFaqs = [];
 
@@ -47,12 +56,15 @@ function Home() {
 
 
       const cusData = await fetchCus()
-      setCusItems([...cusData])
+      if (cusData?.message === "jwt expired"||cusData?.message ===  "jwt not present") {
+        return navigate("/login");
+      } else {
+        setCusItems([...cusData])
+      }
     }
 
     fetcher()
   }, []);
-
 
   return (
     <div

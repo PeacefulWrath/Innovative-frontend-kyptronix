@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Styles from "../styles/RegisterStyles.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import SingUpBg from "../assets/SignUpBg.png";
 import Logo from "../assets/logo-white.png";
@@ -8,7 +8,7 @@ import GoogleIcon from "../assets/googleIcon.png";
 import FacebookIcon from "../assets/facebookIcon.png";
 import LinkedinIcon from "../assets/linkedinIcon.png";
 import EyeIcon from "../assets/EyeIcon.png";
-import { signUp } from "../api-calls/apiCalls";
+import { signUp, verifyToken } from "../api-calls/apiCalls";
 
 export const Register = () => {
   const [firstName, setFirstName] = useState("")
@@ -20,6 +20,10 @@ export const Register = () => {
 
   const [hideAndShowPass, setHideAndShowPass] = useState(false);
   const [hideAndShowPasswordCom, sethideAndShowPasswordCom] = useState(false);
+
+  const [showNotFound, setShowNotFound] = useState(undefined)
+
+  const navigate = useNavigate();
 
   const handleClick = (ID) => {
 
@@ -38,6 +42,18 @@ export const Register = () => {
   };
 
   const handleSignUp = async () => {
+    if(!document.getElementById("confirm-password").value){
+      alert("please confirm the password!!!")
+      return
+    }
+    if(passwordIsNotMatched){
+      alert("password not matched")
+      return;
+    }
+    if(!firstName||!lastName||!phone||!email||!document.getElementById("role_select").value||!password){
+      alert("please fill all the fields!!!")
+      return;
+    }
     const userData = {
       first_name: firstName,
       last_name: lastName,
@@ -46,8 +62,37 @@ export const Register = () => {
       role: document.getElementById("role_select").value,
       password: password
     }
-    await signUp(userData)
+    const signUpData=await signUp(userData)
+    if(signUpData.success==="yes"){
+      navigate("/login")
+    }else{
+      alert(signUpData?.message)
+    }
   }
+
+  useEffect(() => {
+
+
+    const verifier = async () => {
+
+      const verifiedTokenData = await verifyToken()
+      // console.log("rrr",verifiedTokenData?.message)
+      if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+        setShowNotFound(false)
+      } else {
+        setShowNotFound(true)
+      }
+    }
+
+    verifier()
+
+  }, []);
+
+  if (showNotFound === true) {
+    return (<div className='d-flex justify-content-center'>
+      Page Not Found
+    </div>)
+  } else if (showNotFound === false) {
 
   return (
     <div className={`${Styles.Register__main__div}`}>
@@ -119,6 +164,7 @@ export const Register = () => {
               </div>
               <div className={`${Styles.Register__lft__input_wrapper}`}>
                 <input
+                id="confirm-password"
                   type={`${hideAndShowPasswordCom ? "text" : "password"}`}
                   placeholder="Confirm Password"
                   onChange={(e) => {
@@ -176,4 +222,5 @@ export const Register = () => {
       </div>
     </div>
   );
+}
 };

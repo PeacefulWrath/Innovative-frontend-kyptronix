@@ -17,6 +17,8 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 function TopBar({ page, bg }) {
   const [clicked, setClicked] = useState("Home");
@@ -110,6 +112,16 @@ function TopBar({ page, bg }) {
             >
               Get Quote
             </button>
+
+           
+              <ShoppingCartIcon
+              
+               className={styles.Home__topBar__cart__BTN}
+               onClick={()=>{
+                navigate("/cart")
+               }}
+              />
+            
           </div>
 
           <TopBarTab setIsGetquotes={setIsGetquotes} />

@@ -10,13 +10,15 @@ import ContactUs from "./Pages/ContactUs";
 import Gallery from "./Pages/Gallery";
 import { Register } from "./Pages/Register";
 import { Login } from "./Pages/Login";
+import Cart from "./Pages/Cart";
+import ProductDetails from "./Components/ProductsComponents/ProductDetails";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/products" element={<Products />} />
@@ -25,8 +27,10 @@ function App() {
           <Route exact path="/aboutus" element={<AboutUs />} />
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/" element={<Register />} />
+          <Route exact path="/product-details" element={<ProductDetails />} />
+          {/* <Route exact path="/login" element={<Login />} /> */}
         </Routes>
       </Router>
     </>

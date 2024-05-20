@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "../styles/LoginStyles.module.css";
 import { Link } from "react-router-dom";
 import SingUpBg from "../assets/SignUpBg.png";
@@ -7,14 +7,15 @@ import GoogleIcon from "../assets/googleIcon.png";
 import FacebookIcon from "../assets/facebookIcon.png";
 import LinkedinIcon from "../assets/linkedinIcon.png";
 import EyeIcon from "../assets/EyeIcon.png";
-import { logIn } from "../api-calls/apiCalls";
+import { logIn, verifyToken } from "../api-calls/apiCalls";
 import { useNavigate } from "react-router-dom";
-
 
 export const Login = () => {
   const [hideAndShowPass, setHideAndShowPass] = useState(false);
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [showNotFound, setShowNotFound] = useState(undefined)
+
 
   const navigate = useNavigate();
 
@@ -32,14 +33,37 @@ export const Login = () => {
       password: password
     }
     const loginData = await logIn(userData)
-    if (loginData.success == true) {
+    if (loginData.success == "yes") {
       localStorage.setItem("token",loginData.token)
-      navigate('/');
+      navigate('/home');
     } else {
       alert("error in sign in")
     }
   }
 
+  useEffect(() => {
+
+
+    const verifier = async () => {
+
+      const verifiedTokenData = await verifyToken()
+      // console.log("rrr",verifiedTokenData?.message)
+      if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+        setShowNotFound(false)
+      } else {
+        setShowNotFound(true)
+      }
+    }
+
+    verifier()
+
+  }, []);
+
+ if (showNotFound === true) {
+    return (<div className='d-flex justify-content-center'>
+      Page Not Found
+    </div>)
+  } else if (showNotFound === false) {
   return (
     <div className={`${Styles.Login__main__div}`}>
       <div
@@ -94,7 +118,7 @@ export const Login = () => {
 
           <p className={`${Styles.Login__lft__LoginPara}`}>
             Don’t have an account?
-            <Link className={`${Styles.Login__lft__Link}`} to="/register">
+            <Link className={`${Styles.Login__lft__Link}`} to="/">
               Sign up
             </Link>
           </p>
@@ -121,4 +145,5 @@ export const Login = () => {
       </div>
     </div>
   );
+}
 };

@@ -2,177 +2,328 @@ import axios from "axios";
 
 
 export const signUp = async (userData) => {
-    let tempUsers = [];
-    try {
-        // console.log("userData", userData);
+  let tempSignUpData = [];
+  try {
+    // console.log("userData", userData);
 
-        await axios
-            (
-                {
-                    method: "post",
-                    url: `${process.env.REACT_APP_BASE_URL}/api/user/signup`,
-                    data: userData,
-                    headers: {
-                        "Content-Type": "application/json",
-                    }
-                })
-            .then((res) => {
-                tempUsers = res.data;
-            });
-    } catch (error) {
-        console.log("can not save users");
-    } finally {
-        return tempUsers;
-    }
+    await axios
+      (
+        {
+          method: "post",
+          url: `${process.env.REACT_APP_BASE_URL}/api/user/signup`,
+          data: userData,
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+      .then((res) => {
+        tempSignUpData = res?.data;
+      });
+  } catch (error) {
+    tempSignUpData = error?.response?.data;
+  } finally {
+    return tempSignUpData;
+  }
 };
 
 export const logIn = async (userData) => {
-    let tempUsers = [];
-    try {
-        // console.log("userData", userData);
+  let tempLoginData = [];
+  try {
+    // console.log("userData", userData);
 
-        await axios
-            (
-                {
-                    method: "post",
-                    url: `${process.env.REACT_APP_BASE_URL}/api/user/signin`,
-                    data: userData,
-                    headers: {
-                        "Content-Type": "application/json",
-                    }
-                })
-            .then((res) => {
-                tempUsers = res.data;
-            });
-    } catch (error) {
-        console.log("can not login");
-    } finally {
-        return tempUsers;
-    }
+    await axios
+      (
+        {
+          method: "post",
+          url: `${process.env.REACT_APP_BASE_URL}/api/user/signin`,
+          data: userData,
+          headers: {
+            "Content-Type": "application/json",
+          }
+        })
+      .then((res) => {
+        tempLoginData = res?.data
+      });
+  } catch (error) {
+    // console.log("can not login");
+    tempLoginData = error?.response?.data;
+  } finally {
+    return tempLoginData;
+  }
 };
 
 export const fetchTrainingModules = async () => {
-    let moduleData = [];
+  let moduleData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/training-module`
-        );
-        moduleData = response.data.fetchedData;
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/training-module`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      moduleData = response.data.fetchedData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      moduleData = error?.response?.data;
     } finally {
-        return moduleData;
+      return moduleData;
     }
-}
+  } else {
+    moduleData = { success: "no", message: "jwt not present" }
+    return moduleData
+  }
+};
 
 export const fetchTestimonials = async () => {
-    let testimonialData = [];
+  let testimonialData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/testimonial`
-        );
-        testimonialData = response.data.fetchedData;
+      const response = await axios({
+        method: "get",
+
+        url: `${process.env.REACT_APP_BASE_URL}/api/testimonial`,
+
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      testimonialData = response.data.fetchedData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      testimonialData = error?.response?.data;
     } finally {
-        return testimonialData;
+      return testimonialData;
     }
-}
+  } else {
+    testimonialData = { success: "no", message: "jwt not present" }
+    return testimonialData
+  }
+};
 
 export const fetchFaqs = async () => {
-    let faqsData = [];
+  let faqsData = [];
+  const token = localStorage.getItem("token");
+  // console.log("fetch faq")
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/faq`
-        );
-        faqsData = response.data.allFaqData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/faq`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      faqsData = response.data.allFaqData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      faqsData = error?.response?.data;
     } finally {
-        return faqsData;
+      return faqsData;
     }
-}
+  } else {
+    faqsData = { success: "no", message: "jwt not present" }
+    return faqsData
+  }
+};
 
 export const fetchCus = async () => {
-    let cusData = [];
+  let cusData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/choose-us`
-        );
-        cusData = response.data.allCusData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/choose-us`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      cusData = response.data.allCusData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      cusData = error?.response?.data;
     } finally {
-        return cusData;
+      return cusData;
     }
-}
+  } else {
+    cusData = { success: "no", message: "jwt not present" }
+    return cusData
+  }
+};
 
 export const fetchServices = async () => {
-    let serviceData = [];
+  let serviceData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/service`
-        );
-        serviceData = response.data.fetchedData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/service`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      serviceData = response.data.fetchedData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      serviceData = error?.response?.data;
     } finally {
-        return serviceData;
+      return serviceData;
     }
-}
+  } else {
+    serviceData = { success: "no", message: "jwt not present" }
+    return serviceData
+  }
+};
 
 export const fetchCategories = async () => {
-    let categoriesData = [];
+  let categoriesData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/category`
-        );
-        categoriesData = response.data.allCategoryData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/category`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      categoriesData = response.data.allCategoryData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      categoriesData = error?.response?.data;
     } finally {
-        return categoriesData;
+      return categoriesData;
     }
-}
+  } else {
+    categoriesData = { success: "no", message: "jwt not present" }
+    return categoriesData
+  }
+};
+
 
 export const fetchProducts = async () => {
-    let productsData = [];
+  let productsData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/product`
-        );
-        productsData = response.data.fetchedData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/product`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      productsData = response.data.fetchedData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      productsData = error?.response?.data;
     } finally {
-        return productsData;
+      return productsData;
     }
-}
+  } else {
+    productsData = { success: "no", message: "jwt not present" }
+    return productsData
+  }
+};
 
 export const fetchGalleries = async () => {
-    let galleriesData = [];
+  let galleriesData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/gallery`
-        );
-        galleriesData = response.data.allGalleryData;
+
+      const response = await axios(
+        {method: "get",
+        url:`${process.env.REACT_APP_BASE_URL}/api/gallery`,
+        headers: {
+          authorization: `Bearer ${token}`
+        },
+        }
+      );
+      galleriesData = response.data.allGalleryData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      galleriesData = error?.response?.data;
     } finally {
-        return galleriesData;
+      return galleriesData;
     }
-}
+  } else {
+    galleriesData = { success: "no", message: "jwt not present" }
+    return galleriesData
+  }
+};
 
 export const fetchPartners = async () => {
-    let partnersData = [];
+  let partnersData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+
     try {
-        const response = await axios.get(
-            `${process.env.REACT_APP_BASE_URL}/api/partner`
-        );
-        partnersData = response.data.allPartnerData;
+
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/partner`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      partnersData = response.data.allPartnerData;
     } catch (error) {
-        console.log("err", error);
+      // console.log("err", error);
+      partnersData = error?.response?.data;
     } finally {
-        return partnersData;
+      return partnersData;
     }
-}
+  } else {
+    partnersData = { success: "no", message: "jwt not present" }
+    return partnersData
+  }
+};
+
+export const verifyToken = async () => {
+  let tokenData = [];
+  const token = localStorage.getItem("token");
+  if (!token) {
+    tokenData = { success: "no", message: "jwt not present" }
+    return tokenData
+  }
+
+  try {
+
+
+    await axios({
+      method: "post",
+      url: `${process.env.REACT_APP_BASE_URL}/api/user/verify-token`,
+      data: { jwt_token: token },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      tokenData = res.data;
+    });
+  } catch (error) {
+    tokenData = error?.response?.data;
+  } finally {
+    return tokenData;
+  }
+};

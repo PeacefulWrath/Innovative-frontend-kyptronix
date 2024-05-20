@@ -5,18 +5,22 @@ import NewSletter from "../Components/ServicesComponents/NewSletter";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import TopBar from "../Components/TopBar/TopBar";
 import servicesBg from "../assets/services-top-bar.png";
-import iso from "../assets/iso.png";
 import { fetchServices } from "../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 function Services() {
   
   const [servicesItems,setServicesItems] =useState([])
-
+const navigate=useNavigate()
   useEffect(()=>{
     const fetcher = async () => {
       const servicesData = await fetchServices()
-      setServicesItems([...servicesData])
 
+      if (servicesData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+      setServicesItems([...servicesData])
+      }
      
     }
 

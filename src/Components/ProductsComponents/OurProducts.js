@@ -3,8 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import rating from "../../assets/rating.png";
 import styles from "../../styles/ProductsStyles.module.css";
+import { useNavigate } from "react-router-dom";
+
+
 
 function OurProducts({ categoryId, products }) {
+  const navigate=useNavigate()
   return (
     <>
       <div
@@ -30,6 +34,7 @@ function OurProducts({ categoryId, products }) {
                     border: "2px solid grey",
                   }}
                   className={`ps-2 pe-2 pt-2 ${styles.Products_our_products_Product__hoverEffect}`}
+                  onClick={()=>{navigate("/product-details",{state:prod})}}
                 >
                   <img width={300} alt="p1" height={300} src={prod?.image} />
                   <div
@@ -62,11 +67,11 @@ function OurProducts({ categoryId, products }) {
               style={{
                 width: "320px",
                 height: "450px",
-
                 marginLeft: index !== 0 ? "5rem" : "0px",
                 cursor: "pointer"
               }}
               className={`ps-2 pe-2 pt-2 ${styles.Products_our_products_Product__hoverEffect}`}
+              onClick={()=>{navigate("/product-details",{state:prod})}}
             >
               <img width={300} alt="p1" height={300} src={prod?.image} />
               <div

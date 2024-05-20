@@ -2,10 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
 /* top bar and menues*/
 
 .Home_top_bar {
   background: linear-gradient(180deg, #2a91dd 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.Home__topBar__cart__BTN {
+  color: #2a91dd;
+  margin-left: 2%;
+  cursor: pointer;
+  zoom: 1.3;
 }
 
 .Home_top_bar_email_text {
@@ -13,12 +22,10 @@
 }
 
 .Home_top_bar_divider {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    #ffffff 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 50%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 .Home_top_bar_phn_no {
@@ -250,10 +257,8 @@
   align-items: center;
   gap: 10px;
   border-radius: 33px;
-  background: var(
-    --blue-green-gradient,
-    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
-  );
+  background: var(--blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%));
   height: 40px;
   /* margin-top: 167.54px; */
   margin-left: 100px;
@@ -374,10 +379,8 @@
   align-items: center;
   gap: 10px;
   border-radius: 33px;
-  background: var(
-    --blue-green-gradient,
-    linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
-  );
+  background: var(--blue-green-gradient,
+      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%));
   height: 40px;
   margin-top: 108.54px;
   margin-left: 58%;
@@ -963,17 +966,20 @@
   height: 70%;
   padding: 20px;
 }
+
 .Get__Quotes_headerWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .Get__Quotes_ImgWrpper {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
+
 .Get__Quotes_ImgWrpper img {
   width: 80%;
   transition: 0.15s linear;
@@ -987,6 +993,7 @@
   width: 90%;
   margin: 30px auto;
 }
+
 .Get__Quotes_InputsWrapper {
   display: flex;
   justify-content: center;
@@ -994,9 +1001,11 @@
   gap: 10px;
   margin: 15px 0;
 }
+
 .Get__Quotes_InputWrapper {
   width: 47%;
 }
+
 .Get__Quotes_InputWrapper input {
   width: 100%;
   padding: 10px 14px;
@@ -1023,6 +1032,7 @@
   width: 95%;
   margin: 15px auto;
 }
+
 .Get__Quotes_SubjectWrapper {
   width: 100%;
 }
@@ -1057,9 +1067,11 @@
   width: 95%;
   margin: 15px auto;
 }
+
 .Get__Quotes_TextareaWrapper {
   width: 100%;
 }
+
 .Get__Quotes_TextareaWrapper textarea {
   width: 100%;
   padding: 10px 14px;
@@ -1116,9 +1128,11 @@
 .Home__navBar__BTNSWrapper {
   display: none;
 }
+
 .Home_our_mission__mainWrapperTab {
   display: none;
 }
+
 .Home_our_vision__mainWrapperTab {
   display: none;
 }
@@ -1129,11 +1143,13 @@
   .Home__heroSec {
     margin-top: 5% !important;
   }
+
   .Home_logo {
     width: 15%;
     object-fit: cover;
     object-position: right;
   }
+
   .Home_menue {
     color: #fff;
     font-family: "Exo 2";
@@ -1147,6 +1163,7 @@
     white-space: nowrap;
     cursor: pointer;
   }
+
   .Home_other_menues {
     color: #fff;
     font-family: "Exo 2";
@@ -1217,6 +1234,7 @@
   .Home_our_mission_btn {
     margin-left: 33px;
   }
+
   .Home_our_mission_heading {
     width: 450px;
     left: 0px;
@@ -1258,6 +1276,7 @@
     width: 140px;
     white-space: nowrap;
   }
+
   .Home_our_mission_learn_more_text {
     color: #fff;
     font-family: "Exo 2";
@@ -1270,11 +1289,13 @@
   .Home_our_mission_main_image_bg {
     margin-left: 420px;
   }
+
   .Home_our_mission_main_image {
     margin-left: 280px;
     margin-right: 100px;
     margin-top: -78px;
   }
+
   .Home_our_vision_main_image_bg {
     height: 400px !important;
     width: 450px !important;
@@ -1286,6 +1307,7 @@
     margin-left: 10px;
     margin-top: -975px;
   }
+
   .Home_our_vision_main_image {
     height: 400px !important;
     width: 450px !important;
@@ -1293,6 +1315,7 @@
     margin-right: 650px;
     margin-top: -420px;
   }
+
   .Home_our_vision_btn {
     display: inline-flex;
     padding-top: 12px;
@@ -1303,10 +1326,8 @@
     align-items: center;
     gap: 10px;
     border-radius: 33px;
-    background: var(
-      --blue-green-gradient,
-      linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%)
-    );
+    background: var(--blue-green-gradient,
+        linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%));
     height: 40px;
     margin-top: 108.54px;
     margin-left: 50%;
@@ -1378,6 +1399,7 @@
     width: 40px;
     height: 40px;
   }
+
   .Home_testimonials_next_Btn {
     width: 40px;
     height: 40px;
@@ -1390,9 +1412,11 @@
   .Home_choose_us_contentWrapper {
     margin-left: 4% !important;
   }
+
   .Home_choose_us_headingWrapper {
     width: 90% !important;
   }
+
   .Home_choose_us_cards_btns {
     display: flex;
     flex-direction: column;
@@ -1400,12 +1424,14 @@
     gap: 20px;
     width: 50%;
   }
+
   .Home_choose_us_para_div {
     border-radius: 8px;
     border: 1px solid #b6e0ff;
     box-shadow: 0px 0px 8.2px 0px #62d9ff;
     width: 100%;
   }
+
   .Home_choose_us_dropDownWrapper {
     justify-content: space-between;
     width: 90%;
@@ -1415,6 +1441,7 @@
     margin-left: 4% !important;
     margin-right: 4% !important;
   }
+
   .Home_faq_all_ques {
     display: inline-flex;
     height: 20%;
@@ -1425,6 +1452,7 @@
     margin-left: 0%;
     width: 50%;
   }
+
   .Home_faq_question {
     display: flex;
     width: 425px;
@@ -1448,9 +1476,11 @@
     justify-content: flex-start;
     align-items: center;
   }
+
   .Home_footer_quoteImg {
     width: 80%;
   }
+
   .Home_footer_menues {
     display: inline-flex;
     flex-direction: column;
@@ -1459,17 +1489,20 @@
     width: 10%;
   }
 }
+
 /* tablet view */
 @media (max-width: 768px) {
   .Annoucement__wrapper {
     display: none !important;
   }
+
   .Home__topBar__mainWrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
   }
+
   .Home__topBar__iconAndLinkWrapper {
     display: flex;
     justify-content: space-evenly;
@@ -1477,6 +1510,7 @@
     gap: 5px;
     cursor: pointer;
   }
+
   .topBar_iconWrapper {
     height: 25px;
     width: 25px;
@@ -1484,18 +1518,22 @@
     justify-content: center;
     align-items: center;
   }
+
   .topBar_iconWrapper img {
     width: 60%;
   }
+
   .Home__topBar__telLink {
     color: rgba(255, 255, 255, 1);
     font-family: "Exo 2";
     font-size: 13px;
     text-decoration: none;
   }
+
   .Home__topBar__telLink:hover {
     color: rgba(255, 255, 255, 1);
   }
+
   .Home__topBar__telAndMailWrapper {
     display: flex;
     justify-content: center;
@@ -1509,6 +1547,7 @@
     align-items: center;
     gap: 10px;
   }
+
   .Home__topBar__socialLink {
     list-style: none;
     background-color: white;
@@ -1519,6 +1558,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .Home__topBar__socialIcon {
     width: 25px;
   }
@@ -1580,6 +1620,7 @@
     align-items: center;
     padding: 50px !important;
   }
+
   .Home__navMenu__mainWrapper ul {
     width: 100%;
     display: flex;
@@ -1601,10 +1642,12 @@
     padding: 5px;
     transition: all 0.32s ease-in-out;
   }
+
   .Home__navMenu__Links:hover {
     background-color: rgb(110, 110, 110);
     transform: scale(1.1);
   }
+
   .Home__navMenu__Links {
     color: white;
     font-size: 25px;
@@ -1613,11 +1656,13 @@
     text-decoration: none;
     margin: 0 !important;
   }
+
   .Home_logo {
     width: 20%;
     object-fit: cover;
     object-position: right;
   }
+
   .Home_signup_btn,
   .Home_login_btn {
     display: none;
@@ -1654,13 +1699,11 @@
 
   .Home__navBar__signUp__BTN::after {
     position: absolute;
-    content: "";
     bottom: 100%;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #fff;
-
     z-index: -1;
     transition: 0.4s;
   }
@@ -1672,6 +1715,7 @@
   .Home__navBar__signUp__BTN:hover {
     color: #2a91dd;
   }
+
   .Home__navBar__logoIn__BTN {
     font-family: "Exo 2";
     font-weight: 500;
@@ -1717,6 +1761,7 @@
   .Home_our_mission__mainWrapper {
     display: none !important;
   }
+
   .Home_our_mission__mainWrapperTab {
     width: 100%;
     display: flex;
@@ -1724,9 +1769,11 @@
     justify-content: center;
     align-items: center;
   }
+
   .Home_our_mission__textMainWrapper {
     width: 90%;
   }
+
   .Home_our_mission__titleWrapper {
     width: 20%;
     background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
@@ -1736,6 +1783,7 @@
     align-items: center;
     border-radius: 30px;
   }
+
   .Home_our_mission__titleWrapper h2 {
     font-size: 18px;
     text-align: center;
@@ -1743,6 +1791,7 @@
     font-family: "Exo 2";
     font-weight: 700;
   }
+
   .Home_our_mission__EmpowerText {
     color: white;
     margin-top: 10px;
@@ -1750,6 +1799,7 @@
     font-weight: 700;
     font-size: 29px;
   }
+
   .Home_our_mission__Empowerpara {
     color: white;
     margin-top: 15px;
@@ -1757,6 +1807,7 @@
     font-weight: 500;
     font-size: 17px;
   }
+
   .Home_our_mission__learnMoreBtn {
     color: white;
     border: 2px solid white;
@@ -1768,6 +1819,7 @@
     background: transparent;
     transition: all 0.3s ease-in-out;
   }
+
   .Home_our_mission__learnMoreBtn:hover {
     background: linear-gradient(to top left, #2589d2 100%, #2dc2e3 100%);
   }
@@ -1792,6 +1844,7 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
+
   .Home_our_mission__imageTab {
     width: 85%;
   }
@@ -1799,6 +1852,7 @@
   .Home_our_vision__mainWrapper {
     display: none;
   }
+
   .Home_our_vision__mainWrapperTab {
     display: flex;
     flex-direction: column;
@@ -1806,6 +1860,7 @@
     align-items: center;
     margin-top: 40px;
   }
+
   .Home_our_vision__imageWrapper {
     position: relative;
   }
@@ -1821,6 +1876,7 @@
     margin-left: 0px;
     margin-top: 0px;
   }
+
   .Home_our_vision__imageWrapperTab {
     position: absolute;
     top: 0;
@@ -1831,14 +1887,17 @@
     justify-content: center;
     align-items: center;
   }
+
   .Home_our_vision__imageTab {
     width: 90%;
   }
+
   .Home_our_vision__mainContentWrapper {
     /* background: red; */
     width: 90%;
     margin: 0 auto;
   }
+
   .Home_our_vision__titleWrapper {
     width: 20%;
     background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
@@ -1848,6 +1907,7 @@
     align-items: center;
     border-radius: 30px;
   }
+
   .Home_our_vision__titleWrapper h3 {
     font-size: 18px;
     text-align: center;
@@ -1855,6 +1915,7 @@
     font-family: "Exo 2";
     font-weight: 700;
   }
+
   .Home_our_vision__pioneeringText {
     color: white;
     margin-top: 10px;
@@ -1862,6 +1923,7 @@
     font-weight: 700;
     font-size: 29px;
   }
+
   .Home_our_vision__pioneeringPara {
     color: white;
     margin-top: 15px;
@@ -1869,6 +1931,7 @@
     font-weight: 500;
     font-size: 17px;
   }
+
   .Home_our_vision__learnMoreBtn {
     color: white;
     border: 2px solid white;
@@ -1880,6 +1943,7 @@
     background: transparent;
     transition: all 0.3s ease-in-out;
   }
+
   .Home_our_vision__learnMoreBtn:hover {
     background: linear-gradient(to top left, #2589d2 100%, #2dc2e3 100%);
   }
@@ -1909,6 +1973,7 @@
     flex-direction: column;
     gap: 30px;
   }
+
   .Home_testimonials__sliderImageWrapper {
     width: 90% !important;
     justify-content: center !important;
@@ -1940,6 +2005,7 @@
     align-items: center;
     gap: 30px;
   }
+
   .Home_faq_text {
     font-size: 17px;
   }
@@ -1947,6 +2013,7 @@
   .Home_faq_mainContentWrapper {
     width: 90% !important;
   }
+
   .Home_faq_all_ques {
     width: 90%;
   }
@@ -1955,6 +2022,7 @@
     flex-direction: column !important;
     gap: 20px;
   }
+
   .Home_footer_logo_section {
     display: inline-flex;
     height: 20%;
@@ -1965,6 +2033,7 @@
     width: 90%;
     margin: 0 auto;
   }
+
   .Home_footer_menues {
     display: inline-flex;
     flex-direction: column;
@@ -1973,6 +2042,7 @@
     width: 90%;
     margin: 0 auto;
   }
+
   .Home_footer_quoteImg {
     width: 35%;
   }
@@ -1981,10 +2051,12 @@
     width: 85%;
     height: 75%;
   }
+
   .Get__Quotes_SubmitBtnWrapper {
     gap: 10px;
     margin: 10px auto !important;
   }
+
   .Get__Quotes_FormContainer {
     width: 90%;
     margin: 20px auto;
@@ -1996,40 +2068,49 @@
   .Home__topBar__socialMedia__mainWrapper {
     display: none;
   }
+
   .Home__topBar__getQuote__BTN {
     width: 25%;
     border-radius: 25px;
     font-size: 14px;
   }
+
   .Home__topBar__iconAndLinkWrapper {
     gap: 3px;
   }
+
   .topBar_iconWrapper {
     height: 20px;
     width: 20px;
   }
+
   .topBar_iconWrapper img {
     width: 60%;
   }
+
   .Home__topBar__telLink {
     font-size: 12px;
   }
+
   .Home_logo {
     width: 30%;
     object-fit: cover;
     object-position: right;
   }
+
   .Home__navBar__BTNSWrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 65%;
   }
+
   .Home__navBar__signUp__BTN {
     padding: 8px 12px;
     border-radius: 15px;
     font-size: 14px;
   }
+
   .Home__navBar__logoIn__BTN {
     padding: 8px 12px;
     border-radius: 15px;
@@ -2041,15 +2122,19 @@
 
     border-radius: 25px;
   }
+
   .Home_our_mission__titleWrapper h2 {
     font-size: 16px;
   }
+
   .Home_our_mission__EmpowerText {
     font-size: 27px;
   }
+
   .Home_our_mission__Empowerpara {
     font-size: 13px;
   }
+
   .Home_our_vision__titleWrapper {
     width: 35%;
     background: linear-gradient(92deg, #53b3fa 5.18%, #abd021 99.12%);
@@ -2059,6 +2144,7 @@
     align-items: center;
     border-radius: 30px;
   }
+
   .Home_our_vision__titleWrapper h3 {
     font-size: 16px;
     text-align: center;
@@ -2066,6 +2152,7 @@
     font-family: "Exo 2";
     font-weight: 700;
   }
+
   .Home_our_vision__pioneeringPara {
     color: white;
     margin-top: 15px;
@@ -2073,6 +2160,7 @@
     font-weight: 500;
     font-size: 13px;
   }
+
   .Home_training_modules_para {
     color: #fff;
     text-align: center;
@@ -2083,14 +2171,17 @@
     line-height: normal;
     width: 95%;
   }
+
   .Home_training_modules_card_main {
     margin-left: 0px !important;
     margin-top: 2rem !important;
   }
+
   .Home_testimonials_title_para {
     width: 95% !important;
     font-size: 27px;
   }
+
   .Home_choose_us_cards_btns {
     display: flex;
     flex-direction: column;
@@ -2098,9 +2189,11 @@
     gap: 20px;
     width: 90%;
   }
+
   .Home_choose_us_question_img {
     zoom: 40%;
   }
+
   .Home_choose_us_lm_btn {
     display: flex;
     justify-content: center;
@@ -2120,19 +2213,23 @@
     font-weight: 400;
     line-height: normal;
   }
+
   .Home_faq_question {
     display: flex;
     width: 350px;
     justify-content: space-between;
     align-items: center;
   }
+
   .Home_our_vision_main_image_bgTab {
     height: 350px !important;
     width: 360px !important;
   }
+
   .Home_our_vision__mainWrapperTab {
     margin-top: 0px;
   }
+
   .Home_our_mission_main_image_bg {
     margin-left: 0px;
     width: 360px !important;
