@@ -1,36 +1,53 @@
 import React, { useContext, useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from "../../styles/ProductsStyles.module.css";
 import rating from "../../assets/rating.png";
 import {useGlobal } from '../../context/globalContext';
+import TopBar from '../TopBar/TopBar';
 
 
 function ProductDetails() {
     const location = useLocation();
     const product = location.state;
+    const navigate=useNavigate()
 
     const {cartItems,setCartItems}=useGlobal();
 
     const handleAddToCart=()=>{
-       let tempCartItems=cartItems
+      
 
+       
+
+       let tempCartItems=cartItems
+       for(let i=0;i<tempCartItems.length;i++){
+        if(tempCartItems[i]===product?._id){
+         alert("item already added")
+         return 
+        }
+    }
        tempCartItems.push(product?._id)
        setCartItems(tempCartItems)
 
 
        localStorage.setItem("cart",JSON.stringify(tempCartItems))
+
+       alert("product added to cart")
     }
 
     const handleAddToBuy=()=>{
         // console.log("kkk",cartItems)
+        navigate("/user-dashboard")
+      
     }
 
     useEffect(()=>{
-        console.log("1st",cartItems)
+        // console.log("1st",cartItems)
     },[])
 
     
     return (
+       
+       
         <div className='row'>
             <div className='col-md-6'>
                 <img
@@ -66,6 +83,7 @@ function ProductDetails() {
                 </div>
             </div>
         </div>
+    
     )
 }
 

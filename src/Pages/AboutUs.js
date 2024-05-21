@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import AboutUsPrepare from "../Components/AboutUsComponents/AboutUsPrepare";
 import stats from "../assets/stats.png";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
@@ -6,8 +6,22 @@ import copyright from "../assets/copyright.png";
 import aboutusBg from "../assets/aboutus-topbar-bg.png";
 import TopBar from "../Components/TopBar/TopBar";
 import styles from '../styles/AboutUsStyles.module.css';
+import { useNavigate } from "react-router-dom";
+import { verifyToken } from "../api-calls/apiCalls";
 
 function AboutUs() {
+ const navigate=useNavigate()
+
+ useEffect(()=>{
+    const verifier = async () => {
+      const verifiedTokenData = await verifyToken()
+      if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+        navigate("/login")
+      } 
+    }
+    verifier()
+  },[])
+
   return (
     <div
       style={{
@@ -57,6 +71,7 @@ function AboutUs() {
       </div>
     </div>
   );
+
 }
 
 export default AboutUs;

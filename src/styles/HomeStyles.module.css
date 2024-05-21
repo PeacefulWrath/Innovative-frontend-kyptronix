@@ -10,6 +10,12 @@
   background: linear-gradient(180deg, #2a91dd 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+.Home__topBar__cart__BTN {
+  /* margin-left: 5%; */
+  color: #00aeef;
+  cursor: pointer
+}
+
 .Home_top_bar_email_text {
   color: rgba(255, 255, 255, 1);
 }
@@ -213,6 +219,28 @@
   z-index: 2;
 }
 
+.Home_logout_btn {
+  display: inline-flex;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 36px;
+  border: 2px solid #fff;
+  margin-left: 7%;
+  height: 10px;
+  margin-top: 3.5%;
+  width: 40px;
+  color: #dd2a2a;
+  white-space: nowrap;
+
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+
 /* hover effect for .login-btn start */
 
 .Home_login_btn::after {
@@ -228,11 +256,32 @@
   transition: 0.4s;
 }
 
+.Home_logout_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(96.58deg, #d22525 6.11%, #e32d2d 92.54%);
+
+  z-index: -1;
+  transition: 0.4s;
+}
+
 .Home_login_btn:hover {
   color: #fff;
 }
 
+.Home_logout_btn:hover {
+  color: #fff;
+}
+
 .Home_login_btn:hover::after {
+  bottom: 0%;
+}
+
+.Home_logout_btn:hover::after {
   bottom: 0%;
 }
 
@@ -1217,6 +1266,28 @@
     z-index: 2;
   }
 
+  .Home_logout_btn {
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 26px;
+    border: 2px solid #fff;
+    margin-left: 2%;
+    height: 10px;
+    margin-top: 2%;
+    width: 40px;
+    color: #dd2a2a;
+    white-space: nowrap;
+    font-size: 15px;
+
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
   .Home_our_mission_div {
     width: 100%;
     height: 100%;
@@ -1661,6 +1732,10 @@
     display: none;
   }
 
+  .Home_logout_btn {
+    display: none;
+  }
+
   .Home__navBar__BTNSWrapper {
     display: flex;
     justify-content: space-evenly;
@@ -1722,6 +1797,20 @@
     z-index: 2;
   }
 
+
+  .Home__navBar__logOut__BTN {
+    font-family: "Exo 2";
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    color: #dd2a2a;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
   /* hover effect for .login-btn start */
 
   .Home__navBar__logoIn__BTN::after {
@@ -1744,6 +1833,30 @@
   .Home__navBar__logoIn__BTN:hover::after {
     bottom: 0%;
   }
+
+  /* logout  */
+
+  .Home__navBar__logOut__BTN::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(96.58deg, #d22525 6.11%, #e32d2d 92.54%);
+
+    z-index: -1;
+    transition: 0.4s;
+  }
+
+  .Home__navBar__logOut__BTN:hover {
+    color: #fff;
+  }
+
+  .Home__navBar__logOut__BTN:hover::after {
+    bottom: 0%;
+  }
+
 
   .Home__navBar__menuBTN {
     border: none;
@@ -2105,6 +2218,13 @@
   }
 
   .Home__navBar__logoIn__BTN {
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+
+  .Home__navBar__logOut__BTN {
     padding: 8px 12px;
     border-radius: 15px;
     font-size: 14px;

@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TopBar from "../Components/TopBar/TopBar";
 import TrainingsProgram from "../Components/TrainingsComponents/TrainingsProgram";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
 import trainingsBg from "../assets/trainings-top-bar.png";
+import { useNavigate } from "react-router-dom";
+import { verifyToken } from "../api-calls/apiCalls";
 
 function Trainings() {
+  const navigate=useNavigate()
+
+  useEffect(()=>{
+     const verifier = async () => {
+       const verifiedTokenData = await verifyToken()
+       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+         navigate("/login")
+       } 
+     }
+     verifier()
+   },[])
   return (
     <div
       style={{

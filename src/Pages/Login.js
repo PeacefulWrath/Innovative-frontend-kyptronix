@@ -35,9 +35,9 @@ export const Login = () => {
     const loginData = await logIn(userData)
     if (loginData.success == "yes") {
       localStorage.setItem("token",loginData.token)
-      navigate('/home');
+      navigate('/');
     } else {
-      alert("error in sign in")
+      alert(loginData?.message)
     }
   }
 
@@ -45,7 +45,6 @@ export const Login = () => {
 
 
     const verifier = async () => {
-
       const verifiedTokenData = await verifyToken()
       // console.log("rrr",verifiedTokenData?.message)
       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
@@ -61,7 +60,7 @@ export const Login = () => {
 
  if (showNotFound === true) {
     return (<div className='d-flex justify-content-center'>
-      Page Not Found
+      you are already logged in; go to&nbsp;<a href="/">home</a>&nbsp;page
     </div>)
   } else if (showNotFound === false) {
   return (

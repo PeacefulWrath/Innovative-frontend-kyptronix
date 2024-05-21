@@ -74,7 +74,7 @@ export const Register = () => {
 
 
     const verifier = async () => {
-
+console.log("verifier")
       const verifiedTokenData = await verifyToken()
       // console.log("rrr",verifiedTokenData?.message)
       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
@@ -90,7 +90,7 @@ export const Register = () => {
 
   if (showNotFound === true) {
     return (<div className='d-flex justify-content-center'>
-      Page Not Found
+        you are already logged in; go to&nbsp;<a href="/">home</a>&nbsp;page
     </div>)
   } else if (showNotFound === false) {
 

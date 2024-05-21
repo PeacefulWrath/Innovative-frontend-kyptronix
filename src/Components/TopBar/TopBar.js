@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import mail from "../../assets/mail.png";
@@ -18,18 +18,47 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import { useGlobal } from "../../context/globalContext";
+import { Badge } from "antd";
+import { verifyToken } from "../../api-calls/apiCalls";
 
 function TopBar({ page, bg }) {
   const [clicked, setClicked] = useState("Home");
   const [isGetquotes, setIsGetquotes] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showLoginAndSignUp, setShowLoginAndSignUp] = useState(undefined)
+
   const navigate = useNavigate();
+
+  const { cartItems, setCartItems } = useGlobal();
 
   const handleClick = (clickedItem) => {
     setClicked(clickedItem);
     navigate(`/${clickedItem}`);
   };
+
+  const handleLogOut=()=>{
+    localStorage.removeItem("cart")
+    localStorage.removeItem("token")
+    navigate("/")
+  }
+
+  useEffect(() => {
+
+
+    const verifier = async () => {
+      const verifiedTokenData = await verifyToken()
+      // console.log("rrr",verifiedTokenData?.message)
+      if (verifiedTokenData?.message == "jwt expired" || verifiedTokenData?.message === "jwt not present") {
+        setShowLoginAndSignUp(true)
+      } else {
+        setShowLoginAndSignUp(false)
+      }
+    }
+
+    verifier()
+
+  }, []);
 
   return (
     <>
@@ -113,15 +142,21 @@ function TopBar({ page, bg }) {
               Get Quote
             </button>
 
-           
-              <ShoppingCartIcon
-              
-               className={styles.Home__topBar__cart__BTN}
-               onClick={()=>{
-                navigate("/cart")
-               }}
-              />
-            
+            <div className="ms-5">
+              <Badge count={cartItems.length} showZero color="black">
+
+                <ShoppingCartIcon
+
+                  className={styles.Home__topBar__cart__BTN}
+                  onClick={() => {
+                    navigate("/cart")
+                  }}
+                />
+
+
+              </Badge>
+
+            </div>
           </div>
 
           <TopBarTab setIsGetquotes={setIsGetquotes} />
@@ -141,11 +176,10 @@ function TopBar({ page, bg }) {
 
           <div className={styles.Home_menu_list}>
             <p
-              className={`${
-                clicked === "home"
-                  ? `${styles.Home_menue_active}`
-                  : `${styles.Home_menue}`
-              }`}
+              className={`${clicked === "home"
+                ? `${styles.Home_menue_active}`
+                : `${styles.Home_menue}`
+                }`}
               onClick={() => {
                 handleClick("home");
               }}
@@ -154,11 +188,10 @@ function TopBar({ page, bg }) {
             </p>
 
             <p
-              className={`${
-                clicked === "services"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "services"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("services");
               }}
@@ -166,11 +199,10 @@ function TopBar({ page, bg }) {
               Services
             </p>
             <p
-              className={`${
-                clicked === "products"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "products"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("products");
               }}
@@ -178,11 +210,10 @@ function TopBar({ page, bg }) {
               Products
             </p>
             <p
-              className={`${
-                clicked === "trainings"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "trainings"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("trainings");
               }}
@@ -190,11 +221,10 @@ function TopBar({ page, bg }) {
               Trainings
             </p>
             <p
-              className={`${
-                clicked === "partners"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "partners"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("partners");
               }}
@@ -202,11 +232,10 @@ function TopBar({ page, bg }) {
               Our Partners
             </p>
             <p
-              className={`${
-                clicked === "gallery"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "gallery"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("gallery");
               }}
@@ -214,11 +243,10 @@ function TopBar({ page, bg }) {
               Gallery
             </p>
             <p
-              className={`${
-                clicked === "aboutus"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "aboutus"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("aboutus");
               }}
@@ -226,11 +254,10 @@ function TopBar({ page, bg }) {
               About Us
             </p>
             <p
-              className={`${
-                clicked === "contactus"
-                  ? `${styles.Home_other_menues_active}`
-                  : `${styles.Home_other_menues}`
-              }`}
+              className={`${clicked === "contactus"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
               onClick={() => {
                 handleClick("contactus");
               }}
@@ -241,19 +268,33 @@ function TopBar({ page, bg }) {
 
           {showMenu && <NavMenuTab setShowMenu={setShowMenu} />}
 
+         
           <div className={styles.Home__navBar__BTNSWrapper}>
-            <button
-              className={styles.Home__navBar__signUp__BTN}
-              onClick={() => navigate("/register")}
-            >
-              Sign up
-            </button>
-            <button
-              className={styles.Home__navBar__logoIn__BTN}
-              onClick={() => navigate("/login")}
-            >
-              Log In
-            </button>
+            {showLoginAndSignUp ?
+              <>
+                <button
+                  className={styles.Home__navBar__signUp__BTN}
+                  onClick={() => navigate("/register")}
+                >
+                  Sign up
+                </button>
+                <button
+                  className={styles.Home__navBar__logoIn__BTN}
+                  onClick={() => navigate("/login")}
+                >
+                  Log In
+                </button>
+              </>
+              :
+              <>
+                <button
+                  className={styles.Home__navBar__logOut__BTN}
+                  onClick={() => { alert("logout") }}
+                >
+                  Log Out
+                </button>
+              </>
+            }
             <button
               onClick={() => setShowMenu(true)}
               className={styles.Home__navBar__menuBTN}
@@ -267,19 +308,33 @@ function TopBar({ page, bg }) {
             </button>
           </div>
 
-          <button
-            onClick={() => navigate("/register")}
-            className={styles.Home_signup_btn}
-          >
-            Sign up
-          </button>
 
-          <button
-            onClick={() => navigate("/login")}
-            className={styles.Home_login_btn}
-          >
-            Login
-          </button>
+          {showLoginAndSignUp ? <>
+            <button
+              onClick={() => navigate("/register")}
+              className={styles.Home_signup_btn}
+            >
+              Sign up
+            </button>
+
+            <button
+              onClick={() => navigate("/login")}
+              className={styles.Home_login_btn}
+            >
+              Login
+            </button>
+          </> : <>
+            <button
+              onClick={() => { 
+
+                handleLogOut()
+               }}
+              className={styles.Home_logout_btn}
+            >
+              Logout
+            </button>
+          </>}
+
         </div>
 
         {page === "services" && (

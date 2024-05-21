@@ -21,7 +21,7 @@ const navigate=useNavigate()
       setCategories([...categoriesData])
       }
       const productsData = await fetchProducts()
-      if (productsData?.message === "jwt expired") {
+      if (productsData?.message === "jwt expired"||productsData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
       setProducts([...productsData])

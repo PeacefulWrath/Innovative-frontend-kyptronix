@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceFooter from "../Components/ServicesComponents/ServiceFooter";
 import copyright from "../assets/copyright.png";
 import ContactUsForm from "../Components/ContactUsComponents/ContactUsForm";
 import TopBar from "../Components/TopBar/TopBar";
 import contactusBg from "../assets/contactus-topbar-bg.png";
+import { useNavigate } from "react-router-dom";
+import { verifyToken } from "../api-calls/apiCalls";
 
 function ContactUs() {
+  const navigate=useNavigate()
+
+  useEffect(()=>{
+     const verifier = async () => {
+       const verifiedTokenData = await verifyToken()
+       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+         navigate("/login")
+       } 
+     }
+     verifier()
+   },[])
+   
   return (
     <div
       style={{

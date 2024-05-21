@@ -19,7 +19,7 @@ function Gallery() {
     // console.log("gallery")
     const fetcher = async () => {
       const galleriesData = await fetchGalleries();
-      if (galleriesData?.message === "jwt expired") {
+      if (galleriesData?.message === "jwt expired"||galleriesData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
         setGalleries([...galleriesData]);

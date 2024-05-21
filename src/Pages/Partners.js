@@ -15,7 +15,7 @@ const navigate=useNavigate()
     const fetcher = async () => {
       const tempPartnersData = await fetchPartners()
 
-      if (tempPartnersData?.message === "jwt expired") {
+      if (tempPartnersData?.message === "jwt expired"||tempPartnersData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
       setPartnerItems([...tempPartnersData])

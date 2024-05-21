@@ -16,7 +16,7 @@ const navigate=useNavigate()
     const fetcher = async () => {
       const servicesData = await fetchServices()
 
-      if (servicesData?.message === "jwt expired") {
+      if (servicesData?.message === "jwt expired"||servicesData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
       setServicesItems([...servicesData])

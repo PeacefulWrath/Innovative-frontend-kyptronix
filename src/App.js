@@ -13,6 +13,8 @@ import { Login } from "./Pages/Login";
 import Cart from "./Pages/Cart";
 import ProductDetails from "./Components/ProductsComponents/ProductDetails";
 import { GlobalProvider } from "./context/globalContext";
+import Buy from "./Pages/Buy";
+import UserDashboard from "./Pages/UserDashboard";
 
 function App() {
 
@@ -20,12 +22,9 @@ function App() {
 
   return (
     <GlobalProvider>
-     
-    
-   
       <Router>
         <Routes>
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/products" element={<Products />} />
@@ -35,12 +34,13 @@ function App() {
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/gallery" element={<Gallery />} />
           <Route exact path="/cart" element={<Cart />} />
-          <Route exact path="/" element={<Register />} />
+          <Route exact path="/register" element={<Register />} />
           <Route exact path="/product-details" element={<ProductDetails />} />
-          {/* <Route exact path="/login" element={<Login />} /> */}
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/buy" element={<Buy />} />
+          <Route exact path="/user-dashboard" element={<UserDashboard />} />
         </Routes>
       </Router>
-     
       </GlobalProvider>
   );
 }

@@ -13,15 +13,12 @@ function GlobalProvider(props) {
 
   useEffect(() => {
 
-    const fetcher=async()=>{
+   
     if (localStorage.getItem("cart")) {
-      console.log("000",GlobalContext)
-      // console.log("9oo99",localStorage.getItem("cart"))
-      setCartItems([...JSON.parse(localStorage.getItem("cart"))]||[])
+      setCartItems([...JSON.parse(localStorage.getItem("cart"))])
+    }else{
+      setCartItems([])
     }
-    }
-
-    fetcher()
 
   }, [])
 
