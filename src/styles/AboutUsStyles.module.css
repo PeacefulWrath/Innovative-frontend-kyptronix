@@ -177,6 +177,9 @@
   font-weight: 400;
   line-height: normal;
 }
+.AboutUsPrepare__mainWrapperTab{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .Aboutus__mainWrapper {
