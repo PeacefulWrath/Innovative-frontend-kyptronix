@@ -2,6 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
+
+
+/* products details */
+.Products__details__cart__BTN {
+  background-color: #00aeef;
+   color: white;
+    cursor: "pointer"
+}
+.Products__details__buy__BTN {
+  background-color: #2d388a;
+   color: white;
+    cursor: "pointer"
+}
+
 /*products by category */
 .Products_ProductsByCategory_btn {
   display: inline-flex;

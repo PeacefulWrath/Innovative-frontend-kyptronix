@@ -2,33 +2,51 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const GlobalContext = createContext();
 
-function GlobalProvider({ children }) {
-  
-  const [adminEmail, setAdminEmail] = useState("");
-  const [cartItems, setCartItems] = useState("");
+function GlobalProvider(props) {
+
+  const [adminEmail, setAdminEmail] = useState(undefined);
+  const [cartItems, setCartItems] = useState(undefined);
+
+  // console.log("9oo99",localStorage.getItem("cart"))
+
+
+
+  useEffect(() => {
+
+    const fetcher=async()=>{
+    if (localStorage.getItem("cart")) {
+      console.log("000",GlobalContext)
+      // console.log("9oo99",localStorage.getItem("cart"))
+      setCartItems([...JSON.parse(localStorage.getItem("cart"))]||[])
+    }
+    }
+
+    fetcher()
+
+  }, [])
+
+
  
-
-  useEffect(()=>{
-   if(localStorage.getItem("cart")){
-    setCartItems([...localStorage.getItem("cart")])
-   }
-  },[])
-
-  return (
-    <GlobalContext.Provider
-    value={{ 
-        adminEmail, 
+    return (
+      <>
+  
+  { cartItems&& <GlobalContext.Provider
+      value={{
+        adminEmail,
         setAdminEmail,
         cartItems,
         setCartItems
 
-    }}
+      }}
     >
-      {children}
-    </GlobalContext.Provider>
-  );
+      {props.children}
+    </GlobalContext.Provider>}
+  
+  </>
+  )
+
 }
 
 const useGlobal = () => useContext(GlobalContext);
 
-export { GlobalProvider, useGlobal };
+export { useGlobal, GlobalProvider };

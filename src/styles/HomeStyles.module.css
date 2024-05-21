@@ -10,13 +10,6 @@
   background: linear-gradient(180deg, #2a91dd 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.Home__topBar__cart__BTN {
-  color: #2a91dd;
-  margin-left: 2%;
-  cursor: pointer;
-  zoom: 1.3;
-}
-
 .Home_top_bar_email_text {
   color: rgba(255, 255, 255, 1);
 }

@@ -16,6 +16,7 @@ function Gallery() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    // console.log("gallery")
     const fetcher = async () => {
       const galleriesData = await fetchGalleries();
       if (galleriesData?.message === "jwt expired") {

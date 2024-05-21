@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,createContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
@@ -12,10 +12,17 @@ import { Register } from "./Pages/Register";
 import { Login } from "./Pages/Login";
 import Cart from "./Pages/Cart";
 import ProductDetails from "./Components/ProductsComponents/ProductDetails";
+import { GlobalProvider } from "./context/globalContext";
 
 function App() {
+
+
+
   return (
-    <>
+    <GlobalProvider>
+     
+    
+   
       <Router>
         <Routes>
           <Route exact path="/login" element={<Login />} />
@@ -33,7 +40,8 @@ function App() {
           {/* <Route exact path="/login" element={<Login />} /> */}
         </Routes>
       </Router>
-    </>
+     
+      </GlobalProvider>
   );
 }
 
