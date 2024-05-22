@@ -40,7 +40,7 @@ function TopBar({ page, bg }) {
   const handleLogOut=()=>{
     localStorage.removeItem("cart")
     localStorage.removeItem("token")
-    navigate("/")
+    navigate("/login")
   }
 
   useEffect(() => {

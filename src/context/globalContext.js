@@ -6,6 +6,7 @@ function GlobalProvider(props) {
 
   const [adminEmail, setAdminEmail] = useState(undefined);
   const [cartItems, setCartItems] = useState(undefined);
+  const [buyedItems, setBuyedItems] = useState(undefined);
 
   // console.log("9oo99",localStorage.getItem("cart"))
 
@@ -32,7 +33,9 @@ function GlobalProvider(props) {
         adminEmail,
         setAdminEmail,
         cartItems,
-        setCartItems
+        setCartItems,
+        buyedItems,
+        setBuyedItems
 
       }}
     >

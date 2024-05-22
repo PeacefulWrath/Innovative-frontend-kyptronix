@@ -30,7 +30,8 @@ function Cart() {
   }
 
   const handleBuyNow = (product) => {
-    navigate("/user-dashboard",{state:product})
+    // navigate("/user-dashboard",{state:product})
+    navigate("/user-dashboard")
   }
 
   useEffect(() => {

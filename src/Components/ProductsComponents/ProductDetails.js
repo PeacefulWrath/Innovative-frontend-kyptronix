@@ -36,8 +36,8 @@ function ProductDetails() {
 
     const handleAddToBuy=()=>{
         // console.log("kkk",cartItems)
+        // navigate("/user-dashboard",{state:product})
         navigate("/user-dashboard")
-      
     }
 
     useEffect(()=>{
