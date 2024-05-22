@@ -327,3 +327,56 @@ export const verifyToken = async () => {
     return tokenData;
   }
 };
+
+export const createPurchaseOrders = async (addData) => {
+  let tempPurchaseOrders = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+  try {
+    // console.log("po data", addData);
+
+    await axios({
+      method: "post",
+      url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
+      data: addData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+        authorization: `Bearer ${token}`,
+      },
+    }).then((res) => {
+      tempPurchaseOrders = res.data;
+    });
+  } catch (error) {
+    // console.log("can not create purchase order");
+    tempPurchaseOrders=error?.response?.data;
+  } finally {
+    return tempPurchaseOrders;
+  }}else {
+    tempPurchaseOrders = { success: "no", message: "jwt not present" }
+    return tempPurchaseOrders
+  }
+};
+
+export const fetchPurchaseOrders = async () => {
+  let tempPurchaseOrders = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+  try {
+    const response = await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    tempPurchaseOrders = response.data.fetchedData;
+  } catch (error) {
+    // console.log("err", error);
+    tempPurchaseOrders=error?.response?.data;
+  } finally {
+    return tempPurchaseOrders;
+  }}else {
+    tempPurchaseOrders = { success: "no", message: "jwt not present" }
+    return tempPurchaseOrders
+  }
+};
