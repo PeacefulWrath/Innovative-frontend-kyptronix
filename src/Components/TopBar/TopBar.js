@@ -65,14 +65,14 @@ function TopBar({ page, bg }) {
       <div
         style={{
           width: "100%",
-          height: "80%",
-          backgroundImage: `url(${bg})`,
+          height: page!=="cart"?"80%":"",
+          background: page!=="details"&& page!=="cart"?`url(${bg})`:"",
           position: "relative",
         }}
       >
         <nav
           className={
-            page === "home"
+            page === "home"||page==="details"
               ? `${styles.Home_top_bar} navbar navbar-expand-lg `
               : `${serviceStyles.Services_top_bar} navbar navbar-expand-lg `
           }

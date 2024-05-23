@@ -7,19 +7,27 @@ import aboutusBg from "../assets/aboutus-topbar-bg.png";
 import TopBar from "../Components/TopBar/TopBar";
 import styles from '../styles/AboutUsStyles.module.css';
 import { useNavigate } from "react-router-dom";
-import { verifyToken } from "../api-calls/apiCalls";
+import { fetchAboutUs, verifyToken } from "../api-calls/apiCalls";
 
 function AboutUs() {
+  const[aboutUs,setAboutUs]=useState(undefined)
  const navigate=useNavigate()
 
  useEffect(()=>{
-    const verifier = async () => {
+    const executer = async () => {
       const verifiedTokenData = await verifyToken()
       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
         navigate("/login")
       } 
+
+      const aboutUsData = await fetchAboutUs()
+      if (aboutUsData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+        setAboutUs([...aboutUsData])
+      }
     }
-    verifier()
+    executer()
   },[])
 
   return (
@@ -31,7 +39,7 @@ function AboutUs() {
       }}
     >
       <TopBar page={"aboutus"} bg={aboutusBg} />
-      <AboutUsPrepare />
+     { aboutUs&&<AboutUsPrepare dbData={aboutUs}/>}
 {/* 
       <div
         style={{

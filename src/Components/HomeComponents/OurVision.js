@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import telescope from "../../assets/telescope.png";
@@ -6,11 +6,17 @@ import OurMissionImg from "../../assets/OurMissionImg.png";
 import teleShad from "../../assets/tele-shad-1.png";
 import styles from "../../styles/HomeStyles.module.css";
 import gsap from "gsap";
+import { fetchOurVision } from "../../api-calls/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 function OurVision() {
   const buttonRef2 = useRef(null);
   const timeline = useRef(gsap.timeline());
   const timeline2 = useRef(gsap.timeline());
+  const [ourVisions, setOurVisions] = useState(undefined)
+  
+  const navigate = useNavigate();
+
 
   const handleSecondLMMouseEnter = () => {
     timeline.current.to(buttonRef2.current, {
@@ -34,7 +40,20 @@ function OurVision() {
     timeline2.current.reverse();
   };
 
-  return (
+  useEffect(() => {
+    const fetcher = async () => {
+      const ourVisionData = await fetchOurVision()
+      if (ourVisionData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+        setOurVisions([...ourVisionData])
+      }
+    }
+    fetcher()
+  }, [])
+
+  if(ourVisions)
+{  return (
     <>
       <div className={styles.Home_our_vision__mainWrapper}>
         <div className={styles.Home_our_vision_btn}>
@@ -42,15 +61,10 @@ function OurVision() {
         </div>
         <div className={styles.Home_our_vision_div}>
           <div className={`${styles.Home_our_vision_heading} mt-3`}>
-            Pioneering Seamless Learning Excellence
+          {ourVisions[0]?.title}
           </div>
           <div className={styles.Home_our_vision_main}>
-            At INNOVATIVE Quality Tech Limited, we envision a future where
-            education seamlessly integrates with technology, fostering
-            inclusivity and empowering individuals worldwide to unlock their
-            full potential. Our commitment to innovation and excellence drives
-            us to redefine educational standards, inspiring lifelong learners
-            prepared to shape a brighter tomorrow.
+          {ourVisions[0]?.description}
           </div>
           <div
             className={styles.Home_our_vision_learn_more_btn}
@@ -84,9 +98,9 @@ function OurVision() {
           <div className={styles.Home_our_vision__titleWrapper}>
             <h3>Our vision</h3>
           </div>
-          <h2 className={styles.Home_our_vision__pioneeringText}>Pioneering Seamless Learning Excellence</h2>
+          <h2 className={styles.Home_our_vision__pioneeringText}> {ourVisions[0]?.title}</h2>
           <p className={styles.Home_our_vision__pioneeringPara}>
-            At INNOVATIVE Quality Tech Limited, we envision a future where education seamlessly integrates with technology, fostering inclusivity and empowering individuals worldwide to unlock their full potential. Our commitment to innovation and excellence drives us to redefine educational standards, inspiring lifelong learners prepared to shape a brighter tomorrow.
+          {ourVisions[0]?.description}
           </p>
 
           <button className={styles.Home_our_vision__learnMoreBtn}>Learn More</button>
@@ -94,7 +108,7 @@ function OurVision() {
 
       </div>
     </>
-  );
+  );}
 }
 
 export default OurVision;

@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useGlobal } from '../context/globalContext';
 import { fetchProducts } from '../api-calls/apiCalls';
 import { useNavigate } from 'react-router-dom';
+import TopBar from '../Components/TopBar/TopBar';
 
 function Cart() {
   const { cartItems, setCartItems } = useGlobal();
-  const [cartProducts, setCartProducts] = useState([])
+  const [cartProducts, setCartProducts] = useState(undefined)
 
   const navigate = useNavigate()
 
@@ -90,41 +91,50 @@ function Cart() {
 
   }, [])
 
-  return (
-    < >
-      <h1 className='d-flex justify-content-center' >
-        Cart Items
-      </h1>
+  if (cartProducts) {
+    return (
+      <div className='vh-100' style={{ overflowX: "hidden", background: "#202020" }}>
+        <TopBar page={"cart"} />
+        <h1 className='d-flex justify-content-center mt-5' style={{ color: 'white' }} >
+          Cart Items
+        </h1>
 
 
-      <div className='d-flex flex-column' style={{ alignItems: "center" }}>
-        {
-          cartProducts && cartProducts.length !== 0 && cartProducts.map((item, index) => (
+        <div className='d-flex flex-column' style={{ alignItems: "center" }}>
+          {
+            cartProducts.length !== 0 ?
 
-            <div className='d-flex justify-content-around border border-dark mt-5 w-50 p-4'>
-              <img src={item?.product?.image} className='w-25 rounded' />
-              <div className='d-inline-flex flex-column'>
-                <p>{item?.product?.name}</p>
-                <p>{`Price: $${item?.product?.discounted_price}`}</p>
-                {/* <p>{`Count: ${item?.count}`}</p> */}
-                <div>
-                  <button className='btn btn-danger rounded' onClick={() => {
-                    handleRemoveFromCart(index, item?.product?._id)
-                  }}>Remove From Cart</button>
-                  <button className='btn btn-success rounded ms-3' onClick={() => {
-                    handleBuyNow(item?.product)
-                  }}>Buy Now</button>
+              cartProducts.map((item, index) => (
+
+                <div className='d-flex justify-content-around mt-5 w-50 p-4 shadow rounded'>
+                  <img src={item?.product?.image} className='w-25 rounded' />
+                  <div className='d-inline-flex flex-column'>
+                    <p style={{ color: "white" }}>{item?.product?.name}</p>
+                    <p style={{ color: "white" }}>{`Price: $${item?.product?.discounted_price}`}</p>
+                    {/* <p>{`Count: ${item?.count}`}</p> */}
+                    <div>
+                      <button className='btn btn-danger rounded' onClick={() => {
+                        handleRemoveFromCart(index, item?.product?._id)
+                      }}>Remove From Cart</button>
+                      <button className='btn btn-success rounded ms-3' onClick={() => {
+                        handleBuyNow(item?.product)
+                      }}>Buy Now</button>
+                    </div>
+
+                  </div>
                 </div>
 
-              </div>
-            </div>
 
-
-          ))
-        }
+              ))
+              :
+              (
+                <p style={{ color: "white" }} className='mt-md-5'>Your cart is empty</p>
+              )
+          }
+        </div>
       </div>
-    </>
-  )
+    )
+  }
 }
 
 export default Cart

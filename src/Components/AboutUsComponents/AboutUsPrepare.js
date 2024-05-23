@@ -7,7 +7,9 @@ import styles from "../../styles/AboutUsStyles.module.css";
 import AboutusBg from "../../assets/AboutusBg.png";
 import AboutusImg1 from "../../assets/AboutusImg1.png";
 import AboutusImg2 from "../../assets/AboutusImg2.png";
-function AboutUsPrepare() {
+
+function AboutUsPrepare({ dbData }) {
+  // console.log(dbData)
   const buttonRef = useRef(null);
 
   const timeline = useRef(gsap.timeline());
@@ -34,6 +36,7 @@ function AboutUsPrepare() {
     timeline.current.reverse();
     timeline2.current.reverse();
   };
+
   return (
     <>
       <div
@@ -46,8 +49,14 @@ function AboutUsPrepare() {
             marginTop: "8%",
           }}
         >
-          <img src={about} alt="about" style={{ width: "25%" }} />
-          <img src={text} alt="text" className="mt-5" />
+          {/* <img src={about} alt="about" style={{ width: "25%" }} />
+          <img src={text} alt="text" className="mt-5" /> */}
+           <h2  style={{color:"white"}}>
+              {dbData[0]?.title}
+            </h2>
+            <p  style={{color:"white"}}>
+              {dbData[0]?.description}
+            </p>
           <div
             className={styles.Aboutus_learn_more_btn}
             ref={buttonRef}
@@ -78,14 +87,15 @@ function AboutUsPrepare() {
         />
       </div>
 
-      <AboutUsPrepareTab />
+      <AboutUsPrepareTab tDbData={dbData[0]} />
     </>
   );
 }
 
 export default AboutUsPrepare;
 
-const AboutUsPrepareTab = () => {
+const AboutUsPrepareTab = ({ tDbData }) => {
+  // console.log("91", tDbData)
   const buttonRef = useRef(null);
 
   const timeline = useRef(gsap.timeline());
@@ -112,58 +122,51 @@ const AboutUsPrepareTab = () => {
     timeline.current.reverse();
     timeline2.current.reverse();
   };
-  return (
-    <>
-      <div className={styles.AboutUsPrepare__mainWrapperTab}>
-        <div className={styles.AboutUsPrepare__contentMainWrapperTab}>
-          <div className={styles.AboutUsPrepare__contentSubTitleWrapper}>
-            <p>About Us</p>
+
+  if (tDbData) {
+    return (
+      <>
+        <div className={styles.AboutUsPrepare__mainWrapperTab}>
+          <div className={styles.AboutUsPrepare__contentMainWrapperTab}>
+            <div className={styles.AboutUsPrepare__contentSubTitleWrapper}>
+              <p>About Us</p>
+            </div>
+            <h2 className={styles.AboutUsPrepare__contentTitle} style={{color:"white"}}>
+              {tDbData?.title}
+            </h2>
+            <p className={styles.AboutUsPrepare__contentPara} style={{color:"white"}}>
+              {tDbData?.description}
+            </p>
+            <button
+              onMouseEnter={handleFirstLMMouseEnter}
+              onMouseLeave={handleFirstLMMouseLeave}
+              ref={buttonRef}
+              className={styles.AboutUsPrepare__learnMoreBTN}
+            >
+              Learn More
+            </button>
           </div>
-          <h2 className={styles.AboutUsPrepare__contentTitle}>
-            Prepare for Exams with Us on your side!
-          </h2>
-          <p className={styles.AboutUsPrepare__contentPara}>
-            At INNOVATIVE Quality Tech Limited, we understand the challenges
-            students face when preparing for exams. That's why our platform
-            combines cutting-edge technology with expertly crafted content to
-            provide tailored study solutions for each individual. Whether you're
-            a high school student tackling standardized tests or a professional
-            seeking certification, our platform adapts to your needs, offering
-            interactive lessons, practice exams, and personalized feedback to
-            maximize your learning potential. Join the thousands of satisfied
-            users who have experienced the difference with our innovative
-            approach to exam preparation. With us, success is not just a goal,
-            but a guarantee.
-          </p>
-          <button
-            onMouseEnter={handleFirstLMMouseEnter}
-            onMouseLeave={handleFirstLMMouseLeave}
-            ref={buttonRef}
-            className={styles.AboutUsPrepare__learnMoreBTN}
-          >
-            Learn More
-          </button>
-        </div>
-        <div className={styles.AboutUsPrepare__imageWrapper}>
-          <img
-            className={styles.AboutUsPrepare__BgImage}
-            src={AboutusBg}
-            alt="aboutus-bg"
-          />
-          <div className={styles.AboutUsPrepare__twoImageWrapper}>
+          <div className={styles.AboutUsPrepare__imageWrapper}>
             <img
-              className={styles.AboutUsPrepare__imageOne}
-              alt="imageOne"
-              src={AboutusImg1}
+              className={styles.AboutUsPrepare__BgImage}
+              src={AboutusBg}
+              alt="aboutus-bg"
             />
-            <img
-              className={styles.AboutUsPrepare__imageTwo}
-              alt="imageTwo"
-              src={AboutusImg2}
-            />
+            <div className={styles.AboutUsPrepare__twoImageWrapper}>
+              <img
+                className={styles.AboutUsPrepare__imageOne}
+                alt="imageOne"
+                src={AboutusImg1}
+              />
+              <img
+                className={styles.AboutUsPrepare__imageTwo}
+                alt="imageTwo"
+                src={AboutusImg2}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    )
+  }
 };

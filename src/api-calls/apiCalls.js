@@ -253,11 +253,12 @@ export const fetchGalleries = async () => {
     try {
 
       const response = await axios(
-        {method: "get",
-        url:`${process.env.REACT_APP_BASE_URL}/api/gallery`,
-        headers: {
-          authorization: `Bearer ${token}`
-        },
+        {
+          method: "get",
+          url: `${process.env.REACT_APP_BASE_URL}/api/gallery`,
+          headers: {
+            authorization: `Bearer ${token}`
+          },
         }
       );
       galleriesData = response.data.allGalleryData;
@@ -332,26 +333,27 @@ export const createPurchaseOrders = async (addData) => {
   let tempPurchaseOrders = [];
   const token = localStorage.getItem("token");
   if (token) {
-  try {
-    // console.log("po data", addData);
+    try {
+      // console.log("po data", addData);
 
-    await axios({
-      method: "post",
-      url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
-      data: addData,
-      headers: {
-        "Content-Type": "multipart/form-data",
-        authorization: `Bearer ${token}`,
-      },
-    }).then((res) => {
-      tempPurchaseOrders = res.data;
-    });
-  } catch (error) {
-    // console.log("can not create purchase order");
-    tempPurchaseOrders=error?.response?.data;
-  } finally {
-    return tempPurchaseOrders;
-  }}else {
+      await axios({
+        method: "post",
+        url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
+        data: addData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          authorization: `Bearer ${token}`,
+        },
+      }).then((res) => {
+        tempPurchaseOrders = res.data;
+      });
+    } catch (error) {
+      // console.log("can not create purchase order");
+      tempPurchaseOrders = error?.response?.data;
+    } finally {
+      return tempPurchaseOrders;
+    }
+  } else {
     tempPurchaseOrders = { success: "no", message: "jwt not present" }
     return tempPurchaseOrders
   }
@@ -361,22 +363,147 @@ export const fetchPurchaseOrders = async () => {
   let tempPurchaseOrders = [];
   const token = localStorage.getItem("token");
   if (token) {
-  try {
-    const response = await axios({
-      method: "get",
-      url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    });
-    tempPurchaseOrders = response.data.fetchedData;
-  } catch (error) {
-    // console.log("err", error);
-    tempPurchaseOrders=error?.response?.data;
-  } finally {
-    return tempPurchaseOrders;
-  }}else {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/purchase-order`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempPurchaseOrders = response.data.fetchedData;
+    } catch (error) {
+      // console.log("err", error);
+      tempPurchaseOrders = error?.response?.data;
+    } finally {
+      return tempPurchaseOrders;
+    }
+  } else {
     tempPurchaseOrders = { success: "no", message: "jwt not present" }
     return tempPurchaseOrders
+  }
+};
+
+
+
+export const fetchEmailUs = async () => {
+  let tempEmailUsData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/email-us`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempEmailUsData = response.data.allEmailUsData;
+    } catch (error) {
+      tempEmailUsData = error?.response?.data;
+    } finally {
+      return tempEmailUsData;
+    }
+  } else {
+    tempEmailUsData = { success: "no", message: "jwt not present" }
+    return tempEmailUsData
+  }
+};
+
+
+export const fetchCallUs = async () => {
+  let tempCallUsData = [];
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/call-us`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempCallUsData = response.data.allCallUsData;
+    } catch (error) {
+      tempCallUsData = error?.response?.data;
+    } finally {
+      return tempCallUsData;
+    }
+  } else {
+    tempCallUsData = { success: "no", message: "jwt not present" }
+    return tempCallUsData
+  }
+};
+
+export const fetchAboutUs = async () => {
+  let tempAboutUsData = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/about-us`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempAboutUsData = response.data.allAboutUsData;
+    } catch (error) {
+      tempAboutUsData = error?.response?.data;
+    } finally {
+      return tempAboutUsData;
+    }
+  } else {
+    tempAboutUsData = { success: "no", message: "jwt not present" }
+    return tempAboutUsData
+  }
+};
+
+export const fetchOurVision = async () => {
+  let tempOurVision = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/our-vision`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempOurVision = response.data.allOvData;
+    } catch (error) {
+      tempOurVision = error?.response?.data;
+    } finally {
+      return tempOurVision;
+    }
+  } else {
+    tempOurVision = { success: "no", message: "jwt not present" }
+    return tempOurVision
+  }
+};
+
+export const fetchOurMission = async () => {
+  let tempOurMission = [];
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_BASE_URL}/api/our-mission`,
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      });
+      tempOurMission = response.data.allOmData;
+    } catch (error) {
+      tempOurMission = error?.response?.data;
+    } finally {
+      return tempOurMission;
+    }
+  } else {
+    tempOurMission = { success: "no", message: "jwt not present" }
+    return tempOurMission
   }
 };

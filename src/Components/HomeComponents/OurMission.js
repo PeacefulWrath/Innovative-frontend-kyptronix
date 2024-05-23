@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import styles from "../../styles/HomeStyles.module.css";
@@ -6,8 +6,10 @@ import mission from "../../assets/mission.png";
 import shadow from "../../assets/shadow.png";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
+import { fetchOurMission } from "../../api-calls/apiCalls";
 
 function OurMission() {
+  const [ourMissions, setOurMissions] = useState(undefined)
   const navigate = useNavigate();
   const buttonRef = useRef(null);
 
@@ -36,6 +38,19 @@ function OurMission() {
     timeline2.current.reverse();
   };
 
+  useEffect(() => {
+    const fetcher = async () => {
+      const ourMissionData = await fetchOurMission()
+      if (ourMissionData?.message === "jwt expired") {
+        return navigate("/login");
+      } else {
+        setOurMissions([...ourMissionData])
+      }
+    }
+    fetcher()
+  }, [])
+
+  if(ourMissions){
   return (
     <>
       <div className={styles.Home_our_mission__mainWrapper}>
@@ -46,14 +61,10 @@ function OurMission() {
         <div className="d-flex">
           <div className={styles.Home_our_mission_div}>
             <div className={`${styles.Home_our_mission_heading} mt-3`}>
-              Empower Your Learning Journey with INNOVATIVE Quality Tech Limited
+              {ourMissions[0]?.title}
             </div>
             <div className={styles.Home_our_mission_main}>
-              Step into a world where exam preparation meets innovation. Our
-              cutting-edge platform redefines the learning experience, offering
-              comprehensive resources and a user-friendly interface to help you
-              achieve your goals effectively. Welcome to the future of
-              education.
+              {ourMissions[0]?.description}
             </div>
             <div
               className={styles.Home_our_mission_learn_more_btn}
@@ -91,14 +102,10 @@ function OurMission() {
             <h2>Our Mission</h2>
           </div>
           <h2 className={styles.Home_our_mission__EmpowerText}>
-            Empower Your Learning Journey with INNOVATIVE Quality Tech Limited
+            {ourMissions[0]?.title}
           </h2>
           <p className={styles.Home_our_mission__Empowerpara}>
-            Step into a world where exam preparation meets innovation. Our
-            cutting-edge platform redefines the learning experience, offering
-            comprehensive resources and a user-friendly interface to help you
-            achieve your goals effectively. Welcome to the future of education.
-            learn more.
+            {ourMissions[0]?.description}
           </p>
 
           <button className={styles.Home_our_mission__learnMoreBtn}>
@@ -114,7 +121,7 @@ function OurMission() {
         </div>
       </div>
     </>
-  );
+  );}
 }
 
 export default OurMission;
