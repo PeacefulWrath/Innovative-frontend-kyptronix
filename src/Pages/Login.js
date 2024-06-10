@@ -33,6 +33,7 @@ export const Login = () => {
       password: password
     }
     const loginData = await logIn(userData)
+    console.log(loginData)
     if (loginData.success == "yes") {
       localStorage.setItem("token",loginData.token)
       navigate('/');
