@@ -2,18 +2,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Reddit+Mono:wght@200..900&display=swap");
 
-
-
 /* products details */
 .Products__details__cart__BTN {
   background-color: #00aeef;
-   color: white;
-    cursor: "pointer"
+  color: white;
+  cursor: "pointer";
+  border: 1px solid #00aeef;
 }
+.Products__details__cart__BTN:hover {
+  color: #00aeef;
+  background: transparent;
+  border: 1px solid #00aeef;
+}
+
 .Products__details__buy__BTN {
   background-color: #2d388a;
-   color: white;
-    cursor: "pointer"
+  color: white;
+  cursor: "pointer";
+}
+.Products__details__buy__BTN:hover{
+  color: #2d388a;
+  background: transparent;
+  border: 1px solid #2d388a;
 }
 
 /*products by category */
@@ -247,4 +257,26 @@
   .Products__imageMainWrapper {
     width: 90%;
   }
+}
+
+
+.productDetails__mainWrapper{  
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 10px;
+}
+.product__imageWrapper{
+  
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__imageWrapper img{
+  width: 80%;
+  object-fit: cover;
 }
