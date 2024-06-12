@@ -549,6 +549,7 @@ const TopBarTab = ({ setIsGetquotes }) => {
 };
 
 const NavMenuTab = ({ setShowMenu }) => {
+  const [showCart, setShowCart] = useState(false);
   return (
     <>
       <motion.div
@@ -592,8 +593,24 @@ const NavMenuTab = ({ setShowMenu }) => {
               {cur.title}
             </Link>
           ))}
+          <button
+          onClick={()=>{
+            setShowMenu(false)
+            setShowCart(true)
+            }}
+            style={{
+              background: "transparent",
+              color: "white",
+              border: "none",
+              outline: "none",
+            }}
+            className={styles.Home__navMenu__Links}
+          >
+            Cart
+          </button>
         </motion.ul>
       </motion.div>
+      {showCart && <CartMenu setShowCart={setShowCart} />}
     </>
   );
 };
@@ -601,7 +618,7 @@ const NavMenuTab = ({ setShowMenu }) => {
 const CartMenu = ({ setShowCart }) => {
   const { cartItems, setCartItems } = useGlobal();
   const [cartProducts, setCartProducts] = useState([]);
-  const cartRef = useRef(null)
+  const cartRef = useRef(null);
   const gsapTimeLine = useRef(gsap.timeline());
 
   const navigate = useNavigate();
@@ -655,21 +672,20 @@ const CartMenu = ({ setShowCart }) => {
     fetcher();
   }, []);
 
-  useEffect(()=>{
-    if(cartRef.current){
+  useEffect(() => {
+    if (cartRef.current) {
       gsapTimeLine.current.from(cartRef.current, {
-        x:500,
-        opacity: 0,        
+        x: 500,
+        opacity: 0,
       });
       gsapTimeLine.current.to(cartRef.current, {
-        x:0,
+        x: 0,
         opacity: 1,
         duration: 0.3,
         ease: "backInOut",
       });
     }
-  },[])
-
+  }, []);
 
   return (
     <div className={`${styles.Home__cart__OuterWrapper}`}>
@@ -679,10 +695,10 @@ const CartMenu = ({ setShowCart }) => {
             Your Cart
           </h2>
           <button
-            onClick={() =>{
-               setShowCart(false)
-               gsapTimeLine.current.reverse()
-               }}
+            onClick={() => {
+              setShowCart(false);
+              gsapTimeLine.current.reverse();
+            }}
             className={`${styles.Home__cart__CloseIconBtn}`}
           >
             <CloseIcon />
