@@ -25,7 +25,7 @@ function AboutUsPrepare({ dbData }) {
     timeline.current.play();
 
     timeline2.current.to(buttonRef.current, {
-      width: "30%",
+      width: "60%",
       background: "linear-gradient(to top left,#2589D2 100%, #2DC2E3 100%)",
       duration: 1,
     });
