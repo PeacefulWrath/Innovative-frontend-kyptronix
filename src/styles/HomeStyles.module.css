@@ -1629,6 +1629,7 @@
 
   .Home_choose_us_contentWrapper {
     margin-left: 4% !important;
+    width: 95%;
   }
 
   .Home_choose_us_headingWrapper {
@@ -2446,6 +2447,33 @@
     font-size: 27px;
   }
 
+  .Home_choose_us_contentWrapper {
+    margin-left: 4% !important;
+    width: 95%;    
+  }
+  .Home_choose_us_para{
+    font-size: 23px !important;
+  }
+
+  .Home_choose_us_dropDownWrapper{
+    align-items: center;
+    width: 95%;
+  }
+  .Home_choose_us_cr{
+    margin-top: 0px;
+    height: 25px;
+    width: 25px;
+  }
+  .Home__chooseUs__qusWrapper{
+    width: 70%;
+    overflow-x: hidden;
+  }
+  .Home_choose_us_arrow {
+    width: 14px;
+    height: 14px;
+    margin-top: 0px;
+    
+}
   .Home_choose_us_cards_btns {
     display: flex;
     flex-direction: column;

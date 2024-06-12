@@ -18,14 +18,13 @@ function ChooseUs({ items }) {
 
   const tls = useRef([]);
 
-  const handleClick = ( ind) => {
-    if (reverse==true) {
+  const handleClick = (ind) => {
+    if (reverse == true) {
       tls.current[ind].reverse();
-      setReverse(false)
-     
+      setReverse(false);
     } else {
       tls.current[ind].play();
-      setReverse(true)
+      setReverse(true);
     }
   };
 
@@ -104,11 +103,17 @@ function ChooseUs({ items }) {
 
   return (
     <div className={`d-flex ${styles.Home_choose_us_mainWrapper}`}>
-      <div style={{ marginLeft: "8%" }} className={`${styles.Home_choose_us_contentWrapper}`}>
+      <div
+        style={{ marginLeft: "8%" }}
+        className={`${styles.Home_choose_us_contentWrapper}`}
+      >
         <button className="btn" style={buttonStyle}>
           why Choose Us?
         </button>
-        <div className={`${styles.Home_choose_us_headingWrapper} mt-3`} style={{ width: "70%" }}>
+        <div
+          className={`${styles.Home_choose_us_headingWrapper} mt-3`}
+          style={{ width: "70%" }}
+        >
           <div className={styles.Home_choose_us_para}>
             Explore the Advantages of Choosing Our Exam Preparation Portal
           </div>
@@ -123,13 +128,17 @@ function ChooseUs({ items }) {
               // ref={cusParaDiv1}
               className={`${styles.Home_choose_us_para_div} cusParaDiv1`}
             >
-              <div className={`d-flex ms-2 me-2 ${styles.Home_choose_us_dropDownWrapper}`}>
+              <div
+                className={`d-flex ms-2 me-2 ${styles.Home_choose_us_dropDownWrapper}`}
+              >
                 <img src={cr} alt="cr" className={styles.Home_choose_us_cr} />
-                <p
-                  className={`${styles.Home_choose_us_para_2} ms-2 me-2 mt-3 `}
-                >
-                  {item?.question}
-                </p>
+                <div className={`${styles.Home__chooseUs__qusWrapper}`}>
+                  <p
+                    className={`${styles.Home_choose_us_para_2} ms-2 me-2 mt-3 `}
+                  >
+                    {item?.question}
+                  </p>
+                </div>
                 <img
                   onClick={() => {
                     handleClick(index);

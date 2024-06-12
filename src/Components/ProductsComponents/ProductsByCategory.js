@@ -11,18 +11,18 @@ function ProductsByCategory({ categories, products }) {
           <p className={styles.Products_ProductsByCategory_text}>By Catagory</p>
         </div>
         <div
-          className="d-flex mt-5"
-          style={{
-            marginLeft: "15rem",
-          }}
+          className={`${styles.Products__categoryMainWrapper} mt-5`}
+          // style={{
+          //   marginLeft: "8rem",
+          // }}
         >
           {categories.map((item, index) => (
 
             <div
               style={{
-                width: "15rem",
-                height: "15rem",
-                marginLeft: index !== 0 ? "5rem" : "0px",
+                // width: "15rem",
+                // height: "15rem",
+                // marginLeft: index !== 0 ? "5rem" : "0px",
                 cursor: "pointer"
               }}
               className={styles.Products_ProductsByCategory__imgWrapper}
@@ -34,7 +34,7 @@ function ProductsByCategory({ categories, products }) {
                 </div>
               </div>
               <div className={styles.Products_ProductsByCategory__topLayer} />
-              <img alt="by1" src={item?.image} style={{ width: "100%", height: "100%", borderRadius: "1rem" }} />
+              <img alt="by1" src={item?.image} style={{ width: "100%", height: "100%",objectFit:'cover', borderRadius: "1rem" }} />
             </div>
 
           ))}

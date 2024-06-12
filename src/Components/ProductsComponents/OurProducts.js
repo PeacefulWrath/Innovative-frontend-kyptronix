@@ -23,7 +23,8 @@ function OurProducts({ categoryId, products }) {
         (<div className="d-flex mt-5"
           style={{
             marginLeft: "15rem",
-          }}>
+          }}
+          >
           {products.map((prod, index) => (
             <>
               {prod?.category?._id === categoryId &&
@@ -58,22 +59,24 @@ function OurProducts({ categoryId, products }) {
             </>
           ))}
         </div>) :
-        <div className="d-flex mt-5"
-          style={{
-            marginLeft: "15rem",
-          }}>
+        <div className={`${styles.Products__ourProductsMainWrapper} mt-5`}
+          // style={{
+          //   marginLeft: "15rem",
+          // }}
+          >
           {products.map((prod, index) => (
             <div
               style={{
-                width: "320px",
-                height: "450px",
-                marginLeft: index !== 0 ? "5rem" : "0px",
-                cursor: "pointer"
+                
+                cursor: "pointer",
+                overflow:'hidden'
               }}
               className={`ps-2 pe-2 pt-2 ${styles.Products_our_products_Product__hoverEffect}`}
               onClick={()=>{navigate("/product-details",{state:prod})}}
             >
-              <img width={300} alt="p1" height={300} src={prod?.image} />
+              <img 
+              // width={300} height={300} 
+              alt="p1"  style={{height:'50%',width:'100%',objectFit:'cover',borderRadius:'10px'}} src={prod?.image} />
               <div
                 style={{
                   display: "inline-flex",
