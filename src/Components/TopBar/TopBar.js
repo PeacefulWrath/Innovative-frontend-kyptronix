@@ -17,16 +17,19 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useGlobal } from "../../context/globalContext";
 import { Badge } from "antd";
-import { verifyToken } from "../../api-calls/apiCalls";
-
+import { fetchProducts, verifyToken } from "../../api-calls/apiCalls";
+import TestImg from "../../assets/gallery-3.png";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import gsap from "gsap";
 function TopBar({ page, bg }) {
   const [clicked, setClicked] = useState("Home");
   const [isGetquotes, setIsGetquotes] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [showLoginAndSignUp, setShowLoginAndSignUp] = useState(undefined)
+  const [showLoginAndSignUp, setShowLoginAndSignUp] = useState(undefined);
+  const [showCart, setShowCart] = useState(false);
 
   const navigate = useNavigate();
 
@@ -47,20 +50,20 @@ function TopBar({ page, bg }) {
   }
 
   useEffect(() => {
-
-
     const verifier = async () => {
-      const verifiedTokenData = await verifyToken()
+      const verifiedTokenData = await verifyToken();
       // console.log("rrr",verifiedTokenData?.message)
-      if (verifiedTokenData?.message == "jwt expired" || verifiedTokenData?.message === "jwt not present") {
-        setShowLoginAndSignUp(true)
+      if (
+        verifiedTokenData?.message == "jwt expired" ||
+        verifiedTokenData?.message === "jwt not present"
+      ) {
+        setShowLoginAndSignUp(true);
       } else {
-        setShowLoginAndSignUp(false)
+        setShowLoginAndSignUp(false);
       }
-    }
+    };
 
-    verifier()
-
+    verifier();
   }, []);
 
   return (
@@ -68,14 +71,14 @@ function TopBar({ page, bg }) {
       <div
         style={{
           width: "100%",
-          height: page!=="cart"?"80%":"",
-          background: page!=="details"&& page!=="cart"?`url(${bg})`:"",
+          height: page !== "cart" ? "80%" : "",
+          background: page !== "details" && page !== "cart" ? `url(${bg})` : "",
           position: "relative",
         }}
       >
         <nav
           className={
-            page === "home"||page==="details"
+            page === "home" || page === "details"
               ? `${styles.Home_top_bar} navbar navbar-expand-lg `
               : `${serviceStyles.Services_top_bar} navbar navbar-expand-lg `
           }
@@ -147,18 +150,14 @@ function TopBar({ page, bg }) {
 
             <div className="ms-5">
               <Badge count={cartItems.length} showZero color="black">
-
                 <ShoppingCartIcon
-
                   className={styles.Home__topBar__cart__BTN}
                   onClick={() => {
-                    navigate("/cart")
+                    // navigate("/cart");
+                    setShowCart(true);
                   }}
                 />
-
-
               </Badge>
-
             </div>
           </div>
 
@@ -179,10 +178,11 @@ function TopBar({ page, bg }) {
 
           <div className={styles.Home_menu_list}>
             <p
-              className={`${clicked === "home"
-                ? `${styles.Home_menue_active}`
-                : `${styles.Home_menue}`
-                }`}
+              className={`${
+                clicked === "home"
+                  ? `${styles.Home_menue_active}`
+                  : `${styles.Home_menue}`
+              }`}
               onClick={() => {
                 handleClick("home");
               }}
@@ -191,10 +191,11 @@ function TopBar({ page, bg }) {
             </p>
 
             <p
-              className={`${clicked === "services"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "services"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("services");
               }}
@@ -202,10 +203,11 @@ function TopBar({ page, bg }) {
               Services
             </p>
             <p
-              className={`${clicked === "products"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "products"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("products");
               }}
@@ -213,10 +215,11 @@ function TopBar({ page, bg }) {
               Products
             </p>
             <p
-              className={`${clicked === "trainings"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "trainings"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("trainings");
               }}
@@ -224,10 +227,11 @@ function TopBar({ page, bg }) {
               Trainings
             </p>
             <p
-              className={`${clicked === "partners"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "partners"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("partners");
               }}
@@ -235,10 +239,11 @@ function TopBar({ page, bg }) {
               Our Partners
             </p>
             <p
-              className={`${clicked === "gallery"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "gallery"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("gallery");
               }}
@@ -246,10 +251,11 @@ function TopBar({ page, bg }) {
               Gallery
             </p>
             <p
-              className={`${clicked === "aboutus"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "aboutus"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("aboutus");
               }}
@@ -257,10 +263,11 @@ function TopBar({ page, bg }) {
               About Us
             </p>
             <p
-              className={`${clicked === "contactus"
-                ? `${styles.Home_other_menues_active}`
-                : `${styles.Home_other_menues}`
-                }`}
+              className={`${
+                clicked === "contactus"
+                  ? `${styles.Home_other_menues_active}`
+                  : `${styles.Home_other_menues}`
+              }`}
               onClick={() => {
                 handleClick("contactus");
               }}
@@ -283,9 +290,8 @@ function TopBar({ page, bg }) {
 
           {showMenu && <NavMenuTab setShowMenu={setShowMenu} />}
 
-         
           <div className={styles.Home__navBar__BTNSWrapper}>
-            {showLoginAndSignUp ?
+            {showLoginAndSignUp ? (
               <>
                 <button
                   className={styles.Home__navBar__signUp__BTN}
@@ -300,16 +306,18 @@ function TopBar({ page, bg }) {
                   Log In
                 </button>
               </>
-              :
+            ) : (
               <>
                 <button
                   className={styles.Home__navBar__logOut__BTN}
-                  onClick={() => { alert("logout") }}
+                  onClick={() => {
+                    alert("logout");
+                  }}
                 >
                   Log Out
                 </button>
               </>
-            }
+            )}
             <button
               onClick={() => setShowMenu(true)}
               className={styles.Home__navBar__menuBTN}
@@ -323,33 +331,34 @@ function TopBar({ page, bg }) {
             </button>
           </div>
 
+          {showLoginAndSignUp ? (
+            <>
+              <button
+                onClick={() => navigate("/register")}
+                className={styles.Home_signup_btn}
+              >
+                Sign up
+              </button>
 
-          {showLoginAndSignUp ? <>
-            <button
-              onClick={() => navigate("/register")}
-              className={styles.Home_signup_btn}
-            >
-              Sign up
-            </button>
-
-            <button
-              onClick={() => navigate("/login")}
-              className={styles.Home_login_btn}
-            >
-              Login
-            </button>
-          </> : <>
-            <button
-              onClick={() => { 
-
-                handleLogOut()
-               }}
-              className={styles.Home_logout_btn}
-            >
-              Logout
-            </button>
-          </>}
-
+              <button
+                onClick={() => navigate("/login")}
+                className={styles.Home_login_btn}
+              >
+                Login
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => {
+                  handleLogOut();
+                }}
+                className={styles.Home_logout_btn}
+              >
+                Logout
+              </button>
+            </>
+          )}
         </div>
 
         {page === "services" && (
@@ -404,6 +413,7 @@ function TopBar({ page, bg }) {
       </div>
 
       {isGetquotes && <GetQuotes setIsGetquotes={setIsGetquotes} />}
+      {showCart && <CartMenu setShowCart={setShowCart} />}
     </>
   );
 }
@@ -600,5 +610,163 @@ const NavMenuTab = ({ setShowMenu }) => {
         </motion.ul>
       </motion.div>
     </>
+  );
+};
+
+const CartMenu = ({ setShowCart }) => {
+  const { cartItems, setCartItems } = useGlobal();
+  const [cartProducts, setCartProducts] = useState([]);
+  const cartRef = useRef(null)
+  const gsapTimeLine = useRef(gsap.timeline());
+
+  const navigate = useNavigate();
+
+  const handleRemoveFromCart = (index, prodId) => {
+    let tempCartProducts = cartProducts;
+    tempCartProducts.splice(index, 1);
+
+    setCartProducts([...tempCartProducts]);
+
+    let localStorageCartItems = JSON.parse(localStorage.getItem("cart"));
+
+    localStorageCartItems.forEach((lsci, ind) => {
+      if (lsci === prodId) {
+        localStorageCartItems.splice(ind, 1);
+      }
+    });
+    localStorage.setItem("cart", JSON.stringify(localStorageCartItems));
+
+    window.location.reload();
+  };
+
+  const handleBuyNow = (product) => {
+    navigate("/user-dashboard");
+  };
+
+  useEffect(() => {
+    const fetcher = async () => {
+      const productsData = await fetchProducts();
+      if (
+        productsData?.message === "jwt expired" ||
+        productsData?.message === "jwt not present"
+      ) {
+        return navigate("/login");
+      } else {
+        let tempCartItems = [];
+
+        cartItems.forEach((cartItem, cartInd) => {
+          productsData.forEach((prod, prodInd) => {
+            if (prod?._id === cartItem) {
+              tempCartItems.push({
+                product: prod,
+              });
+            }
+          });
+        });
+
+        setCartProducts([...tempCartItems]);
+      }
+    };
+    fetcher();
+  }, []);
+
+  useEffect(()=>{
+    if(cartRef.current){
+      gsapTimeLine.current.from(cartRef.current, {
+        x:500,
+        opacity: 0,        
+      });
+      gsapTimeLine.current.to(cartRef.current, {
+        x:0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "backInOut",
+      });
+    }
+  },[])
+
+
+  return (
+    <div className={`${styles.Home__cart__OuterWrapper}`}>
+      <div ref={cartRef} className={`${styles.Home__cart__mainCartWrapper}`}>
+        <div className={`${styles.Home__cart__headingAndCloseIconWrapper}`}>
+          <h2 className={`${styles.Home__cart__headingAndCloseIcon__heading}`}>
+            Your Cart
+          </h2>
+          <button
+            onClick={() =>{
+               setShowCart(false)
+               gsapTimeLine.current.reverse()
+               }}
+            className={`${styles.Home__cart__CloseIconBtn}`}
+          >
+            <CloseIcon />
+          </button>
+        </div>
+
+        {cartProducts.length === 0 ? (
+          <>
+            <p
+              style={{
+                color: "#fff",
+                textAlign: "center",
+                fontFamily: "Montserrat",
+                fontSize: "20px",
+                fontWeight: "500",
+                margin: "10px 0px",
+              }}
+            >
+              No Items in your cart
+            </p>
+          </>
+        ) : (
+          <>
+            <div className={`${styles.Home__cart__cartListMainWrapper}`}>
+              {cartProducts.map((cur, id) => (
+                <>
+                  <div
+                    key={id}
+                    className={`${styles.Home__cart__cartItemsWrapper}`}
+                  >
+                    <div
+                      className={`${styles.Home__cart__productImageWrapper}`}
+                    >
+                      <img src={cur.product?.image} alt="product-img" />
+                    </div>
+                    <div
+                      className={`${styles.Home__cart__productInfoMainWrapper}`}
+                    >
+                      <h2 className={`${styles.Home__cart__productName}`}>
+                        {cur.product?.name}
+                      </h2>
+
+                      <p className={`${styles.Home__cart__productprice}`}>
+                        <AttachMoneyIcon /> {cur.product?.discounted_price}
+                      </p>
+                      <div className={`${styles.Home__cart__BTNsWrapper}`}>
+                        <button
+                          onClick={() =>
+                            handleRemoveFromCart(id, cur.product?._id)
+                          }
+                          className={`${styles.Home__cart__removeBTN}`}
+                        >
+                          Remove
+                        </button>
+                        <button
+                          onClick={handleBuyNow}
+                          className={`${styles.Home__cart__checkOutBTN}`}
+                        >
+                          Check Out
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
