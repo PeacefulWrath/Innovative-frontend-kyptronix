@@ -15,13 +15,17 @@ import ProductDetails from "./Components/ProductsComponents/ProductDetails";
 import { GlobalProvider } from "./context/globalContext";
 import Buy from "./Pages/Buy";
 import UserDashboard from "./Pages/UserDashboard";
+import MyProducts from "./Pages/MyProducts";
+import Success from "./Pages/Success";
+import Failure from "./Pages/Failure";
+import ViewFileTemplate from "./Components/viewFileTemplate/viewFileTemplate";
 
 function App() {
 
 
 
   return (
-    <GlobalProvider>
+    // <GlobalProvider>
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -39,9 +43,13 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/buy" element={<Buy />} />
           <Route exact path="/user-dashboard" element={<UserDashboard />} />
+          <Route exact path="/my-products" element={<MyProducts/>} />
+          <Route exact path="/success" element={<Success/>} />
+          <Route exact path="/failure" element={<Failure/>} />
+          <Route exact path="/view-file-template" element={<ViewFileTemplate/>} />
         </Routes>
       </Router>
-      </GlobalProvider>
+      // </GlobalProvider>
   );
 }
 

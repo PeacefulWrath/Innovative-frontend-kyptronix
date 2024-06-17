@@ -78,6 +78,9 @@ console.log("verifier")
       const verifiedTokenData = await verifyToken()
       // console.log("rrr",verifiedTokenData?.message)
       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         setShowNotFound(false)
       } else {
         setShowNotFound(true)

@@ -33,9 +33,12 @@ export const Login = () => {
       password: password
     }
     const loginData = await logIn(userData)
-    console.log(loginData)
+    // console.log("36",loginData)
     if (loginData.success == "yes") {
       localStorage.setItem("token",loginData.token)
+      localStorage.setItem("user_email",loginData.user.email)
+      localStorage.setItem("cart",JSON.stringify([]))
+      localStorage.setItem("buyed_products",JSON.stringify([]))
       navigate('/');
     } else {
       alert(loginData?.message)
@@ -50,7 +53,7 @@ export const Login = () => {
       // console.log("rrr",verifiedTokenData?.message)
       if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
         setShowNotFound(false)
-      } else {
+      }else {
         setShowNotFound(true)
       }
     }
@@ -118,7 +121,7 @@ export const Login = () => {
 
           <p className={`${Styles.Login__lft__LoginPara}`}>
             Don’t have an account?
-            <Link className={`${Styles.Login__lft__Link}`} to="/">
+            <Link className={`${Styles.Login__lft__Link}`} to="/register">
               Sign up
             </Link>
           </p>

@@ -16,6 +16,14 @@ const navigate=useNavigate()
       const tempPartnersData = await fetchPartners()
 
       if (tempPartnersData?.message === "jwt expired"||tempPartnersData?.message ===  "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
       } else {
       setPartnerItems([...tempPartnersData])
@@ -27,6 +35,7 @@ const navigate=useNavigate()
     fetcher()
   }, []);
 
+  if(partnerItems){
   return (
     <div
       style={{
@@ -50,7 +59,7 @@ const navigate=useNavigate()
         />
       </div>
     </div>
-  );
+  )}
 }
 
 export default Partners;

@@ -39,7 +39,10 @@ function TopBar({ page, bg }) {
 
   const handleLogOut=()=>{
     localStorage.removeItem("cart")
+    localStorage.removeItem("buyed_products")
     localStorage.removeItem("token")
+    localStorage.removeItem("user_email")
+    window.location.reload()
     navigate("/login")
   }
 
@@ -263,6 +266,18 @@ function TopBar({ page, bg }) {
               }}
             >
               Contact Us
+            </p>
+
+            <p
+              className={`${clicked === "myproducts"
+                ? `${styles.Home_other_menues_active}`
+                : `${styles.Home_other_menues}`
+                }`}
+              onClick={() => {
+                handleClick("my-products");
+              }}
+            >
+              My Products
             </p>
           </div>
 

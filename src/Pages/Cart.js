@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useGlobal } from '../context/globalContext';
-import { fetchProducts } from '../api-calls/apiCalls';
+import { fetchProducts, handleCheckout } from '../api-calls/apiCalls';
 import { useNavigate } from 'react-router-dom';
 import TopBar from '../Components/TopBar/TopBar';
 
@@ -9,6 +9,9 @@ function Cart() {
   const [cartProducts, setCartProducts] = useState(undefined)
 
   const navigate = useNavigate()
+
+
+
 
   const handleRemoveFromCart = (index, prodId) => {
     let tempCartProducts = cartProducts
@@ -30,9 +33,13 @@ function Cart() {
     window.location.reload()
   }
 
-  const handleBuyNow = (product) => {
-    // navigate("/user-dashboard",{state:product})
-    navigate("/user-dashboard")
+  const handleBuyNow = async(product) => {
+    const sessionData=await handleCheckout(product)
+    // console.log("bbb",sessionData.session.url)
+    if(sessionData){
+    localStorage.setItem("temp_buyed_product",JSON.stringify(product))
+    window.location=sessionData.session.url
+    }
   }
 
   useEffect(() => {
@@ -40,8 +47,16 @@ function Cart() {
     const fetcher = async () => {
       const productsData = await fetchProducts()
       if (productsData?.message === "jwt expired" || productsData?.message === "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
-      } else {
+      } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }else {
 
         let tempCartItems = []
 

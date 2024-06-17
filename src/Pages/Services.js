@@ -17,6 +17,14 @@ const navigate=useNavigate()
       const servicesData = await fetchServices()
 
       if (servicesData?.message === "jwt expired"||servicesData?.message ===  "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
       } else {
       setServicesItems([...servicesData])
@@ -26,6 +34,9 @@ const navigate=useNavigate()
 
     fetcher()
   },[])
+
+
+  if(servicesItems){
   return (
     <div
       style={{
@@ -48,7 +59,7 @@ const navigate=useNavigate()
         <ServiceFooter />
       </div> 
     </div>
-  );
+  )}
 }
 
 export default Services;

@@ -20,8 +20,16 @@ function Gallery() {
     const fetcher = async () => {
       const galleriesData = await fetchGalleries();
       if (galleriesData?.message === "jwt expired"||galleriesData?.message ===  "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
-      } else {
+      } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }else {
         setGalleries([...galleriesData]);
       }
       const galleryCategoriesData = [];

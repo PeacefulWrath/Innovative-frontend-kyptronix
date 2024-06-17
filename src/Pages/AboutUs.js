@@ -15,13 +15,16 @@ function AboutUs() {
 
  useEffect(()=>{
     const executer = async () => {
-      const verifiedTokenData = await verifyToken()
-      if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
-        navigate("/login")
-      } 
-
       const aboutUsData = await fetchAboutUs()
       if (aboutUsData?.message === "jwt expired") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
       } else {
         setAboutUs([...aboutUsData])
@@ -30,6 +33,9 @@ function AboutUs() {
     executer()
   },[])
 
+
+  if(aboutUs)
+{
   return (
     <div
       style={{
@@ -79,7 +85,7 @@ function AboutUs() {
       </div>
     </div>
   );
-
+}
 }
 
 export default AboutUs;

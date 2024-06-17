@@ -16,6 +16,14 @@ const navigate=useNavigate()
     const fetcher = async () => {
       const categoriesData = await fetchCategories()
       if (categoriesData?.message === "jwt expired") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
         return navigate("/login");
       } else {
       setCategories([...categoriesData])
@@ -31,6 +39,7 @@ const navigate=useNavigate()
     fetcher()
   }, [])
 
+  if(products){
   return (
     <div
       style={{
@@ -51,7 +60,7 @@ const navigate=useNavigate()
         <ServiceFooter />
       </div>
     </div>
-  );
+  )}
 }
 
 export default Products;

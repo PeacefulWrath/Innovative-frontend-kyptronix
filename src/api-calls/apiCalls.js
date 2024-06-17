@@ -507,3 +507,118 @@ export const fetchOurMission = async () => {
     return tempOurMission
   }
 };
+
+export const handleCheckout = async (product) => {
+  let sessionData=""
+  const token = localStorage.getItem("token");
+  if (token) {
+    try {
+      const data={
+        product_name:product.name,
+        amount:product.discounted_price,
+        quantity:1
+      }
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/checkout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      sessionData= await response.json();
+    
+    } catch (error) {
+      sessionData = error?.response?.data;
+    } finally {
+      return sessionData;
+    }
+  } else {
+    sessionData = { success: "no", message: "jwt not present" }
+    return sessionData
+  }
+  
+  
+  
+};
+
+export const updateUsers = async (userData) => {
+  let tempUsers = [];
+  const token = localStorage.getItem('token');
+
+  if (token) {
+    try {
+      // console.log("userData", userData);
+
+      await axios({
+        method: 'put',
+        url: `${process.env.REACT_APP_BASE_URL}/api/user/`,
+        data: userData,
+        headers: {
+          'Content-Type': 'application/json',
+          authorization: `Bearer ${token}`,
+        },
+      }).then((res) => {
+        tempUsers = res.data;
+      });
+    } catch (error) {
+      // console.log("can not update users");
+      tempUsers = error?.response?.data;
+    } finally {
+      return tempUsers;
+    }
+  } else {
+    return { message: 'jwt not present' };
+  }
+};
+
+export const fetchUsers = async () => {
+  let usersData = [];
+  const token = localStorage.getItem('token');
+
+  if(token){
+  try {
+    const response = await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_BASE_URL}/api/user`,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    usersData = response.data.allUserData;
+  } catch (error) {
+    // console.log("err", error);
+    usersData=error?.response?.data;
+  } finally {
+    return usersData;
+  }
+}
+};
+
+export const updateMcqTemplatesAttempts = async (updateData) => {
+  let tempTemplates = [];
+  const token = localStorage.getItem('token');
+
+  if (token) {
+    try {
+      await axios({
+        method: 'put',
+        url: `${process.env.REACT_APP_BASE_URL}/api/mcq-template`,
+        data: updateData,
+        headers: {
+          'Content-Type': 'application/json',
+          authorization: `Bearer ${token}`,
+        },
+      }).then((res) => {
+        tempTemplates = res.data;
+      });
+    } catch (error) {
+      // console.log("can not create templates");
+      tempTemplates = error?.response?.data;
+    } finally {
+      return tempTemplates;
+    }
+  } else {
+    return { message: 'jwt not present' };
+  }
+};

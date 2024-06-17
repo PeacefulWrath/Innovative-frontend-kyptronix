@@ -14,11 +14,20 @@ function ContactUs() {
      const verifier = async () => {
        const verifiedTokenData = await verifyToken()
        if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
          navigate("/login")
-       } 
+       } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+        localStorage.removeItem("cart")
+        localStorage.removeItem("token")
+        localStorage.removeItem("user_email")
+        return navigate("/login");
+      }
      }
      verifier()
    },[])
+
    
   return (
     <div
