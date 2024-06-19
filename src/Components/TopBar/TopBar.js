@@ -8,7 +8,7 @@ import linkedin from "../../assets/linkedin.png";
 import insta from "../../assets/insta.png";
 import twitter from "../../assets/twitter.png";
 import divider from "../../assets/divider.png";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo3.png";
 import styles from "../../styles/HomeStyles.module.css";
 import serviceStyles from "../../styles/ServicesStyles.module.css";
 import { useNavigate } from "react-router-dom";
@@ -71,7 +71,7 @@ function TopBar({ page, bg }) {
       <div
         style={{
           width: "100%",
-          height: page !== "cart" ? "80%" : "",
+          // height: page !== "cart" ? "80%" : "",
           background: page !== "details" && page !== "cart" ? `url(${bg})` : "",
           position: "relative",
         }}

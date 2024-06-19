@@ -19,6 +19,7 @@ import MyProducts from "./Pages/MyProducts";
 import Success from "./Pages/Success";
 import Failure from "./Pages/Failure";
 import ViewFileTemplate from "./Components/viewFileTemplate/viewFileTemplate";
+import { Blog } from "./Pages/Blog";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <Route exact path="/success" element={<Success/>} />
           <Route exact path="/failure" element={<Failure/>} />
           <Route exact path="/view-file-template" element={<ViewFileTemplate/>} />
+          <Route exact path="/blog" element={<Blog/>} />
         </Routes>
       </Router>
       // </GlobalProvider>
