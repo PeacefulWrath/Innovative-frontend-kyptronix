@@ -1,108 +1,146 @@
-.Blog__mainWrapper{
+.Blog__blogMainHeading {
+  text-align: center;
+  color: white;
+  font-family: "Exo 2";
+}
+.Blog__blogMainWrapper {
+  width: 80%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.BlogCardMainWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.Blog__BlogImage {
+  width: 100%;
+  height: auto;
+}
+.Blog__blogPostTime {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 6px 10px;
+  font-size: 16px;
+  font-family: "Exo 2";
+  font-weight: 600;
+}
+.Blog__InfoWrapper {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    width: 90%;
-    margin: 20px auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.Blog__mainBlogWrapper{
-    width: 60%;
-    padding: 10px;
-    
+.Blog__blogLinkWrapper {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 90%;
+  margin: 20px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-.Blog__mainBlogHeading{
-    color: white;
-    font-family: "Exo 2";
-    font-size: 44px;
-}
-.Blog__publishedData{
-    font-size: 17px;
-    color: #2a91dd;
-    font-family: 'Exo 2';
-}
-.Blog__mainContent{    
-    margin: 10px 0px;
-    padding: 10px;
-}
-.Blog__contentPara{
-    color: white;
-    font-size: 17px;
-    margin: 15px 0px;
-}
-.BlogContentHeading{
-    color: white;
-    font-family: "Exo 2";
-    font-size: 34px;
-}
-.Blog__relaredBlogGeadingWrapper{
-    background-color: #2a91dd;
-    padding: 10px ;
-    display: flex;
-     justify-content: center;
-     align-items: center;
-}
-.Blog__relatedBlogHeading{
-    color: white;
-    font-family: "Exo 2";
-    font-size: 34px;
-}
-.relatedBlogLinkWrapper{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    gap:10px;
-    margin: 10px 0;
-}
-.Blog__links{
-    color: white;
-    font-family: "Exo 2";
-    list-style: none;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color .3s ease-in-out;
-}
-.Blog__links:hover{
-    color: #2a91dd;
-    
-}
-.Blog__popularBlogMainWrapper{
-    margin: 25px 0px;
+.Blog__blogLink {
+  color: #000;
+  font-family: "Exo 2";
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
 }
 
+.Blog__mainWrapper {
+  width: 90%;
+  margin: 20px auto;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.Blog__mainBlogWrapper {
+  width: 75%;
+  padding: 10px;
+}
+.Blog__mainBlogHeading {
+  color: white;
+  font-family: "Exo 2";
+  font-size: 44px;
+}
+.Blog__publishedData {
+  font-size: 17px;
+  color: #2a91dd;
+  font-family: "Exo 2";
+}
+.Blog__mainContent {
+  margin: 10px 0px;
+  padding: 10px;
+}
+.Blog__contentPara {
+  color: white;
+  font-size: 17px;
+  margin: 15px 0px;
+}
+.BlogContentHeading {
+  color: white;
+  font-family: "Exo 2";
+  font-size: 34px;
+}
+.Blog__relaredBlogGeadingWrapper {
+  background-color: #2a91dd;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Blog__relatedBlogHeading {
+  color: white;
+  font-family: "Exo 2";
+  font-size: 25px;
+}
+.relatedBlogLinkWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+.Blog__links {
+  color: white;
+  font-family: "Exo 2";
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+.Blog__links:hover {
+  color: #2a91dd;
+}
+.Blog__popularBlogMainWrapper {
+  margin: 25px 0px;
+}
+.Blog__blogDetailsImg {
+  width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Blog__relativeBlogMainWrapper{
-    width: 40%;
-    padding: 10px;
-    
+.Blog__relativeBlogMainWrapper {
+  width: 25%;
+  padding: 10px;
 }
