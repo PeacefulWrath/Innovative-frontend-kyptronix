@@ -41,7 +41,7 @@ function OurMission() {
   useEffect(() => {
     const fetcher = async () => {
       const ourMissionData = await fetchOurMission()
-      if (ourMissionData?.message === "jwt expired") {
+      if (ourMissionData?.message === "jwt expired"||ourMissionData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
         setOurMissions([...ourMissionData])

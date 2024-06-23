@@ -26,7 +26,7 @@ function Home() {
     const fetcher = async () => {
       const tempTrainingModuleData = await fetchTrainingModules()
       if (tempTrainingModuleData?.message === "jwt expired"||tempTrainingModuleData?.message ===  "jwt not present") {
-        return navigate("/login");
+         navigate("/login");
 
       } else {
         setTraininingModulesItems([...tempTrainingModuleData])
@@ -34,7 +34,7 @@ function Home() {
       const testimonialsData = await fetchTestimonials()
 
       if (testimonialsData?.message === "jwt expired"||testimonialsData?.message ===  "jwt not present") {
-        return navigate("/login");
+         navigate("/login");
       } else {
         setTestimonialsItems([...testimonialsData])
       }
@@ -57,7 +57,7 @@ function Home() {
 
       const cusData = await fetchCus()
       if (cusData?.message === "jwt expired"||cusData?.message ===  "jwt not present") {
-        return navigate("/login");
+         navigate("/login");
       } else {
         setCusItems([...cusData])
       }

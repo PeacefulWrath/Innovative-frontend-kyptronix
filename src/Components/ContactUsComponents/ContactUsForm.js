@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect} from "react";
 import right from "../../assets/contactus-right.png";
 import divider from "../../assets/contactus-divider.png";
 import contactus from "../../assets/contactus-btn.png";
@@ -7,8 +7,39 @@ import dropdown from "../../assets/dropdown.png";
 import PhoneIcon from "../../assets/phoneIcon.png";
 import EmailIcon from "../../assets/emailIcon.png";
 import gsap from "gsap";
+import emailjs from '@emailjs/browser';
 
 function ContactUsForm() {
+ 
+  useEffect(() => emailjs.init('7tEQNlrYa74GKcgSa'), []);
+
+  const [firstName,setFirstName]=useState("")
+  const [lastName,setLastName]=useState("")
+  const [email,setEmail]=useState("")
+  const [phone,setPhone]=useState("")
+  const [subject,setSubject]=useState("")
+  const [message,setMessage]=useState("")
+
+  const handleSend = async () => {
+    // console.log("email",email)
+    const serviceId = 'service_twmn4of';
+    const customerTemplateId = 'template_9u0ao4f';
+    try {
+      await emailjs.send(serviceId, customerTemplateId, {
+        name: firstName+lastName,
+        phone:phone,
+        email: email,
+        subject:subject,
+        message: message
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      alert('email send successfully');
+      window.location.reload();
+    }
+  };
+
   return (
     <>
       <div
@@ -31,52 +62,83 @@ function ContactUsForm() {
 
           <div className={styles.Contact_us_form}>
             <div className="d-flex">
-              <div
+              <input
                 className={styles.Contact_us_attr_main}
-                contentEditable="true"
-              >
-                {" "}
+                // contentEditable="true"
+                placeholder="first name"
+                onChange={(e)=>{
+                  setFirstName(e.target.value)
+                }}
+              />
+                {/* {" "}
                 <div
                   className={styles.Contact_us_attr_container}
                   data-placeholder="First Name"
-                ></div>
-              </div>
-              <div
+                ></div> */}
+              {/* </div> */}
+              <input
                 className={`${styles.Contact_us_attr_main} ms-3`}
-                contentEditable="true"
-              >
-                {" "}
+                // contentEditable="true"
+                placeholder="last name"
+                onChange={(e)=>{
+                  setLastName(e.target.value)
+                }}
+              />
+                {/* {" "}
                 <div
                   className={styles.Contact_us_attr_container}
                   data-placeholder="Last Name"
-                ></div>
-              </div>
+                ></div> */}
+              {/* </input> */}
             </div>
+
+
+
             <div className="d-flex mt-4">
-              <div
+              <input
                 className={styles.Contact_us_attr_main}
-                contentEditable="true"
-              >
-                {" "}
+                // contentEditable="true"
+                placeholder="phone number"
+                onChange={(e)=>{
+                  setPhone(e.target.value)
+                }}
+              />
+                {/* {" "}
                 <div
                   className={styles.Contact_us_attr_container}
                   data-placeholder="Phone Number"
-                ></div>
-              </div>
-              <div
+                ></div> */}
+              {/* </input> */}
+              <input
                 className={`${styles.Contact_us_attr_main} ms-3`}
-                contentEditable="true"
-              >
-                {" "}
+                // contentEditable="true"
+                placeholder="email"
+                onChange={(e)=>{
+                  setEmail(e.target.value)
+                }}
+              />
+                {/* {" "}
                 <div
                   className={styles.Contact_us_attr_container}
                   data-placeholder="Email ID"
-                ></div>
-              </div>
+                ></div> */}
+              {/* </input> */}
             </div>
+
+
             <div className="mt-4">
-              <div className={styles.Contact_us_sub_main}>
-                <div
+              <select className={styles.Contact_us_sub_main}
+               onChange={(e)=>{
+                // console.log("999",e.target.value)
+                setSubject(e.target.value)
+              }}
+              
+              >
+                 <option default>Choose Subject</option>
+                 <option>Subject 1</option>
+                  <option>Subject 2</option>
+                  <option>Subject 3</option>
+                {/* <div
                   className={styles.Contact_us_sub_container}
                   data-placeholder="Subject"
                 ></div>
@@ -84,23 +146,29 @@ function ContactUsForm() {
                   src={dropdown}
                   alt="dropdown"
                   style={{ cursor: "pointer" }}
-                />
-              </div>
+                /> */}
+              </select>
             </div>
+
+
             <div className="mt-4">
-              <div
+              <textarea
                 className={styles.Contact_us_msg_main}
-                contentEditable="true"
+                // contentEditable="true"
+                placeholder="message"
+                onChange={(e)=>{
+                  setMessage(e.target.value)
+                }}
               >
-                {" "}
+                {/* {" "}
                 <div
                   className={styles.Contact_us_msg_container}
                   data-placeholder="Message"
-                ></div>
-              </div>
+                ></div> */}
+              </textarea>
             </div>
             <div></div>
-            <div className={styles.Contact_us_submit_div_main}>
+            <div className={styles.Contact_us_submit_div_main} onClick={()=>{handleSend()}}>
               <div className={styles.Contact_us_submit_text}>Submit</div>
             </div>
           </div>
@@ -126,6 +194,9 @@ function ContactUsForm() {
 export default ContactUsForm;
 
 const ContactUsFormTab = () => {
+
+
+
   const buttonRef = useRef(null);
 
   const timeline = useRef(gsap.timeline());
@@ -152,6 +223,8 @@ const ContactUsFormTab = () => {
     timeline.current.reverse();
     timeline2.current.reverse();
   };
+
+ 
   return (
     <>
       <div className={styles.ContactUsForm__mainWrapperTab}>
@@ -213,6 +286,9 @@ const ContactUsFormTab = () => {
                   className={styles.Form__inputs}
                   type="text"
                   placeholder="Frist Name..."
+                  // onChange={(e)=>{
+                  //   setFirstName(e.target.value)
+                  // }}
                 />
               </div>
               <div className={styles.Form__inputWrapper}>
@@ -220,6 +296,9 @@ const ContactUsFormTab = () => {
                   className={styles.Form__inputs}
                   type="text"
                   placeholder="Last Name..."
+                  onChange={(e)=>{
+                    // setLastName(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -230,6 +309,9 @@ const ContactUsFormTab = () => {
                   className={styles.Form__inputs}
                   type="text"
                   placeholder="Phone Number..."
+                  onChange={(e)=>{
+                    // setPhone(e.target.value)
+                  }}
                 />
               </div>
               <div className={styles.Form__inputWrapper}>
@@ -237,16 +319,21 @@ const ContactUsFormTab = () => {
                   className={styles.Form__inputs}
                   type="text"
                   placeholder="Email ID..."
+                  onChange={(e)=>{
+                    // setEmail(e.target.value)
+                  }}
                 />
               </div>
             </div>
             <div className={styles.Form__firstAndLastInputWrapper}>
               <div className={styles.Form__selectWrapper}>
-                <select className={styles.Form__selectField}>
-                  <option default>Subject</option>
-                  <option>Subject</option>
-                  <option>Subject</option>
-                  <option>Subject</option>
+                <select className={styles.Form__selectField} onChange={(e)=>{
+                  // setSubject(e.target.value)
+                }}>
+                   <option default>Choose Subject</option>
+                  <option>Subject 1</option>
+                  <option>Subject 2</option>
+                  <option>Subject 3</option>
                 </select>
               </div>
             </div>
@@ -255,6 +342,9 @@ const ContactUsFormTab = () => {
                 className={styles.Form__textarea}
                 placeholder="Message.."
                 rows="5"
+                onChange={(e)=>{
+                  // setMessage(e.target.value)
+                }}
               ></textarea>
             </div>
 
@@ -263,6 +353,9 @@ const ContactUsFormTab = () => {
                 ref={buttonRef}
                 onMouseEnter={handleFirstLMMouseEnter}
                 onMouseLeave={handleFirstLMMouseLeave}
+                onClick={()=>{
+                  // handleSend()
+                }}
               >
                 Submit
               </button>

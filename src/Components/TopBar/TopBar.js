@@ -20,11 +20,14 @@ import { motion } from "framer-motion";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useGlobal } from "../../context/globalContext";
 import { Badge } from "antd";
-import { fetchProducts, verifyToken } from "../../api-calls/apiCalls";
+import { fetchProducts, handleCheckout, verifyToken } from "../../api-calls/apiCalls";
 import TestImg from "../../assets/gallery-3.png";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import gsap from "gsap";
+import emailjs from '@emailjs/browser';
+
 function TopBar({ page, bg }) {
+  
   const [clicked, setClicked] = useState("Home");
   const [isGetquotes, setIsGetquotes] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -34,6 +37,8 @@ function TopBar({ page, bg }) {
   const navigate = useNavigate();
 
   const { cartItems, setCartItems } = useGlobal();
+
+
 
   const handleClick = (clickedItem) => {
     setClicked(clickedItem);
@@ -421,6 +426,36 @@ function TopBar({ page, bg }) {
 export default TopBar;
 
 const GetQuotes = ({ setIsGetquotes }) => {
+
+  useEffect(() => emailjs.init('7tEQNlrYa74GKcgSa'), []);
+
+  const [firstName,setFirstName]=useState("")
+  const [lastName,setLastName]=useState("")
+  const [email,setEmail]=useState("")
+  const [phone,setPhone]=useState("")
+  const [subject,setSubject]=useState("")
+  const [message,setMessage]=useState("")
+
+  const handleSend = async () => {
+    // console.log("email",email)
+    const serviceId = 'service_twmn4of';
+    const customerTemplateId = 'template_lsqfp5p';
+    try {
+      await emailjs.send(serviceId, customerTemplateId, {
+        name: firstName+lastName,
+        phone:phone,
+        email: email,
+        subject:subject,
+        message: message
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      alert('email send successfully');
+      window.location.reload();
+    }
+  };
+
   return (
     <>
       <div className={styles.Get__Quotes}>
@@ -441,6 +476,9 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   type="text"
                   placeholder="First Name"
                   className={styles.Get__Quotes_input}
+                  onChange={(e)=>{
+                    setFirstName(e.target.value)
+                  }}
                 />
               </div>
               <div className={styles.Get__Quotes_InputWrapper}>
@@ -448,6 +486,9 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   type="text"
                   placeholder="Last Name"
                   className={styles.Get__Quotes_input}
+                  onChange={(e)=>{
+                    setLastName(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -458,6 +499,9 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   type="text"
                   placeholder="Phone number"
                   className={styles.Get__Quotes_input}
+                  onChange={(e)=>{
+                    setPhone(e.target.value)
+                  }}
                 />
               </div>
               <div className={styles.Get__Quotes_InputWrapper}>
@@ -465,6 +509,9 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   type="text"
                   placeholder="Email ID"
                   className={styles.Get__Quotes_input}
+                  onChange={(e)=>{
+                    setEmail(e.target.value)
+                  }}
                 />
               </div>
             </div>
@@ -473,16 +520,15 @@ const GetQuotes = ({ setIsGetquotes }) => {
               <div className={styles.Get__Quotes_SubjectWrapper}>
                 <select
                   type="text"
-                  placeholder="Phone number"
                   className={styles.Get__Quotes_input}
+                  onChange={(e)=>{
+                    setSubject(e.target.value)
+                  }}
                 >
-                  <option default value="hello">
-                    Select subject
-                  </option>
-                  <option value="hello">hello</option>
-                  <option value="hello">hello</option>
-                  <option value="hello">hello</option>
-                  <option value="hello">hello</option>
+                  <option default>Choose Subject</option>
+                 <option>Subject 1</option>
+                  <option>Subject 2</option>
+                  <option>Subject 3</option>
                 </select>
               </div>
             </div>
@@ -494,13 +540,16 @@ const GetQuotes = ({ setIsGetquotes }) => {
                   placeholder="Message"
                   className={styles.Get__Quotes_input}
                   rows="5"
+                  onChange={(e)=>{
+                    setMessage(e.target.value)
+                  }}
                 />
               </div>
             </div>
           </div>
 
           <div className={styles.Get__Quotes_SubmitBtnWrapper}>
-            <button>Submit</button>
+            <button onClick={handleSend}>Submit</button>
           </div>
         </div>
       </div>
@@ -639,9 +688,14 @@ const CartMenu = ({ setShowCart }) => {
     window.location.reload();
   };
 
-  const handleBuyNow = (product) => {
-    navigate("/user-dashboard");
-  };
+  const handleBuyNow = async(product) => {
+    const sessionData=await handleCheckout(product)
+    // console.log("bbb",sessionData.session.url)
+    if(sessionData){
+    localStorage.setItem("temp_buyed_product",JSON.stringify(product))
+    window.location=sessionData.session.url
+    }
+  }
 
   useEffect(() => {
     const fetcher = async () => {
@@ -753,7 +807,7 @@ const CartMenu = ({ setShowCart }) => {
                           Remove
                         </button>
                         <button
-                          onClick={handleBuyNow}
+                          onClick={()=>{handleBuyNow(cur.product)}}
                           className={`${styles.Home__cart__checkOutBTN}`}
                         >
                           Check Out

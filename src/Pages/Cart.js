@@ -50,12 +50,12 @@ function Cart() {
         localStorage.removeItem("cart")
         localStorage.removeItem("token")
         localStorage.removeItem("user_email")
-        return navigate("/login");
+        navigate("/login");
       } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
         localStorage.removeItem("cart")
         localStorage.removeItem("token")
         localStorage.removeItem("user_email")
-        return navigate("/login");
+        navigate("/login");
       }else {
 
         let tempCartItems = []

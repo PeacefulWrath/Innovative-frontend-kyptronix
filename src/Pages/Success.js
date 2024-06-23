@@ -77,12 +77,26 @@ function Success() {
 
         if (lsBuyedProducts !== null && lsBuyedProducts !== undefined) {
           // console.log("rrr",JSON.parse(lsBuyedProducts))
-          JSON.parse(lsBuyedProducts).forEach((ls) => {
-            // console.log("loop",ls)
-            allBuyedProducts.push(ls);
-          });
+          let index=0;
 
-          allBuyedProducts.push(newBuyedProduct._id);
+          // JSON.parse(lsBuyedProducts).forEach((ls) => {
+          //   // console.log("loop",ls)
+          //   allBuyedProducts[index]=ls;
+          //   index++;
+          // });
+          let tempLsproducts=JSON.parse(lsBuyedProducts)
+          // console.log("ggg -1",allBuyedProducts)
+
+          for(let i=0;i<tempLsproducts.length;i++){
+            allBuyedProducts[i]=tempLsproducts[i];
+            index=i;
+          }
+
+          // console.log("ggg 000",allBuyedProducts)
+
+          allBuyedProducts[index+1]=newBuyedProduct._id
+
+          // console.log("ggg 1111",allBuyedProducts +"new buyed"+newBuyedProduct)
 
           localStorage.setItem(
             "buyed_products",
@@ -92,7 +106,10 @@ function Success() {
           // console.log("ddd",allBuyedProducts)
 
           setAllProducts([...allBuyedProducts]);
-        } 
+        } else{
+          allBuyedProducts[0]=newBuyedProduct._id
+        }
+        // console.log("ggg 2222",allBuyedProducts)
         // else if (JSON.parse(lsBuyedProducts).length==0) {
           
         //   allBuyedProducts.push(newBuyedProduct._id);

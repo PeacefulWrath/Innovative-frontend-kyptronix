@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { fetchProducts, fetchUsers, updateUsers } from "../api-calls/apiCalls";
+import { fetchProducts, fetchUsers, updateUsers, verifyToken } from "../api-calls/apiCalls";
 import { useGlobal } from "../context/globalContext";
 import TopBar from "../Components/TopBar/TopBar";
 import { Button } from "antd";
@@ -17,6 +17,21 @@ function MyProducts() {
 
   useEffect(() => {
     //  console.log("hhh",allBuyedProducts)
+    const verifier = async () => {
+      const verifiedTokenData = await verifyToken()
+      if (verifiedTokenData?.message == "jwt expired"||verifiedTokenData?.message ===  "jwt not present") {
+       localStorage.removeItem("cart")
+       localStorage.removeItem("token")
+       localStorage.removeItem("user_email")
+        navigate("/login")
+      } else if (localStorage.getItem('cart')===null||localStorage.getItem('user_email')===null) {
+       localStorage.removeItem("cart")
+       localStorage.removeItem("token")
+       localStorage.removeItem("user_email")
+        navigate("/login");
+     } 
+    }
+    verifier()
 
     if (allBuyedProducts) {
       const setUserData = async () => {

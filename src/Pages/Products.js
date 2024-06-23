@@ -24,13 +24,13 @@ const navigate=useNavigate()
         localStorage.removeItem("cart")
         localStorage.removeItem("token")
         localStorage.removeItem("user_email")
-        return navigate("/login");
+         navigate("/login");
       } else {
       setCategories([...categoriesData])
       }
       const productsData = await fetchProducts()
       if (productsData?.message === "jwt expired"||productsData?.message ===  "jwt not present") {
-        return navigate("/login");
+        navigate("/login");
       } else {
       setProducts([...productsData])
       }

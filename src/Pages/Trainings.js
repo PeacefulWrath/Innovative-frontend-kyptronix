@@ -22,7 +22,7 @@ function Trainings() {
         localStorage.removeItem("cart")
         localStorage.removeItem("token")
         localStorage.removeItem("user_email")
-        return navigate("/login");
+        navigate("/login");
       } 
      }
      verifier()

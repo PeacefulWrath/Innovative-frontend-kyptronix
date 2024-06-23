@@ -4,7 +4,7 @@ import styles from "../../styles/ProductsStyles.module.css";
 import rating from "../../assets/rating.png";
 import { useGlobal } from "../../context/globalContext";
 import TopBar from "../TopBar/TopBar";
-import { verifyToken } from "../../api-calls/apiCalls";
+import { handleCheckout, verifyToken } from "../../api-calls/apiCalls";
 
 function ProductDetails() {
   const location = useLocation();
@@ -30,11 +30,14 @@ function ProductDetails() {
     window.location.reload();
   };
 
-  const handleAddToBuy = () => {
-    // console.log("kkk",cartItems)
-    // navigate("/user-dashboard",{state:product})
-    navigate("/user-dashboard");
-  };
+  const handleBuyNow = async(product) => {
+    const sessionData=await handleCheckout(product)
+    // console.log("bbb",sessionData.session.url)
+    if(sessionData){
+    localStorage.setItem("temp_buyed_product",JSON.stringify(product))
+    window.location=sessionData.session.url
+    }
+  }
 
   useEffect(() => {
     // console.log("1st",cartItems)
@@ -93,7 +96,7 @@ function ProductDetails() {
               <button
                 className={`btn rounded ${styles.Products__details__buy__BTN}`}
                 onClick={() => {
-                  handleAddToBuy();
+                  handleBuyNow(product);
                 }}
               >
                 Buy Now

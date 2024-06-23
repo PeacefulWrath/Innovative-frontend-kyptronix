@@ -43,7 +43,7 @@ function OurVision() {
   useEffect(() => {
     const fetcher = async () => {
       const ourVisionData = await fetchOurVision()
-      if (ourVisionData?.message === "jwt expired") {
+      if (ourVisionData?.message === "jwt expired"||ourVisionData?.message ===  "jwt not present") {
         return navigate("/login");
       } else {
         setOurVisions([...ourVisionData])
